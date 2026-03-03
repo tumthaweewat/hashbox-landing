@@ -188,14 +188,14 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
 
             // Show success state
-            submitBtn.textContent = 'ส่งเรียบร้อยแล้ว!';
+            submitBtn.textContent = 'Message Sent!';
             submitBtn.classList.add('success');
             submitBtn.disabled = true;
 
             // Reset after 4 seconds
             setTimeout(() => {
                 contactForm.reset();
-                submitBtn.textContent = 'ส่งข้อความ →';
+                submitBtn.textContent = 'Send Message →';
                 submitBtn.classList.remove('success');
                 submitBtn.disabled = false;
             }, 4000);

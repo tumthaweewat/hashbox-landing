@@ -21,7 +21,7 @@
     /* Typography */
     --font-display: 'Space Grotesk', sans-serif;
     --font-body: 'DM Sans', sans-serif;
-    --font-thai: 'Noto Sans Thai', 'DM Sans', sans-serif;
+    /* Thai font removed — all content now in English */
 
     /* Spacing */
     --container-width: 1200px;
@@ -375,7 +375,6 @@ img {
 }
 
 .section-sub {
-    font-family: var(--font-thai);
     color: var(--color-text-muted);
     font-size: 1.05rem;
     max-width: 560px;
@@ -472,8 +471,7 @@ img {
     -webkit-text-fill-color: transparent;
 }
 
-.hero-body-th {
-    font-family: var(--font-thai);
+.hero-body {
     font-size: 1.1rem;
     color: var(--color-text-muted);
     margin-bottom: 8px;
@@ -481,7 +479,7 @@ img {
     line-height: 1.7;
 }
 
-.hero-body-en {
+.hero-body-sub {
     font-size: 1rem;
     color: var(--color-text-dim);
     margin-bottom: 40px;
@@ -666,7 +664,6 @@ img {
 }
 
 .service-desc {
-    font-family: var(--font-thai);
     color: var(--color-text-muted);
     font-size: 0.95rem;
     line-height: 1.65;
@@ -691,13 +688,12 @@ img {
 }
 
 .why-title {
-    font-family: var(--font-thai);
     font-size: clamp(28px, 4vw, 42px);
-    line-height: 1.35;
+    line-height: 1.2;
     margin-bottom: 20px;
 }
 
-.why-sub-en {
+.why-sub {
     color: var(--color-text-muted);
     font-size: 1rem;
     margin-bottom: 24px;
@@ -830,7 +826,6 @@ img {
 }
 
 .step-body {
-    font-family: var(--font-thai);
     color: var(--color-text-muted);
     font-size: 0.9rem;
     line-height: 1.6;
@@ -945,15 +940,14 @@ img {
     margin-bottom: 24px;
 }
 
-.about-para-th {
-    font-family: var(--font-thai);
+.about-para {
     color: var(--color-text-muted);
     font-size: 1rem;
     line-height: 1.7;
     margin-bottom: 16px;
 }
 
-.about-para-en {
+.about-para-sub {
     color: var(--color-text-dim);
     font-size: 0.95rem;
     line-height: 1.6;
@@ -1172,7 +1166,6 @@ img {
 .retainer-note {
     text-align: center;
     color: var(--color-text-dim);
-    font-family: var(--font-thai);
     font-size: 0.95rem;
     padding: 20px;
     background: var(--color-surface);
@@ -1199,8 +1192,7 @@ img {
     margin-bottom: 16px;
 }
 
-.contact-sub-th {
-    font-family: var(--font-thai);
+.contact-sub {
     color: var(--color-text-muted);
     font-size: 1rem;
     margin-bottom: 32px;
@@ -1350,7 +1342,6 @@ img {
 }
 
 .footer-desc {
-    font-family: var(--font-thai);
     color: var(--color-text-dim);
     font-size: 0.9rem;
     line-height: 1.6;
