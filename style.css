@@ -1,3 +1,19 @@
+/*
+Theme Name: Hashbox Studio
+Theme URI: https://hashbox.studio
+Author: Hashbox Studio
+Author URI: https://hashbox.studio
+Description: A professional dark-themed WordPress theme for Hashbox Studio — Website Craft Agency + Digital Workforce Studio. Features a Signal design system with Blue/Cyan/Amber accents on dark zinc.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: hashbox-studio
+Tags: one-page, dark, agency, custom-menu, translation-ready
+*/
+
 /* =============================================
    HASHBOX STUDIO — "Signal" Design System (Direction 3)
    Color System: Dark Zinc + Blue/Cyan/Amber accents
@@ -21,7 +37,6 @@
     /* Typography */
     --font-display: 'Space Grotesk', sans-serif;
     --font-body: 'DM Sans', sans-serif;
-    /* Thai font removed — all content now in English */
 
     /* Spacing */
     --container-width: 1200px;
