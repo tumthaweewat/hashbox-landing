@@ -1,5 +1,33 @@
+# WordPress
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/backups/
+
+# Deployment
+deploy/
+*.zip
+
+# System files
 .DS_Store
-node_modules/
-.vercel
-dist/
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
 *.log
+error_log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node modules (if using)
+node_modules/
+
+# Environment files
+.env
+.env.local
+.env.production

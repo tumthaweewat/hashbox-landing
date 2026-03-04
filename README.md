@@ -1,33 +1,73 @@
-# Hashbox Landing Page
+# Hashbox Studio WordPress Theme
 
-High-conversion landing page for Hashbox, featuring a modern Blue Gradient aesthetic and full responsive design.
+A professional dark-themed WordPress theme for Hashbox Studio — Website Craft Agency + Digital Workforce Studio.
 
-## 🛠 Tech Stack
-- **HTML5**: Semantic structure
-- **CSS3**: Vanilla CSS with Variables & Flexbox/Grid
-- **Fonts**: Google Fonts (Poppins & Prompt)
+## 🎨 Design System
+- **Theme**: Signal Design System (Direction 3)
+- **Colors**: Dark Zinc + Blue/Cyan/Amber accents
+- **Style**: Professional, modern, agency-focused
 
-## 🚀 Getting Started
+## 🚀 Features
+- Responsive design
+- Dark theme optimized
+- One-page layout
+- Custom sections:
+  - Hero
+  - About
+  - Services
+  - Portfolio
+  - Digital Workforce
+  - Pricing
+  - Contact
 
-### Local Development
-1. Clone the repository
-2. Open `index.html` in your browser OR run a local server:
-   ```bash
-   python3 -m http.server 8000
-   ```
+## 📦 Installation
 
-## 📦 Deployment
+### Manual Installation
+1. Download the theme files
+2. Upload to `/wp-content/themes/hashbox-studio/`
+3. Activate in WordPress admin
 
-### Push to GitHub
-1. Create a new repository on GitHub.
-2. Run the following commands:
-   ```bash
-   git remote add origin https://github.com/YOUR_USERNAME/hashbox-landing.git
-   git branch -M main
-   git push -u origin main
-   ```
+### Git Deployment
+This repository is connected to hashbox.co.th for automatic deployment.
 
-### Deploy to Vercel
-1. Go to [Vercel Dashboard](https://vercel.com/new).
-2. Import your GitHub repository.
-3. Click **Deploy** (No build settings needed for static HTML).
+## 🔧 Development
+
+### File Structure
+```
+hashbox-studio/
+├── style.css              # Main theme stylesheet
+├── functions.php          # Theme functions
+├── index.php             # Main template
+├── header.php            # Header template
+├── footer.php            # Footer template
+├── front-page.php        # Homepage template
+├── template-parts/       # Template components
+│   ├── hero.php
+│   ├── about.php
+│   ├── services.php
+│   ├── portfolio.php
+│   ├── digital-workforce.php
+│   ├── pricing.php
+│   ├── contact.php
+│   └── why-hashbox.php
+└── js/                   # JavaScript files
+```
+
+### Requirements
+- WordPress 6.0+
+- PHP 7.4+
+- Modern browser support
+
+## 🌐 Live Site
+- **Production**: [hashbox.co.th](https://hashbox.co.th)
+- **Repository**: [GitHub](https://github.com/tumthaweewat/hashbox-landing)
+
+## 🔄 Deployment
+Automatic deployment is configured through Git integration. Push to `main` branch to deploy changes.
+
+## 📞 Support
+For support and customizations, contact Hashbox Studio.
+
+---
+
+© 2026 Hashbox Studio. All rights reserved.
