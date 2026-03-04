@@ -8,7 +8,7 @@
   },
   "deployment": {
     "target": "hashbox.co.th",
-    "path": "/public_html/wp-content/themes/hashbox-studio/",
+    "path": "/httpdocs/wp-content/themes/hashbox-studio/",
     "branch": "main",
     "auto_deploy": true,
     "exclude": [
