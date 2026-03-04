@@ -23,7 +23,7 @@
   },
   "wordpress": {
     "theme_name": "Hashbox Studio",
-    "theme_uri": "https://hashbox.studio",
+    "theme_uri": "https://hashbox.co.th",
     "version": "1.0.0",
     "requires_wp": "6.0",
     "requires_php": "7.4"
