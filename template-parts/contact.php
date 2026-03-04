@@ -25,13 +25,13 @@
                     </div>
                 </div>
 
-                <a href="https://lin.ee/Whc6k0pn" class="btn btn-line-oa" target="_blank" rel="noopener noreferrer">LINE OA</a>
+                <a href="https://lin.ee/Xagx6i4" class="btn btn-line-oa" target="_blank" rel="noopener noreferrer">LINE OA</a>
 
                 <div class="social-links">
                     <a href="#" class="social-pill" aria-label="Instagram">IG</a>
                     <a href="#" class="social-pill" aria-label="Facebook">FB</a>
                     <a href="#" class="social-pill" aria-label="LinkedIn">LI</a>
-                    <a href="https://lin.ee/Whc6k0pn" class="social-pill" aria-label="LINE" target="_blank" rel="noopener noreferrer">LINE</a>
+                    <a href="https://lin.ee/Xagx6i4" class="social-pill" aria-label="LINE" target="_blank" rel="noopener noreferrer">LINE</a>
                 </div>
             </div>
 

@@ -14,7 +14,7 @@
                         <a href="#" class="social-pill" aria-label="Instagram">IG</a>
                         <a href="#" class="social-pill" aria-label="Facebook">FB</a>
                         <a href="#" class="social-pill" aria-label="LinkedIn">LI</a>
-                        <a href="https://lin.ee/Whc6k0pn" class="social-pill" aria-label="LINE" target="_blank" rel="noopener noreferrer">LINE</a>
+                        <a href="https://lin.ee/Xagx6i4" class="social-pill" aria-label="LINE" target="_blank" rel="noopener noreferrer">LINE</a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -41,7 +41,7 @@
                     <h4 class="footer-heading">Contact</h4>
                     <ul>
                         <li>hello@hashbox.studio</li>
-                        <li><a href="https://lin.ee/Whc6k0pn" target="_blank" rel="noopener noreferrer">LINE OA: @hashboxstudio</a></li>
+                        <li><a href="https://lin.ee/Xagx6i4" target="_blank" rel="noopener noreferrer">LINE OA: @hashboxstudio</a></li>
                         <li>Mon-Fri 9:00-18:00</li>
                         <li>Bangkok, Thailand</li>
                     </ul>
