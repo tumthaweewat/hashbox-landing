@@ -22,7 +22,7 @@
                     <ul>
                         <li><a href="#services">Website Development</a></li>
                         <li><a href="#services">E-commerce</a></li>
-                        <li><a href="#services">Technical SEO</a></li>
+                        <li><a href="#services">Performance & SEO</a></li>
                         <li><a href="#digital-workforce">Digital Workforce</a></li>
                         <li><a href="#pricing">Retainer Plans</a></li>
                     </ul>

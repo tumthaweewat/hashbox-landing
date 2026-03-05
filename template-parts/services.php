@@ -32,8 +32,8 @@
                     <span class="tag">Brand</span>
                     <span class="tag">E-commerce</span>
                 </div>
-                <p class="service-desc">We build websites that don't just look great -- they convert. Technical SEO is built into every project, from corporate sites to enterprise-level e-commerce platforms.</p>
-                <div class="service-footer">Technical SEO &middot; Core Web Vitals &middot; Schema Markup</div>
+                <p class="service-desc">We build websites that don't just look great -- they convert. Performance & SEO is built into every project, from corporate sites to enterprise-level e-commerce platforms.</p>
+                <div class="service-footer">Performance & SEO &middot; Core Web Vitals &middot; Schema Markup</div>
             </div>
 
             <!-- Card 2 — Digital Workforce Studio -->
@@ -63,7 +63,7 @@
                 <div class="service-footer">LINE OA Chatbot &middot; CRM Integration &middot; ROI Tracking</div>
             </div>
 
-            <!-- Card 3 — Technical SEO Expert -->
+            <!-- Card 3 — Performance & SEO -->
             <div class="service-card" data-service="seo" data-accent="gradient">
                 <div class="service-accent-bar accent-gradient"></div>
                 <div class="service-icon-wrap icon-blue">
@@ -74,13 +74,13 @@
                         <line x1="9" y1="12" x2="13" y2="12"/>
                     </svg>
                 </div>
-                <h3 class="service-title">Technical SEO Expert</h3>
+                <h3 class="service-title">Performance & SEO</h3>
                 <div class="service-tags">
                     <span class="tag">SEO Audit</span>
                     <span class="tag">Performance</span>
                     <span class="tag">Structured Data</span>
                 </div>
-                <p class="service-desc">Every website we build passes a comprehensive Technical SEO audit -- including Schema Markup, Core Web Vitals optimization, site speed tuning, and Search Console setup.</p>
+                <p class="service-desc">We build blazing-fast websites with SEO baked in from day one — so your site loads fast, ranks higher, and converts better.</p>
                 <div class="service-footer">100% SEO-Ready &middot; Page Speed &middot; Search Visibility</div>
             </div>
         </div>

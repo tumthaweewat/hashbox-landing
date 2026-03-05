@@ -17,7 +17,8 @@ get_header();
 <?php get_template_part( 'template-parts/digital-workforce' ); ?>
 <?php get_template_part( 'template-parts/portfolio' ); ?>
 <?php get_template_part( 'template-parts/about' ); ?>
-<?php get_template_part( 'template-parts/pricing' ); ?>
+<?php get_template_part( 'template-parts/faq' ); ?>
+<?php get_template_part( 'template-parts/insights' ); ?>
 <?php get_template_part( 'template-parts/contact' ); ?>
 
 <?php

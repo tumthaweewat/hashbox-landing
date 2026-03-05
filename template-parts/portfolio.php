@@ -19,7 +19,7 @@
                 <span class="work-tag tag-blue">Corporate Website</span>
                 <div class="work-overlay">
                     <h3 class="work-name">Nexus Corp</h3>
-                    <p class="work-desc">Enterprise corporate website with full Technical SEO and analytics integration</p>
+                    <p class="work-desc">Enterprise corporate website with full Performance & SEO and analytics integration</p>
                 </div>
             </div>
             <div class="work-card" style="--card-bg: linear-gradient(135deg, #0369A1, #06B6D4);">
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class="work-card" style="--card-bg: linear-gradient(135deg, #1E3A5F, #2563EB);">
-                <span class="work-tag tag-blue">Technical SEO</span>
+                <span class="work-tag tag-blue">Performance & SEO</span>
                 <div class="work-overlay">
                     <h3 class="work-name">Rank Project</h3>
                     <p class="work-desc">Complete technical SEO audit and optimization for search visibility</p>

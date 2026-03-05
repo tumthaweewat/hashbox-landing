@@ -222,7 +222,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =============================================
-    // 9. SMOOTH SCROLL for all anchor links
+    // 9. FAQ ACCORDION
+    // =============================================
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+            const isOpen = question.getAttribute('aria-expanded') === 'true';
+            
+            // Close all other FAQ items
+            faqQuestions.forEach(otherQuestion => {
+                if (otherQuestion !== question) {
+                    otherQuestion.setAttribute('aria-expanded', 'false');
+                    otherQuestion.nextElementSibling.classList.remove('open');
+                }
+            });
+            
+            // Toggle current FAQ item
+            question.setAttribute('aria-expanded', !isOpen);
+            if (!isOpen) {
+                answer.classList.add('open');
+            } else {
+                answer.classList.remove('open');
+            }
+        });
+    });
+
+    // =============================================
+    // 10. SMOOTH SCROLL for all anchor links
     // =============================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', (e) => {

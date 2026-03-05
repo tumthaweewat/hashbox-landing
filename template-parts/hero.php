@@ -28,7 +28,7 @@
                 We craft enterprise-grade websites and design AI-powered workforces that deliver measurable cost savings for your business.
             </p>
             <p class="hero-body-sub fade-up" style="--delay: 450ms">
-                Technical SEO built-in. AI automation that delivers measurable ROI.
+                Performance & SEO built-in. AI automation that delivers measurable ROI.
             </p>
 
             <div class="hero-actions fade-up" style="--delay: 500ms">
@@ -37,7 +37,7 @@
             </div>
 
             <div class="hero-trust fade-up" style="--delay: 600ms">
-                <span class="trust-pill">Technical SEO 100% Built-in</span>
+                <span class="trust-pill">Performance & SEO 100% Built-in</span>
                 <span class="trust-pill">30+ Projects Delivered</span>
                 <span class="trust-pill">AI Workflow Consulting</span>
             </div>

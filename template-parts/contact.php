@@ -59,7 +59,7 @@
                             <option value="">Select a service</option>
                             <option value="web">Website Development</option>
                             <option value="ecommerce">E-commerce</option>
-                            <option value="seo">Technical SEO</option>
+                            <option value="seo">Performance & SEO</option>
                             <option value="digital-workforce">Digital Workforce Studio</option>
                             <option value="consult">Not sure / Need guidance</option>
                         </select>
