@@ -5,6 +5,14 @@
    ============================================= */
 
 /* =============================================
+   HIDE MAIN SITE HEADER ON PORTFOLIO PAGE
+   ============================================= */
+.portfolio-page-wrapper ~ * .site-header,
+body:has(.portfolio-page-wrapper) .site-header {
+    display: none !important;
+}
+
+/* =============================================
    PORTFOLIO NAVIGATION
    ============================================= */
 .portfolio-nav {
@@ -67,7 +75,7 @@
    ============================================= */
 .portfolio-hero {
     background: #09090B;
-    padding: 96px 24px 80px;
+    padding: 64px 24px 72px;
     position: relative;
     overflow: hidden;
 }
