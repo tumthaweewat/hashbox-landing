@@ -1483,13 +1483,7 @@ img {
         padding: 80px 0;
     }
 
-    .main-nav {
-        display: none;
-    }
 
-    .btn-nav-cta {
-        display: none;
-    }
 
     .hamburger {
         display: flex;
