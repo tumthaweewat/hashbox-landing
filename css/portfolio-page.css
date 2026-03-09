@@ -5,30 +5,16 @@
    ============================================= */
 
 /* =============================================
-   HIDE MAIN SITE HEADER ON PORTFOLIO PAGE
+   SHOW MAIN SITE HEADER ON PORTFOLIO PAGE
    ============================================= */
-.portfolio-page-wrapper ~ * .site-header,
-body:has(.portfolio-page-wrapper) .site-header {
-    display: none !important;
-}
+/* Header is now visible - removed display: none */
 
 /* =============================================
-   PORTFOLIO NAVIGATION
+   PORTFOLIO NAVIGATION (REMOVED)
+   Using main site header instead
    ============================================= */
 .portfolio-nav {
-    position: sticky;
-    top: 0;
-    background: rgba(9, 9, 11, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid #3F3F46;
-    padding: 0 24px;
-    height: 64px;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 100%;
+    display: none;
 }
 
 .portfolio-nav .nav-logo {
@@ -75,7 +61,7 @@ body:has(.portfolio-page-wrapper) .site-header {
    ============================================= */
 .portfolio-hero {
     background: #09090B;
-    padding: 64px 24px 72px;
+    padding: calc(72px + 64px) 24px 72px; /* Added header height offset */
     position: relative;
     overflow: hidden;
 }
@@ -776,7 +762,7 @@ body:has(.portfolio-page-wrapper) .site-header {
 
 @media (max-width: 768px) {
     .portfolio-hero {
-        padding: 72px 20px 60px;
+        padding: calc(72px + 48px) 20px 60px; /* Adjusted for mobile header */
     }
 
     .portfolio-hero-title {
@@ -840,7 +826,7 @@ body:has(.portfolio-page-wrapper) .site-header {
     }
 
     .portfolio-hero {
-        padding: 56px 16px 48px;
+        padding: calc(56px + 48px) 16px 48px; /* Adjusted for small mobile header */
     }
 
     .portfolio-hero-title {

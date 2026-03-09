@@ -18,17 +18,6 @@ get_header();
 ?>
 
 <div id="portfolioApp" class="portfolio-page-wrapper">
-    <!-- Navigation -->
-    <nav class="portfolio-nav">
-        <a href="<?php echo home_url(); ?>" class="nav-logo">
-            <span class="logo-main">Hashbox</span><span class="logo-dot">.Studio</span>
-        </a>
-        <div class="nav-actions">
-            <a href="<?php echo home_url(); ?>#contact" class="contact-btn">
-                Contact
-            </a>
-        </div>
-    </nav>
 
     <!-- Hero Section - Minimal Design -->
     <section class="portfolio-hero">
