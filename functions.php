@@ -185,37 +185,154 @@ function get_portfolio_data() {
 add_action('wp_ajax_get_portfolio_data', 'get_portfolio_data');
 add_action('wp_ajax_nopriv_get_portfolio_data', 'get_portfolio_data');
 
-// Fetch portfolio data (mock data for now)
+// Fetch portfolio data (Benjanard's real projects)
 function fetch_benjanard_portfolio() {
-    // Mock data - replace with actual API call or scraping logic
+    // Real project data from Benjanard's portfolio
     return array(
         'projects' => array(
             array(
-                'title' => 'Enterprise Dashboard',
-                'subtitle' => 'Data Visualization Platform',
-                'description' => 'A comprehensive dashboard for enterprise data analysis with real-time updates and interactive charts.',
-                'websiteUrl' => 'https://example.com/project1',
-                'responsibilities' => array('UI/UX Design', 'Frontend Development'),
-                'features' => array('Real-time Data', 'Interactive Charts', 'Responsive Design')
+                'title' => 'Robinhood Super App 4.0',
+                'subtitle' => 'App Revamp - Thailand\'s First Super App',
+                'description' => 'Thailand\'s first Super App for food-delivery, ride-hailing, shopping, express and travel with 6 Million base users. Mobile app revamp focused on improving interface efficiency, enhancing convenience and accessibility, making user journey simpler.',
+                'websiteUrl' => '',
+                'category' => 'mobile',
+                'responsibilities' => array('UX/UI Design', 'Visual Design', 'Design System', 'UX Writing', 'Competitor Analysis', 'Graphic Design'),
+                'features' => array('Payment Shortcut', 'Search Landing', 'Save Address', 'Onboarding Improvement', 'Filter & Sort', 'Suggest Items'),
+                'tags' => array('Super App', 'Mobile Design', 'UX/UI', 'Food Delivery', 'Payment System'),
+                'year' => '2024',
+                'client' => 'Robinhood',
+                'status' => 'featured'
             ),
             array(
-                'title' => 'E-commerce Platform',
-                'subtitle' => 'Modern Shopping Experience',
-                'description' => 'Full-featured e-commerce platform with payment integration and inventory management.',
-                'websiteUrl' => 'https://example.com/project2',
-                'responsibilities' => array('Full Stack Development', 'Payment Integration'),
-                'features' => array('Payment Gateway', 'Inventory System', 'Admin Panel')
+                'title' => 'Krungthai Bank',
+                'subtitle' => 'Web Application Revamp',
+                'description' => 'Complete website revamp focusing on user-friendly interface and visually appealing design to enhance customer experience. Emphasis on modern banking digital experience.',
+                'websiteUrl' => '',
+                'category' => 'web',
+                'responsibilities' => array('Style Guide', 'Design Concepts', 'Visual Design', 'Key Visual', 'User Interface', 'CI Website Guidelines'),
+                'features' => array('Modern Interface', 'User Experience', 'Visual Design', 'Brand Guidelines'),
+                'tags' => array('Banking', 'Web Design', 'Financial Services', 'Corporate'),
+                'year' => '2024',
+                'client' => 'Krungthai Bank',
+                'status' => 'featured'
             ),
             array(
-                'title' => 'Mobile Banking App',
-                'subtitle' => 'Secure Financial Services',
-                'description' => 'Mobile banking application with biometric authentication and real-time transactions.',
-                'websiteUrl' => 'https://example.com/project3',
-                'responsibilities' => array('Mobile Development', 'Security Implementation'),
-                'features' => array('Biometric Auth', 'Real-time Transactions', 'Security Features')
+                'title' => 'Singha Estate Corporate',
+                'subtitle' => 'Website Redesign',
+                'description' => 'International real estate developer website redesign with improved information architecture and user interface. Visual storytelling format showcasing grand and luxurious brand image with focus on sustainability.',
+                'websiteUrl' => '',
+                'category' => 'web',
+                'responsibilities' => array('Style Guide', 'Design Concepts', 'Story Telling', 'Design System', 'User Interface', 'Prototype'),
+                'features' => array('Visual Storytelling', 'Luxury Design', 'Sustainability Focus', 'Information Architecture'),
+                'tags' => array('Real Estate', 'Corporate', 'Luxury Brand', 'Storytelling'),
+                'year' => '2024',
+                'client' => 'Singha Estate',
+                'status' => 'featured'
+            ),
+            array(
+                'title' => 'Electrolux Thailand',
+                'subtitle' => 'Virtual Shop Campaign',
+                'description' => 'Shop-in-shop concept microsite to boost kitchen appliance sales. User journey with filtering steps for food preferences and product categories, including sustainability information leading to e-commerce purchases.',
+                'websiteUrl' => '',
+                'category' => 'ecommerce',
+                'responsibilities' => array('Creative Ideas', 'User Flow', 'User Interface', 'Prototype', 'Visual Design', 'Retouch', 'Story Telling'),
+                'features' => array('Shop-in-Shop', 'User Journey', 'Product Filtering', 'Sustainability Info'),
+                'tags' => array('E-commerce', 'Campaign', 'Kitchen Appliances', 'Microsite'),
+                'year' => '2024',
+                'client' => 'Electrolux Thailand',
+                'status' => 'regular'
+            ),
+            array(
+                'title' => 'THE WISDOM - KBank',
+                'subtitle' => '24-hour Personal Assistant via LINE',
+                'description' => '24-hour personal assistant service integrated with LINE messaging platform for Kasikorn Bank customers. Focus on user interface and information architecture for seamless banking assistance.',
+                'websiteUrl' => '',
+                'category' => 'mobile',
+                'responsibilities' => array('User Interface', 'Information Architecture', 'Prototype', 'Visualization'),
+                'features' => array('24/7 Service', 'LINE Integration', 'Banking Assistant', 'Chat Interface'),
+                'tags' => array('Banking', 'Chatbot', 'LINE', 'Customer Service'),
+                'year' => '2023',
+                'client' => 'Kasikorn Bank',
+                'status' => 'regular'
+            ),
+            array(
+                'title' => 'KTC Mobile App',
+                'subtitle' => 'App Store Preview Design',
+                'description' => 'KTC (Krungthai Card) mobile app preview design for App Store. Concept focused on "easy, complete, and comprehensive for every moment" user experience.',
+                'websiteUrl' => '',
+                'category' => 'mobile',
+                'responsibilities' => array('Creative Ideas', 'Visual Design', 'Graphic Design'),
+                'features' => array('App Store Preview', 'Mobile Banking', 'Card Management', 'User Experience'),
+                'tags' => array('Mobile App', 'Banking', 'Credit Card', 'App Store'),
+                'year' => '2023',
+                'client' => 'KTC (Krungthai Card)',
+                'status' => 'regular'
+            ),
+            array(
+                'title' => 'Block Trade - Yuanta Securities',
+                'subtitle' => 'Single Stock Futures Website',
+                'description' => 'Created webpage for "Single stock futures block trade" under Yuanta Securities website. Focus on financial trading interface and user experience for securities trading.',
+                'websiteUrl' => 'https://www.yuanta.co.th',
+                'category' => 'web',
+                'responsibilities' => array('User Interface', 'Visual Design', 'Illustration'),
+                'features' => array('Trading Interface', 'Financial Data', 'Securities Trading', 'Block Trade'),
+                'tags' => array('Finance', 'Trading', 'Securities', 'Web Design'),
+                'year' => '2023',
+                'client' => 'Yuanta Securities',
+                'status' => 'regular'
+            ),
+            array(
+                'title' => 'D Health Plus - KBank',
+                'subtitle' => 'Health Insurance Website',
+                'description' => 'Health insurance landing page responsive website design under Kasikorn Bank. Focus on health insurance products and user-friendly insurance application process.',
+                'websiteUrl' => 'https://www.kasikornbank.com',
+                'category' => 'web',
+                'responsibilities' => array('User Interface', 'Illustration'),
+                'features' => array('Health Insurance', 'Responsive Design', 'Insurance Application', 'Landing Page'),
+                'tags' => array('Insurance', 'Healthcare', 'Banking', 'Landing Page'),
+                'year' => '2023',
+                'client' => 'Kasikorn Bank',
+                'status' => 'regular'
+            ),
+            array(
+                'title' => 'Isuzu Thailand Website',
+                'subtitle' => 'Website Revamp',
+                'description' => 'Isuzu Thailand website revamp project demonstrating enhanced design and structure. Utilized Di-cut techniques to create striking visuals that stand out from frame cards.',
+                'websiteUrl' => '',
+                'category' => 'web',
+                'responsibilities' => array('Web Design', 'Visual Design', 'Creative Direction'),
+                'features' => array('Di-cut Techniques', 'Visual Enhancement', 'Automotive Design', 'Brand Identity'),
+                'tags' => array('Automotive', 'Corporate', 'Website Revamp', 'Visual Design'),
+                'year' => '2023',
+                'client' => 'Isuzu Thailand',
+                'status' => 'showcase'
+            ),
+            array(
+                'title' => 'Peppermint Field',
+                'subtitle' => 'Product Website',
+                'description' => 'Product website showcasing product functions with animated videos and images. Focus on making the product presentation more interesting and appealing to potential customers.',
+                'websiteUrl' => '',
+                'category' => 'web',
+                'responsibilities' => array('Web Design', 'Animation', 'Product Presentation'),
+                'features' => array('Animated Videos', 'Product Showcase', 'Interactive Elements', 'Visual Appeal'),
+                'tags' => array('Product Design', 'Animation', 'E-commerce', 'Interactive'),
+                'year' => '2023',
+                'client' => 'Peppermint Field',
+                'status' => 'showcase'
             )
         ),
-        'scrapedAt' => current_time('mysql')
+        'scrapedAt' => current_time('mysql'),
+        'totalProjects' => 10,
+        'designer' => array(
+            'name' => 'Benjanard',
+            'title' => 'UX/UI Designer',
+            'description' => 'Experienced UX/UI designer with a strong background in creating visually appealing and user-friendly interfaces for web and mobile applications.',
+            'contact' => array(
+                'email' => 'benjanard@example.com',
+                'phone' => '095-4799860',
+                'linkedin' => 'https://linkedin.com/in/benjanard'
+            )
+        )
     );
 }
 

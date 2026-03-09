@@ -23,24 +23,24 @@ get_header();
                 <div class="badge-glow"></div>
             </div>
             <h1 class="portfolio-hero-title">
-                Selected Work
-                <span class="title-accent">.</span>
+                Hi, I'm Benjanard
+                <span class="title-accent">👋</span>
             </h1>
             <p class="portfolio-hero-desc">
-                A curated collection of digital experiences we've crafted — 
-                from enterprise applications to brand transformations.
+                Experienced UX/UI designer with a strong background in creating visually appealing 
+                and user-friendly interfaces for web and mobile applications.
             </p>
             <div class="hero-stats">
                 <div class="stat-item">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Projects Delivered</span>
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Featured Projects</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">98%</span>
-                    <span class="stat-label">Client Satisfaction</span>
+                    <span class="stat-number">6M+</span>
+                    <span class="stat-label">App Users Reached</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">3+</span>
+                    <span class="stat-number">5+</span>
                     <span class="stat-label">Years Experience</span>
                 </div>
             </div>
@@ -110,11 +110,11 @@ get_header();
         <section class="projects-section">
             <div class="section-header-portfolio">
                 <div class="section-intro">
-                    <span class="section-label">OUR WORK</span>
+                    <span class="section-label">PORTFOLIO</span>
                     <h2 class="section-title">Featured Projects</h2>
                     <p class="section-description">
-                        Each project tells a story of innovation, creativity, and technical excellence. 
-                        Here are some highlights from our recent work.
+                        Each project represents a unique challenge solved through thoughtful design and user experience. 
+                        From super apps to banking platforms, here are some highlights from my recent work.
                     </p>
                 </div>
                 <div class="section-filters">
@@ -132,20 +132,20 @@ get_header();
         <!-- CTA Section -->
         <section class="portfolio-cta">
             <div class="cta-content">
-                <h2 class="cta-title">Ready to Start Your Project?</h2>
+                <h2 class="cta-title">Let's Work Together</h2>
                 <p class="cta-description">
-                    Let's discuss how we can bring your vision to life with cutting-edge technology and creative design.
+                    Interested in collaborating? I'm always excited to work on new projects that challenge creativity and push the boundaries of user experience.
                 </p>
                 <div class="cta-actions">
                     <a href="<?php echo home_url(); ?>#contact" class="btn btn-cta">
-                        Start Your Project
+                        Get In Touch
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14"></path>
                             <path d="m12 5 7 7-7 7"></path>
                         </svg>
                     </a>
                     <a href="<?php echo home_url(); ?>" class="btn btn-outline">
-                        Back to Home
+                        Back to Hashbox
                     </a>
                 </div>
             </div>
