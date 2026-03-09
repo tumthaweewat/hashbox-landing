@@ -1,0 +1,850 @@
+/* =============================================
+   PORTFOLIO PAGE - Minimal Light Theme
+   Inspired by: Lorenz Woehr, Brittany Chiang
+   ============================================= */
+
+/* Portfolio Page Light Theme Override */
+.portfolio-page-wrapper {
+    --p-bg: #FAFAFA;
+    --p-surface: #FFFFFF;
+    --p-text: #0A0A0A;
+    --p-text-muted: #525252;
+    --p-text-dim: #A3A3A3;
+    --p-border: #E5E5E5;
+    --p-accent: #0A0A0A;
+    --p-accent-light: #262626;
+    
+    background: var(--p-bg) !important;
+    color: var(--p-text);
+    min-height: 100vh;
+}
+
+.portfolio-page-wrapper * {
+    color: inherit;
+}
+
+/* Hide dark theme elements */
+.portfolio-page-wrapper .gradient-accent {
+    display: none;
+}
+
+/* =============================================
+   PORTFOLIO NAVIGATION - Minimal
+   ============================================= */
+.portfolio-page-wrapper .portfolio-nav {
+    position: sticky;
+    top: 0;
+    background: rgba(250, 250, 250, 0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--p-border);
+    padding: 20px 24px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+
+.portfolio-page-wrapper .nav-logo {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    color: var(--p-text);
+}
+
+.portfolio-page-wrapper .nav-logo .logo-main {
+    color: var(--p-text);
+}
+
+.portfolio-page-wrapper .nav-logo .logo-dot {
+    color: var(--p-text-muted);
+}
+
+.portfolio-page-wrapper .nav-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.portfolio-page-wrapper .refresh-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: var(--p-text-muted);
+    border: 1px solid var(--p-border);
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.portfolio-page-wrapper .refresh-btn:hover {
+    background: var(--p-surface);
+    border-color: var(--p-text);
+    color: var(--p-text);
+}
+
+.portfolio-page-wrapper .refresh-btn svg {
+    color: currentColor;
+    stroke: currentColor;
+}
+
+.portfolio-page-wrapper .contact-btn {
+    background: var(--p-text);
+    color: var(--p-bg) !important;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.portfolio-page-wrapper .contact-btn:hover {
+    background: var(--p-accent-light);
+    transform: translateY(-1px);
+}
+
+/* =============================================
+   PORTFOLIO HERO - Minimal Style
+   ============================================= */
+.portfolio-page-wrapper .portfolio-hero {
+    background: var(--p-bg);
+    padding: 100px 24px 80px;
+    position: relative;
+    overflow: visible;
+}
+
+.portfolio-page-wrapper .portfolio-hero::before {
+    display: none;
+}
+
+.portfolio-page-wrapper .portfolio-hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+}
+
+.portfolio-page-wrapper .hero-badge {
+    display: none;
+}
+
+.portfolio-page-wrapper .hero-visual {
+    display: none;
+}
+
+.portfolio-page-wrapper .portfolio-hero-title {
+    font-size: clamp(48px, 8vw, 80px);
+    font-weight: 600;
+    color: var(--p-text);
+    line-height: 1.05;
+    margin-bottom: 32px;
+    letter-spacing: -0.03em;
+}
+
+.portfolio-page-wrapper .title-accent {
+    color: var(--p-text-dim);
+}
+
+.portfolio-page-wrapper .portfolio-hero-desc {
+    font-size: 18px;
+    color: var(--p-text-muted);
+    line-height: 1.7;
+    margin-bottom: 48px;
+    max-width: 600px;
+    font-weight: 400;
+}
+
+.portfolio-page-wrapper .hero-stats {
+    display: flex;
+    gap: 48px;
+    padding-top: 32px;
+    border-top: 1px solid var(--p-border);
+}
+
+.portfolio-page-wrapper .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.portfolio-page-wrapper .stat-number {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--p-text);
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.portfolio-page-wrapper .stat-label {
+    font-size: 13px;
+    color: var(--p-text-dim);
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+/* =============================================
+   LOADING STATE
+   ============================================= */
+.portfolio-page-wrapper .loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    padding: 80px 24px;
+    background: var(--p-bg);
+}
+
+.portfolio-page-wrapper .loading-animation {
+    text-align: center;
+}
+
+.portfolio-page-wrapper .loading-dots {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-page-wrapper .dot {
+    width: 8px;
+    height: 8px;
+    background: var(--p-text);
+    border-radius: 50%;
+    animation: portfolioBounce 1.4s ease-in-out infinite both;
+}
+
+.portfolio-page-wrapper .dot:nth-child(1) { animation-delay: -0.32s; }
+.portfolio-page-wrapper .dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes portfolioBounce {
+    0%, 80%, 100% { transform: scale(0); opacity: 0.3; }
+    40% { transform: scale(1); opacity: 1; }
+}
+
+.portfolio-page-wrapper .loading p {
+    color: var(--p-text-muted);
+    font-size: 14px;
+}
+
+/* =============================================
+   ERROR STATE
+   ============================================= */
+.portfolio-page-wrapper .error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    padding: 80px 24px;
+    background: var(--p-bg);
+}
+
+.portfolio-page-wrapper .error-content {
+    text-align: center;
+    max-width: 400px;
+}
+
+.portfolio-page-wrapper .error-icon {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.portfolio-page-wrapper .error h3 {
+    color: var(--p-text);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.portfolio-page-wrapper .error p {
+    color: var(--p-text-muted);
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+.portfolio-page-wrapper .retry-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--p-text);
+    color: var(--p-bg) !important;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.portfolio-page-wrapper .retry-btn:hover {
+    background: var(--p-accent-light);
+}
+
+.portfolio-page-wrapper .retry-btn svg {
+    stroke: currentColor;
+}
+
+/* =============================================
+   PORTFOLIO CONTENT
+   ============================================= */
+.portfolio-page-wrapper .portfolio-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+    background: var(--p-bg);
+}
+
+/* =============================================
+   SECTION HEADER - Minimal
+   ============================================= */
+.portfolio-page-wrapper .projects-section {
+    padding-top: 60px;
+}
+
+.portfolio-page-wrapper .section-header-portfolio {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--p-border);
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.portfolio-page-wrapper .section-intro {
+    max-width: 500px;
+}
+
+.portfolio-page-wrapper .section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--p-text-dim);
+    margin-bottom: 12px;
+    display: block;
+}
+
+.portfolio-page-wrapper .section-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--p-text);
+    margin-bottom: 12px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+.portfolio-page-wrapper .section-description {
+    color: var(--p-text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* =============================================
+   FILTERS - Minimal Pills
+   ============================================= */
+.portfolio-page-wrapper .section-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.portfolio-page-wrapper .filter-btn {
+    background: transparent;
+    color: var(--p-text-muted);
+    border: 1px solid var(--p-border);
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.portfolio-page-wrapper .filter-btn:hover {
+    border-color: var(--p-text);
+    color: var(--p-text);
+}
+
+.portfolio-page-wrapper .filter-btn.active {
+    background: var(--p-text);
+    color: var(--p-bg) !important;
+    border-color: var(--p-text);
+}
+
+/* =============================================
+   PROJECTS GRID - Card Style
+   ============================================= */
+.portfolio-page-wrapper .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 80px;
+}
+
+.portfolio-page-wrapper .project-item {
+    background: var(--p-surface);
+    border: 1px solid var(--p-border);
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-page-wrapper .project-item::before {
+    display: none;
+}
+
+.portfolio-page-wrapper .project-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: var(--p-text-dim);
+}
+
+.portfolio-page-wrapper .project-item.featured {
+    border-color: var(--p-text);
+}
+
+/* Project Badge */
+.portfolio-page-wrapper .project-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--p-text);
+    color: var(--p-bg) !important;
+    padding: 4px 10px;
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    z-index: 2;
+}
+
+/* Project Visual */
+.portfolio-page-wrapper .project-visual {
+    height: 220px;
+    background: linear-gradient(135deg, #F5F5F5 0%, #E5E5E5 100%);
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.portfolio-page-wrapper .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.portfolio-page-wrapper .project-item:hover .project-image {
+    transform: scale(1.03);
+}
+
+.portfolio-page-wrapper .project-visual-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg, #F5F5F5 0%, #E5E5E5 100%);
+}
+
+.portfolio-page-wrapper .visual-icon {
+    color: var(--p-text-dim);
+    opacity: 0.3;
+    transform: scale(1.5);
+}
+
+.portfolio-page-wrapper .visual-icon svg {
+    stroke: currentColor;
+}
+
+.portfolio-page-wrapper .visual-overlay {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    background: var(--p-surface);
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--p-border);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.3s ease;
+}
+
+.portfolio-page-wrapper .project-item:hover .visual-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.portfolio-page-wrapper .visual-text {
+    color: var(--p-text);
+    font-weight: 500;
+    font-size: 13px;
+}
+
+/* Project Content */
+.portfolio-page-wrapper .project-content {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-page-wrapper .project-meta-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.portfolio-page-wrapper .project-year {
+    color: var(--p-text-dim);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.portfolio-page-wrapper .project-client {
+    color: var(--p-text-muted);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.portfolio-page-wrapper .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    gap: 16px;
+}
+
+.portfolio-page-wrapper .project-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--p-text);
+    margin: 0;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    flex: 1;
+}
+
+.portfolio-page-wrapper .project-subtitle {
+    color: var(--p-text-muted);
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 12px 0;
+    line-height: 1.5;
+}
+
+.portfolio-page-wrapper .project-description {
+    color: var(--p-text-muted);
+    line-height: 1.6;
+    margin: 0 0 16px 0;
+    flex: 1;
+    font-size: 14px;
+}
+
+.portfolio-page-wrapper .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--p-text);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border: 1px solid var(--p-border);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    margin-left: 0;
+    flex-shrink: 0;
+}
+
+.portfolio-page-wrapper .project-link:hover {
+    background: var(--p-text);
+    color: var(--p-bg) !important;
+    border-color: var(--p-text);
+}
+
+.portfolio-page-wrapper .project-link svg {
+    stroke: currentColor;
+}
+
+/* Project Tags */
+.portfolio-page-wrapper .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.portfolio-page-wrapper .project-tag {
+    background: var(--p-bg);
+    color: var(--p-text-muted);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid var(--p-border);
+}
+
+/* Project Responsibilities */
+.portfolio-page-wrapper .project-responsibilities {
+    color: var(--p-text-dim);
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--p-border);
+}
+
+.portfolio-page-wrapper .project-responsibilities strong {
+    color: var(--p-text-muted);
+    font-weight: 500;
+}
+
+/* =============================================
+   CTA SECTION - Minimal
+   ============================================= */
+.portfolio-page-wrapper .portfolio-cta {
+    position: relative;
+    background: var(--p-surface);
+    border: 1px solid var(--p-border);
+    border-radius: 16px;
+    padding: 64px 40px;
+    margin: 60px 0 80px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.portfolio-page-wrapper .cta-visual {
+    display: none;
+}
+
+.portfolio-page-wrapper .cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.portfolio-page-wrapper .cta-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--p-text);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.portfolio-page-wrapper .cta-description {
+    color: var(--p-text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio-page-wrapper .cta-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-page-wrapper .cta-actions .btn {
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.portfolio-page-wrapper .cta-actions .btn-cta {
+    background: var(--p-text);
+    color: var(--p-bg) !important;
+    box-shadow: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.portfolio-page-wrapper .cta-actions .btn-cta:hover {
+    background: var(--p-accent-light);
+    transform: translateY(-2px);
+}
+
+.portfolio-page-wrapper .cta-actions .btn-cta svg {
+    stroke: currentColor;
+}
+
+.portfolio-page-wrapper .cta-actions .btn-outline {
+    background: transparent;
+    border: 1px solid var(--p-border);
+    color: var(--p-text);
+}
+
+.portfolio-page-wrapper .cta-actions .btn-outline:hover {
+    border-color: var(--p-text);
+    background: var(--p-bg);
+}
+
+/* =============================================
+   RESPONSIVE - Mobile First
+   ============================================= */
+@media (max-width: 900px) {
+    .portfolio-page-wrapper .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .portfolio-page-wrapper .hero-stats {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-page-wrapper .portfolio-hero {
+        padding: 60px 20px 60px;
+    }
+    
+    .portfolio-page-wrapper .portfolio-hero-title {
+        font-size: clamp(36px, 10vw, 48px);
+    }
+    
+    .portfolio-page-wrapper .portfolio-hero-desc {
+        font-size: 16px;
+    }
+    
+    .portfolio-page-wrapper .hero-stats {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    
+    .portfolio-page-wrapper .stat-item {
+        min-width: 100px;
+    }
+    
+    .portfolio-page-wrapper .section-header-portfolio {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .portfolio-page-wrapper .section-filters {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        flex-wrap: nowrap;
+    }
+    
+    .portfolio-page-wrapper .filter-btn {
+        flex-shrink: 0;
+    }
+    
+    .portfolio-page-wrapper .portfolio-cta {
+        padding: 48px 24px;
+        margin: 40px 0 60px;
+    }
+    
+    .portfolio-page-wrapper .cta-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .portfolio-page-wrapper .cta-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .portfolio-page-wrapper .nav-actions {
+        gap: 8px;
+    }
+    
+    .portfolio-page-wrapper .refresh-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    .portfolio-page-wrapper .refresh-btn span {
+        display: none;
+    }
+    
+    .portfolio-page-wrapper .contact-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .portfolio-page-wrapper .portfolio-content {
+        padding: 0 20px 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-page-wrapper .portfolio-nav {
+        padding: 16px 16px;
+    }
+    
+    .portfolio-page-wrapper .portfolio-hero {
+        padding: 48px 16px 48px;
+    }
+    
+    .portfolio-page-wrapper .portfolio-hero-title {
+        font-size: 32px;
+    }
+    
+    .portfolio-page-wrapper .project-visual {
+        height: 180px;
+    }
+    
+    .portfolio-page-wrapper .project-content {
+        padding: 20px;
+    }
+    
+    .portfolio-page-wrapper .portfolio-content {
+        padding: 0 16px 48px;
+    }
+}
+
+/* =============================================
+   ANIMATIONS
+   ============================================= */
+@keyframes portfolioFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.portfolio-page-wrapper .project-item {
+    animation: portfolioFadeInUp 0.5s ease forwards;
+}
+
+.portfolio-page-wrapper .project-item:nth-child(1) { animation-delay: 0.1s; }
+.portfolio-page-wrapper .project-item:nth-child(2) { animation-delay: 0.15s; }
+.portfolio-page-wrapper .project-item:nth-child(3) { animation-delay: 0.2s; }
+.portfolio-page-wrapper .project-item:nth-child(4) { animation-delay: 0.25s; }
+.portfolio-page-wrapper .project-item:nth-child(5) { animation-delay: 0.3s; }
+.portfolio-page-wrapper .project-item:nth-child(6) { animation-delay: 0.35s; }

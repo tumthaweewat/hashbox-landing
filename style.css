@@ -1906,8 +1906,19 @@ img {
 }
 
 /* =============================================
-   PORTFOLIO PAGE STYLES
+   PORTFOLIO PAGE STYLES - Minimal Design
    ============================================= */
+
+/* Portfolio Page Variables */
+.portfolio-page-wrapper {
+    --portfolio-bg: #FAFAFA;
+    --portfolio-surface: #FFFFFF;
+    --portfolio-text: #0A0A0A;
+    --portfolio-text-muted: #525252;
+    --portfolio-text-dim: #A3A3A3;
+    --portfolio-border: #E5E5E5;
+    --portfolio-accent: #0A0A0A;
+}
 
 /* Password Gate */
 .password-gate {
@@ -1916,7 +1927,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--color-bg);
+    background: var(--portfolio-bg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1926,35 +1937,36 @@ img {
 .password-gate-inner {
     text-align: center;
     padding: 48px;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-xl);
+    background: var(--portfolio-surface);
+    border: 1px solid var(--portfolio-border);
+    border-radius: 16px;
     max-width: 400px;
     width: 100%;
     margin: 0 24px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
 }
 
 .gate-logo {
     display: inline-block;
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 500;
     text-decoration: none;
-    letter-spacing: 0.03em;
+    letter-spacing: -0.02em;
     margin-bottom: 32px;
 }
 
 .gate-logo .logo-main {
-    color: var(--color-text);
+    color: var(--portfolio-text);
 }
 
 .gate-logo .logo-dot {
-    color: var(--color-accent);
+    color: var(--portfolio-text-muted);
 }
 
 .gate-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--color-text);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--portfolio-text);
     margin-bottom: 24px;
 }
 
@@ -1965,31 +1977,32 @@ img {
 }
 
 .password-input {
-    padding: 16px;
-    background: var(--color-bg);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    color: var(--color-text);
-    font-size: 16px;
+    padding: 14px 16px;
+    background: var(--portfolio-bg);
+    border: 1px solid var(--portfolio-border);
+    border-radius: 8px;
+    color: var(--portfolio-text);
+    font-size: 15px;
     font-family: inherit;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .password-input:focus {
     outline: none;
-    border-color: var(--color-accent);
+    border-color: var(--portfolio-text);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
 }
 
 .password-error {
-    color: #EF4444;
+    color: #DC2626;
     font-size: 14px;
     margin: 0;
     min-height: 20px;
 }
 
 .password-submit {
-    padding: 16px 24px;
-    background: var(--color-accent);
+    padding: 14px 24px;
+    background: var(--portfolio-text);
     color: white;
     border: none;
     border-radius: var(--radius-md);

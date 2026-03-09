@@ -3,32 +3,50 @@
  * Template Name: Portfolio Page
  * 
  * Custom page template for Benjanard Portfolio integration
+ * Features a minimal, light-themed design
  *
  * @package Hashbox_Studio
  */
 
+// Enqueue portfolio-specific styles
+function hashbox_portfolio_styles() {
+    wp_enqueue_style('portfolio-page-css', get_template_directory_uri() . '/css/portfolio-page.css', array(), '1.0.0');
+}
+add_action('wp_enqueue_scripts', 'hashbox_portfolio_styles');
+
 get_header();
 ?>
 
-<!-- Password gate temporarily disabled -->
-
 <div id="portfolioApp" class="portfolio-page-wrapper">
-    <div class="gradient-accent"></div>
+    <!-- Navigation - Minimal -->
+    <nav class="portfolio-nav">
+        <a href="<?php echo home_url(); ?>" class="nav-logo">
+            <span class="logo-main">Hashbox</span><span class="logo-dot">.Studio</span>
+        </a>
+        <div class="nav-actions">
+            <button id="refreshBtn" class="refresh-btn">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <polyline points="1 20 1 14 7 14"></polyline>
+                    <path d="m20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+                </svg>
+                <span>Refresh</span>
+            </button>
+            <a href="<?php echo home_url(); ?>#contact" class="contact-btn">
+                Contact
+            </a>
+        </div>
+    </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Minimal Design -->
     <section class="portfolio-hero">
         <div class="portfolio-hero-content">
-            <div class="hero-badge">
-                <span class="badge-text">PORTFOLIO</span>
-                <div class="badge-glow"></div>
-            </div>
             <h1 class="portfolio-hero-title">
-                Selected Work
-                <span class="title-accent">.</span>
+                Selected Work<span class="title-accent">.</span>
             </h1>
             <p class="portfolio-hero-desc">
-                A curated collection of digital experiences we've crafted — 
-                from enterprise applications to brand transformations.
+                A curated collection of digital experiences we've crafted for clients across industries. 
+                Each project represents our commitment to thoughtful design and technical excellence.
             </p>
             <div class="hero-stats">
                 <div class="stat-item">
@@ -45,40 +63,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="hero-visual">
-            <div class="floating-card card-1">
-                <div class="card-header"></div>
-                <div class="card-content"></div>
-            </div>
-            <div class="floating-card card-2">
-                <div class="card-header"></div>
-                <div class="card-content"></div>
-            </div>
-            <div class="floating-card card-3">
-                <div class="card-header"></div>
-                <div class="card-content"></div>
-            </div>
-        </div>
     </section>
-
-    <nav class="portfolio-nav">
-        <a href="<?php echo home_url(); ?>" class="nav-logo">
-            <span class="logo-main">HASHBOX</span><span class="logo-dot">.STUDIO</span>
-        </a>
-        <div class="nav-actions">
-            <button id="refreshBtn" class="refresh-btn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="23 4 23 10 17 10"></polyline>
-                    <polyline points="1 20 1 14 7 14"></polyline>
-                    <path d="m20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
-                </svg>
-                Refresh
-            </button>
-            <a href="<?php echo home_url(); ?>#contact" class="contact-btn">
-                Get In Touch
-            </a>
-        </div>
-    </nav>
 
     <div id="loading" class="loading">
         <div class="loading-animation">
@@ -87,7 +72,7 @@ get_header();
                 <div class="dot"></div>
                 <div class="dot"></div>
             </div>
-            <p>Loading amazing projects...</p>
+            <p>Loading projects...</p>
         </div>
     </div>
 
