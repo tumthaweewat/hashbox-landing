@@ -19,22 +19,20 @@ const refreshBtn = document.getElementById('refreshBtn');
 
 document.addEventListener('DOMContentLoaded', function() {
     // Check if we're on the portfolio page
-    if (!passwordGate || !portfolioApp) return;
+    if (!portfolioApp) return;
     
-    if (sessionStorage.getItem(AUTH_KEY) === 'true') {
-        showApp();
-    } else {
-        passwordGate.style.display = 'flex';
-        portfolioApp.style.display = 'none';
-    }
-
-    passwordForm.addEventListener('submit', handlePasswordSubmit);
+    // Skip password check - directly show app
+    showApp();
 
     if (refreshBtn) {
         refreshBtn.addEventListener('click', function() {
             refreshBtn.disabled = true;
-            refreshBtn.textContent = 'Loading...';
-            loadPortfolioData(true);
+            const originalText = refreshBtn.innerHTML;
+            refreshBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg> Loading...';
+            loadPortfolioData(true).finally(() => {
+                refreshBtn.disabled = false;
+                refreshBtn.innerHTML = originalText;
+            });
         });
     }
 });
@@ -74,8 +72,8 @@ async function handlePasswordSubmit(e) {
 }
 
 function showApp() {
-    passwordGate.style.display = 'none';
-    portfolioApp.style.display = 'block';
+    if (passwordGate) passwordGate.style.display = 'none';
+    if (portfolioApp) portfolioApp.style.display = 'block';
     loadPortfolioData();
 }
 
