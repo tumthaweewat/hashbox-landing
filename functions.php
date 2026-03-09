@@ -36,6 +36,15 @@ function hashbox_theme_setup() {
 add_action( 'after_setup_theme', 'hashbox_theme_setup' );
 
 /**
+ * Add favicon and app icons
+ */
+function hashbox_add_favicon() {
+    // Remove default WordPress favicon
+    remove_action('wp_head', 'wp_site_icon', 99);
+}
+add_action('init', 'hashbox_add_favicon');
+
+/**
  * Enqueue styles and scripts
  */
 function hashbox_enqueue_assets() {

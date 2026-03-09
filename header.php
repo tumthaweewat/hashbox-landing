@@ -4,6 +4,18 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/svg+xml" href="<?php echo get_template_directory_uri(); ?>/assets/favicons/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/assets/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/assets/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/assets/favicons/site.webmanifest">
+    
+    <!-- Theme Color for Mobile Browsers -->
+    <meta name="theme-color" content="#2563EB">
+    <meta name="msapplication-TileColor" content="#09090B">
+    
     <?php wp_head(); ?>
 </head>
 
