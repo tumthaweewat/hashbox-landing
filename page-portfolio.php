@@ -40,20 +40,7 @@ get_header();
                 A curated collection of digital experiences we've crafted for clients across industries. 
                 Each project represents our commitment to thoughtful design and technical excellence.
             </p>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">50+</span>
-                    <span class="stat-label">Projects Delivered</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">98%</span>
-                    <span class="stat-label">Client Satisfaction</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">3+</span>
-                    <span class="stat-label">Years Experience</span>
-                </div>
-            </div>
+
         </div>
     </section>
 
