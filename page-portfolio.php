@@ -18,20 +18,12 @@ get_header();
 ?>
 
 <div id="portfolioApp" class="portfolio-page-wrapper">
-    <!-- Navigation - Minimal -->
+    <!-- Navigation -->
     <nav class="portfolio-nav">
         <a href="<?php echo home_url(); ?>" class="nav-logo">
             <span class="logo-main">Hashbox</span><span class="logo-dot">.Studio</span>
         </a>
         <div class="nav-actions">
-            <button id="refreshBtn" class="refresh-btn">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polyline points="23 4 23 10 17 10"></polyline>
-                    <polyline points="1 20 1 14 7 14"></polyline>
-                    <path d="m20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
-                </svg>
-                <span>Refresh</span>
-            </button>
             <a href="<?php echo home_url(); ?>#contact" class="contact-btn">
                 Contact
             </a>
