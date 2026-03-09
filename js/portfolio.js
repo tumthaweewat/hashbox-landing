@@ -196,19 +196,31 @@ function createProjectItem(project) {
         statusBadge = '<div class="project-badge">Featured</div>';
     }
 
-    // Create project visual placeholder
-    const projectVisual = `
-        <div class="project-visual">
-            <div class="project-visual-placeholder">
-                <div class="visual-icon">
-                    ${getCategoryIcon(project.category)}
-                </div>
+    // Create project visual with image or placeholder
+    let projectVisual = '';
+    if (project.image) {
+        projectVisual = `
+            <div class="project-visual">
+                <img src="${escapeHtml(project.image)}" alt="${escapeHtml(project.imageAlt || project.title)}" class="project-image" loading="lazy">
                 <div class="visual-overlay">
                     <span class="visual-text">${escapeHtml(project.title)}</span>
                 </div>
             </div>
-        </div>
-    `;
+        `;
+    } else {
+        projectVisual = `
+            <div class="project-visual">
+                <div class="project-visual-placeholder">
+                    <div class="visual-icon">
+                        ${getCategoryIcon(project.category)}
+                    </div>
+                    <div class="visual-overlay">
+                        <span class="visual-text">${escapeHtml(project.title)}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
 
     item.innerHTML = `
         ${statusBadge}
