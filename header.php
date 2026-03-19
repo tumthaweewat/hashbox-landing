@@ -48,7 +48,7 @@
 
             <div class="header-actions">
                 <a href="#contact" class="btn btn-cta btn-nav-cta">Free Consultation</a>
-                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-controls="mobileMenu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
