@@ -20,6 +20,7 @@ get_header();
         <span class="section-label">ABOUT US</span>
         <h1 class="about-hero-headline">เราทำเว็บที่ <span class="accent-word">perform</span><br>และสร้าง AI workforce ที่วัดผลได้</h1>
         <p class="about-hero-body">Hashbox Studio คือ Website Craft Agency + Digital Workforce Studio ที่รวม web expertise ระดับ technical กับ AI workflow consulting ไว้ในทีมเดียว</p>
+        <p class="about-hero-founder">นำทีมโดย Thaweewat (Tum) Sriaroonthip — Fullstack Developer 19 ปี, อดีต Tech Evangelist ที่ award-winning SEO agency ดูแลมากกว่า 300 แบรนด์ทั้งในไทยและต่างประเทศ</p>
         <div class="about-hero-actions">
             <a href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="btn btn-cta btn-lg">นัดปรึกษาฟรี</a>
             <a href="<?php echo esc_url( home_url( '/portfolio' ) ); ?>" class="btn btn-outline btn-lg">ดูผลงาน</a>
@@ -49,7 +50,7 @@ get_header();
 <section class="about-section about-surface">
     <div class="container">
         <div class="section-header">
-            <span class="section-label">ทำไมต้อง HASHBOX</span>
+            <h2 class="section-label">ทำไมต้อง HASHBOX</h2>
         </div>
         <div class="about-why-grid">
             <div class="about-why-card about-why-problem">
@@ -96,7 +97,7 @@ get_header();
 <section class="about-section">
     <div class="container">
         <div class="section-header">
-            <span class="section-label">สิ่งที่เราทำ</span>
+            <h2 class="section-label">สิ่งที่เราทำ</h2>
         </div>
         <div class="about-services-grid">
             <div class="about-service-card" data-accent="blue">
@@ -136,7 +137,7 @@ get_header();
     <div class="container">
         <div class="about-tech-grid">
             <div class="about-tech-col">
-                <span class="section-label">TECH STACK</span>
+                <h2 class="section-label">TECH STACK</h2>
                 <div class="about-tech-tags">
                     <span class="about-tech-tag about-tech-tag-blue">Next.js</span>
                     <span class="about-tech-tag about-tech-tag-blue">React</span>
@@ -148,7 +149,7 @@ get_header();
                 </div>
             </div>
             <div class="about-tech-col">
-                <span class="section-label">AI TOOLS ที่สร้างเอง</span>
+                <h2 class="section-label">AI TOOLS ที่สร้างเอง</h2>
                 <ul class="about-tools-list">
                     <li class="about-tool-item">
                         <span class="about-tool-dot about-tool-dot-amber"></span>
@@ -180,7 +181,7 @@ get_header();
 <section class="about-section">
     <div class="container">
         <div class="section-header">
-            <span class="section-label">สิ่งที่เราเชื่อ</span>
+            <h2 class="section-label">สิ่งที่เราเชื่อ</h2>
         </div>
         <div class="about-values-grid">
             <div class="about-value-card about-value-blue">
@@ -221,7 +222,7 @@ get_header();
 <section class="about-section about-surface">
     <div class="container">
         <div class="section-header">
-            <span class="section-label">ประสบการณ์ที่หล่อหลอมเรา</span>
+            <h2 class="section-label">ประสบการณ์ที่หล่อหลอมเรา</h2>
             <p class="section-sub">ผลงาน SEO ที่ Tum มีส่วนร่วมในช่วงที่เป็น Tech Evangelist ที่ award-winning SEO agency ดูแลมากกว่า 300 แบรนด์</p>
         </div>
         <div class="about-cases-grid">

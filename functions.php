@@ -46,6 +46,17 @@ function hashbox_about_meta_description() {
 add_action( 'wp_head', 'hashbox_about_meta_description', 1 );
 
 /**
+ * Custom title tag for About page
+ */
+function hashbox_about_title( $title ) {
+    if ( is_page_template( 'page-about.php' ) ) {
+        return 'เกี่ยวกับเรา — Hashbox Studio | Website Craft + Digital Workforce';
+    }
+    return $title;
+}
+add_filter( 'pre_get_document_title', 'hashbox_about_title' );
+
+/**
  * Add favicon and app icons
  */
 function hashbox_add_favicon() {
