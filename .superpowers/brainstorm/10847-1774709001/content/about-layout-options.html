@@ -1,0 +1,128 @@
+<h2>About Us Page — Layout Structure</h2>
+<p class="subtitle">เลือก layout ที่เหมาะกับ content จาก doc (9 sections)</p>
+
+<div class="section">
+  <p class="label">Sections ที่ต้องมี (จาก doc):</p>
+  <p style="color:#aaa;font-size:0.9rem;line-height:1.8">
+    1. Hero — H1 + founder origin story<br>
+    2. สิ่งที่เราทำ — 4 services cards<br>
+    3. ทีมของเรา — Tum + Rucha profiles<br>
+    4. สิ่งที่เราเชื่อ — 3 values<br>
+    5. ตัวเลขของเรา — 4 stats<br>
+    6. ประสบการณ์ที่หล่อหลอมเรา — case study highlights<br>
+    7. ติดต่อเรา — contact info + CTA<br>
+    8. Schema markup (JSON-LD)
+  </p>
+</div>
+
+<div class="cards">
+  <!-- Option A -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:20px;">
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:0.75rem;">
+        <div style="background:#1a1a2e;border-left:3px solid #2563EB;padding:10px 12px;border-radius:4px;">
+          <strong style="color:#3B82F6;">HERO</strong><br>
+          <span style="color:#888;">Full-width — H1 + origin story + orbs bg</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+          <div style="background:#1a1a2e;border-left:3px solid #06B6D4;padding:8px 10px;border-radius:4px;grid-column:span 2;">
+            <strong style="color:#06B6D4;">SERVICES</strong> <span style="color:#888;">— 4 cards grid</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+          <div style="background:#252530;border-left:3px solid #F59E0B;padding:8px 10px;border-radius:4px;">
+            <strong style="color:#F59E0B;">TEAM</strong><br><span style="color:#888;">Profile cards</span>
+          </div>
+          <div style="background:#252530;border-left:3px solid #F59E0B;padding:8px 10px;border-radius:4px;">
+            <strong style="color:#F59E0B;">VALUES</strong><br><span style="color:#888;">3 pillars</span>
+          </div>
+        </div>
+        <div style="background:#1a1a2e;border-left:3px solid #2563EB;padding:8px 10px;border-radius:4px;">
+          <strong style="color:#3B82F6;">STATS</strong> <span style="color:#888;">— full-width counter bar</span>
+        </div>
+        <div style="background:#252530;border-left:3px solid #06B6D4;padding:8px 10px;border-radius:4px;">
+          <strong style="color:#06B6D4;">EXPERIENCE</strong> <span style="color:#888;">— case studies</span>
+        </div>
+        <div style="background:#1a1a2e;border-left:3px solid #F59E0B;padding:8px 10px;border-radius:4px;">
+          <strong style="color:#F59E0B;">CTA + CONTACT</strong>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A) Linear Sections</h3>
+      <p>แต่ละ section แยกชัดเจน สลับ dark/lighter surface สร้าง rhythm เหมือน landing page ปัจจุบัน</p>
+    </div>
+  </div>
+
+  <!-- Option B -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:20px;">
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:0.75rem;">
+        <div style="background:#1a1a2e;border-left:3px solid #2563EB;padding:10px 12px;border-radius:4px;">
+          <strong style="color:#3B82F6;">HERO</strong><br>
+          <span style="color:#888;">Full-width — H1 + short intro only</span>
+        </div>
+        <div style="background:#252530;border-left:3px solid #06B6D4;padding:10px 12px;border-radius:4px;">
+          <strong style="color:#06B6D4;">FOUNDER STORY</strong><br>
+          <span style="color:#888;">2-col: text left + team photo/visual right</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+          <div style="background:#1a1a2e;border-left:3px solid #F59E0B;padding:8px 10px;border-radius:4px;grid-column:span 2;">
+            <strong style="color:#F59E0B;">SERVICES + VALUES</strong> <span style="color:#888;">— merged into "วิธีทำงาน"</span>
+          </div>
+        </div>
+        <div style="background:#252530;padding:8px 10px;border-radius:4px;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:4px;text-align:center;">
+          <div style="background:#1a1a2e;padding:6px;border-radius:4px;"><strong style="color:#3B82F6;">19</strong><br><span style="color:#888;font-size:0.65rem;">ปี</span></div>
+          <div style="background:#1a1a2e;padding:6px;border-radius:4px;"><strong style="color:#06B6D4;">300+</strong><br><span style="color:#888;font-size:0.65rem;">แบรนด์</span></div>
+          <div style="background:#1a1a2e;padding:6px;border-radius:4px;"><strong style="color:#F59E0B;">90+</strong><br><span style="color:#888;font-size:0.65rem;">CWV</span></div>
+          <div style="background:#1a1a2e;padding:6px;border-radius:4px;"><strong style="color:#3B82F6;">6</strong><br><span style="color:#888;font-size:0.65rem;">AI tools</span></div>
+        </div>
+        <div style="background:#1a1a2e;border-left:3px solid #06B6D4;padding:8px 10px;border-radius:4px;">
+          <strong style="color:#06B6D4;">TRACK RECORD</strong> <span style="color:#888;">— case study cards with metrics</span>
+        </div>
+        <div style="background:#252530;border-left:3px solid #F59E0B;padding:8px 10px;border-radius:4px;">
+          <strong style="color:#F59E0B;">CTA + CONTACT</strong>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B) Story-Driven</h3>
+      <p>เริ่มจาก founder story เด่นๆ → merge services+values เป็น "วิธีทำงาน" → stats bar → track record → CTA ลื่นไหลกว่า กระชับกว่า</p>
+    </div>
+  </div>
+
+  <!-- Option C -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding:20px;">
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:0.75rem;">
+        <div style="background:#1a1a2e;border-left:3px solid #2563EB;padding:10px 12px;border-radius:4px;">
+          <strong style="color:#3B82F6;">HERO</strong><br>
+          <span style="color:#888;">Cinematic — H1 + quote + stats overlay</span>
+        </div>
+        <div style="display:grid;grid-template-columns:2fr 1fr;gap:6px;">
+          <div style="background:#252530;border-left:3px solid #06B6D4;padding:8px 10px;border-radius:4px;">
+            <strong style="color:#06B6D4;">STORY + MISSION</strong><br>
+            <span style="color:#888;">Long-form narrative</span>
+          </div>
+          <div style="background:#252530;border-left:3px solid #F59E0B;padding:8px 10px;border-radius:4px;">
+            <strong style="color:#F59E0B;">SIDEBAR</strong><br>
+            <span style="color:#888;">Sticky team cards + quick stats</span>
+          </div>
+        </div>
+        <div style="background:#1a1a2e;border-left:3px solid #2563EB;padding:8px 10px;border-radius:4px;">
+          <strong style="color:#3B82F6;">SERVICES</strong> <span style="color:#888;">— horizontal scroll cards</span>
+        </div>
+        <div style="background:#252530;border-left:3px solid #06B6D4;padding:8px 10px;border-radius:4px;">
+          <strong style="color:#06B6D4;">CASE STUDIES</strong> <span style="color:#888;">— timeline layout</span>
+        </div>
+        <div style="background:#1a1a2e;border-left:3px solid #F59E0B;padding:8px 10px;border-radius:4px;">
+          <strong style="color:#F59E0B;">CTA</strong>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C) Magazine / Editorial</h3>
+      <p>Layout แบบ editorial — story เป็น main column, team+stats เป็น sticky sidebar, services เป็น horizontal scroll ดู premium แต่ซับซ้อนกว่า</p>
+    </div>
+  </div>
+</div>
