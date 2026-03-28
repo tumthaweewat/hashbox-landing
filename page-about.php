@@ -18,11 +18,29 @@ get_header();
 
     <div class="container about-hero-container">
         <span class="section-label">ABOUT US</span>
-        <h1 class="about-hero-headline">เราทำเว็บที่ perform<br>และสร้าง AI workforce ที่วัดผลได้</h1>
+        <h1 class="about-hero-headline">เราทำเว็บที่ <span class="accent-word">perform</span><br>และสร้าง AI workforce ที่วัดผลได้</h1>
         <p class="about-hero-body">Hashbox Studio คือ Website Craft Agency + Digital Workforce Studio ที่รวม web expertise ระดับ technical กับ AI workflow consulting ไว้ในทีมเดียว</p>
         <div class="about-hero-actions">
             <a href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="btn btn-cta btn-lg">นัดปรึกษาฟรี</a>
             <a href="<?php echo esc_url( home_url( '/portfolio' ) ); ?>" class="btn btn-outline btn-lg">ดูผลงาน</a>
+        </div>
+        <div class="about-hero-badges">
+            <span class="about-hero-badge">
+                <span class="about-hero-badge-dot about-hero-badge-dot-blue"></span>
+                Website Development
+            </span>
+            <span class="about-hero-badge">
+                <span class="about-hero-badge-dot about-hero-badge-dot-cyan"></span>
+                Technical SEO &amp; Performance
+            </span>
+            <span class="about-hero-badge">
+                <span class="about-hero-badge-dot about-hero-badge-dot-amber"></span>
+                Digital Workforce Studio
+            </span>
+            <span class="about-hero-badge">
+                <span class="about-hero-badge-dot about-hero-badge-dot-blue"></span>
+                E-commerce
+            </span>
         </div>
     </div>
 </section>
@@ -83,24 +101,28 @@ get_header();
         <div class="about-services-grid">
             <div class="about-service-card" data-accent="blue">
                 <div class="about-service-accent accent-blue"></div>
+                <span class="about-service-num">01</span>
                 <h3 class="about-service-title">Website Development</h3>
                 <p class="about-service-desc">สร้างเว็บไซต์ Corporate, Brand, E-commerce ด้วย tech stack ที่เหมาะสม — Next.js, WordPress, หรือ WordPress Headless โดยทุกโปรเจคมี Performance &amp; SEO built-in ตั้งแต่โครงสร้าง</p>
                 <a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="about-service-link">ดูบริการ &rarr;</a>
             </div>
             <div class="about-service-card" data-accent="cyan">
                 <div class="about-service-accent accent-cyan"></div>
+                <span class="about-service-num">02</span>
                 <h3 class="about-service-title">Technical SEO &amp; Performance</h3>
                 <p class="about-service-desc">บริการ SEO audit, Core Web Vitals optimization, Schema Markup และ site architecture จากทีมที่เป็นทั้ง developer และ SEO specialist</p>
                 <a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="about-service-link">ดูบริการ &rarr;</a>
             </div>
             <div class="about-service-card" data-accent="amber">
                 <div class="about-service-accent accent-amber"></div>
+                <span class="about-service-num">03</span>
                 <h3 class="about-service-title">Digital Workforce Studio</h3>
                 <p class="about-service-desc">ออกแบบ AI assistant, workflow automation และ chatbot สำหรับธุรกิจ ลดงาน manual ลดค่าใช้จ่าย วัด ROI ได้จริง</p>
                 <a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="about-service-link">ดูบริการ &rarr;</a>
             </div>
             <div class="about-service-card" data-accent="blue">
                 <div class="about-service-accent accent-blue"></div>
+                <span class="about-service-num">04</span>
                 <h3 class="about-service-title">E-commerce</h3>
                 <p class="about-service-desc">เว็บขายของออนไลน์ที่ออกแบบเพื่อ conversion พร้อม payment gateway ไทยและ SEO สำหรับ e-commerce โดยเฉพาะ</p>
                 <a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="about-service-link">ดูบริการ &rarr;</a>
@@ -176,23 +198,19 @@ get_header();
         </div>
         <div class="about-stats-bar">
             <div class="about-stat about-stat-blue">
-                <span class="about-stat-num" data-target="19">0</span>
-                <span class="about-stat-suffix"> ปี</span>
+                <span class="about-stat-num" data-target="19">0</span><span class="about-stat-suffix"> ปี</span>
                 <p class="about-stat-label">ประสบการณ์ด้าน development</p>
             </div>
             <div class="about-stat about-stat-cyan">
-                <span class="about-stat-num" data-target="300">0</span>
-                <span class="about-stat-suffix">+</span>
+                <span class="about-stat-num" data-target="300">0</span><span class="about-stat-suffix">+</span>
                 <p class="about-stat-label">แบรนด์ที่เคยดูแล</p>
             </div>
             <div class="about-stat about-stat-amber">
-                <span class="about-stat-num" data-target="90">0</span>
-                <span class="about-stat-suffix">+</span>
+                <span class="about-stat-num" data-target="90">0</span><span class="about-stat-suffix">+</span>
                 <p class="about-stat-label">คะแนน Core Web Vitals Desktop</p>
             </div>
             <div class="about-stat about-stat-blue">
-                <span class="about-stat-num" data-target="6">0</span>
-                <span class="about-stat-suffix"></span>
+                <span class="about-stat-num" data-target="6">0</span><span class="about-stat-suffix"></span>
                 <p class="about-stat-label">AI tools ที่สร้างขึ้นมาเอง</p>
             </div>
         </div>
@@ -208,6 +226,7 @@ get_header();
         </div>
         <div class="about-cases-grid">
             <div class="about-case-card about-case-blue">
+                <span class="about-case-eyebrow">Case Study 01</span>
                 <h3 class="about-case-title">โปรเจค HR Tech Platform</h3>
                 <p class="about-case-desc">Full technical SEO overhaul — optimize Core Web Vitals, แก้ crawlability issues, ใส่ Schema Markup ครบ, restructure site architecture ภายใน 12 เดือน</p>
                 <div class="about-case-metrics">
@@ -217,6 +236,7 @@ get_header();
                 </div>
             </div>
             <div class="about-case-card about-case-cyan">
+                <span class="about-case-eyebrow">Case Study 02</span>
                 <h3 class="about-case-title">โปรเจค Home Service App</h3>
                 <p class="about-case-desc">Technical SEO + Core Web Vitals optimization + SEO content strategy ที่ผสานกับ site structure ภายใน 6 เดือน</p>
                 <div class="about-case-metrics">
@@ -232,12 +252,14 @@ get_header();
 <!-- ============ SECTION 7 — CTA + CONTACT ============ -->
 <section class="about-section about-cta-section">
     <div class="container about-cta-container">
+        <span class="section-label">พร้อมเริ่มต้นแล้วหรือยัง?</span>
         <h2 class="about-cta-title">พร้อมคุยกับเรา?</h2>
-        <p class="about-cta-sub">นัดหมายปรึกษาฟรี 30 นาที</p>
+        <p class="about-cta-sub">นัดหมายปรึกษาฟรี 30 นาที ไม่มีข้อผูกมัด</p>
+        <div class="about-cta-divider-line"></div>
         <div class="about-cta-info">
-            <span>Email: project@hashbox.co.th</span>
+            <span>project@hashbox.co.th</span>
             <span class="about-cta-divider">&middot;</span>
-            <span>โทร: 02 266 6222</span>
+            <span>02 266 6222</span>
             <span class="about-cta-divider">&middot;</span>
             <span>LINE: @hashboxstudio</span>
         </div>
