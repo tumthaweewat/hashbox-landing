@@ -36,6 +36,16 @@ function hashbox_theme_setup() {
 add_action( 'after_setup_theme', 'hashbox_theme_setup' );
 
 /**
+ * Add meta description for About page
+ */
+function hashbox_about_meta_description() {
+    if ( is_page_template( 'page-about.php' ) ) {
+        echo '<meta name="description" content="Hashbox Studio คือ agency ที่รวม Web Development ระดับ technical กับ AI Workflow Consulting ไว้ด้วยกัน นำทีมโดย Fullstack Developer 19 ปี อดีต Tech Evangelist จาก agency ระดับ award-winning">' . "\n";
+    }
+}
+add_action( 'wp_head', 'hashbox_about_meta_description', 1 );
+
+/**
  * Add favicon and app icons
  */
 function hashbox_add_favicon() {
@@ -148,6 +158,27 @@ function hashbox_enqueue_portfolio_assets() {
     }
 }
 add_action('wp_enqueue_scripts', 'hashbox_enqueue_portfolio_assets');
+
+// Enqueue about page assets
+function hashbox_enqueue_about_assets() {
+    if (is_page_template('page-about.php')) {
+        wp_enqueue_style(
+            'hashbox-about-css',
+            get_template_directory_uri() . '/css/about-page.css',
+            array('hashbox-style'),
+            '1.0.0'
+        );
+
+        wp_enqueue_script(
+            'hashbox-about-js',
+            get_template_directory_uri() . '/js/about.js',
+            array(),
+            '1.0.0',
+            true
+        );
+    }
+}
+add_action('wp_enqueue_scripts', 'hashbox_enqueue_about_assets');
 
 // Portfolio authentication AJAX handler
 function handle_portfolio_auth() {
