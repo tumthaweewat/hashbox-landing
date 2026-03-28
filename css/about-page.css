@@ -79,8 +79,17 @@
     font-size: 1.1rem;
     color: var(--color-text-muted);
     line-height: 1.7;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
     max-width: 600px;
+}
+
+.about-hero-founder {
+    font-size: 0.95rem;
+    color: var(--color-text-dim);
+    line-height: 1.6;
+    margin-bottom: 32px;
+    padding-left: 16px;
+    border-left: 2px solid var(--color-accent);
 }
 
 .about-hero-actions {
