@@ -246,8 +246,8 @@ get_header();
         </div>
         <p class="about-cta-address">139 Pan Rd, Si Lom, Bang Rak, Bangkok 10500 &middot; Mon - Fri 9:00 - 18:00</p>
         <div class="about-cta-actions">
-            <a href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="btn btn-cta btn-lg">Book Free Consultation &rarr;</a>
-            <a href="https://lin.ee/Xagx6i4" class="btn btn-outline-cyan btn-lg" target="_blank" rel="noopener noreferrer">LINE OA</a>
+            <a href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="btn btn-cta">Book Free Consultation &rarr;</a>
+            <a href="https://lin.ee/Xagx6i4" class="btn btn-outline-cyan" target="_blank" rel="noopener noreferrer">LINE OA</a>
         </div>
     </div>
 </section>
