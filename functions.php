@@ -40,7 +40,7 @@ add_action( 'after_setup_theme', 'hashbox_theme_setup' );
  */
 function hashbox_about_meta_description() {
     if ( is_page_template( 'page-about.php' ) ) {
-        echo '<meta name="description" content="Hashbox Studio คือ agency ที่รวม Web Development ระดับ technical กับ AI Workflow Consulting ไว้ด้วยกัน นำทีมโดย Fullstack Developer 19 ปี อดีต Tech Evangelist จาก agency ระดับ award-winning">' . "\n";
+        echo '<meta name="description" content="Hashbox Studio is a Website Craft Agency + Digital Workforce Studio combining technical web development with AI workflow consulting. Led by a Fullstack Developer with 19 years of experience and 300+ brands managed.">' . "\n";
     }
 }
 add_action( 'wp_head', 'hashbox_about_meta_description', 1 );
@@ -50,7 +50,7 @@ add_action( 'wp_head', 'hashbox_about_meta_description', 1 );
  */
 function hashbox_about_title( $title ) {
     if ( is_page_template( 'page-about.php' ) ) {
-        return 'เกี่ยวกับเรา — Hashbox Studio | Website Craft + Digital Workforce';
+        return 'About Us — Hashbox Studio | Website Craft + Digital Workforce';
     }
     return $title;
 }
