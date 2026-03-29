@@ -12,10 +12,6 @@ get_header();
 
 <!-- ============ SECTION 1 — HERO ============ -->
 <section class="about-hero">
-    <div class="about-hero-orb about-hero-orb-blue"></div>
-    <div class="about-hero-orb about-hero-orb-cyan"></div>
-    <div class="about-hero-dot-grid"></div>
-
     <div class="container about-hero-container">
         <span class="section-label">ABOUT US</span>
         <h1 class="about-hero-headline">เราทำเว็บที่ <span class="accent-word">perform</span><br>และสร้าง AI workforce ที่วัดผลได้</h1>
@@ -26,22 +22,10 @@ get_header();
             <a href="<?php echo esc_url( home_url( '/portfolio' ) ); ?>" class="btn btn-outline btn-lg">ดูผลงาน</a>
         </div>
         <div class="about-hero-badges">
-            <span class="about-hero-badge">
-                <span class="about-hero-badge-dot about-hero-badge-dot-blue"></span>
-                Website Development
-            </span>
-            <span class="about-hero-badge">
-                <span class="about-hero-badge-dot about-hero-badge-dot-cyan"></span>
-                Technical SEO &amp; Performance
-            </span>
-            <span class="about-hero-badge">
-                <span class="about-hero-badge-dot about-hero-badge-dot-amber"></span>
-                Digital Workforce Studio
-            </span>
-            <span class="about-hero-badge">
-                <span class="about-hero-badge-dot about-hero-badge-dot-blue"></span>
-                E-commerce
-            </span>
+            <span class="about-hero-badge">Website Development</span>
+            <span class="about-hero-badge">Technical SEO &amp; Performance</span>
+            <span class="about-hero-badge">Digital Workforce Studio</span>
+            <span class="about-hero-badge">E-commerce</span>
         </div>
     </div>
 </section>
@@ -54,7 +38,7 @@ get_header();
         </div>
         <div class="about-why-grid">
             <div class="about-why-card about-why-problem">
-                <h3 class="about-why-card-title about-why-problem-title">ปัญหาที่เจอซ้ำๆ</h3>
+                <h3 class="about-why-card-title">ปัญหาที่เจอซ้ำๆ</h3>
                 <ul class="about-why-list">
                     <li class="about-why-item about-why-item-bad">
                         <span class="about-why-icon about-why-icon-bad">✕</span>
@@ -72,7 +56,7 @@ get_header();
                 <p class="about-why-footer">3 ทีมที่ไม่คุยกัน = ผลลัพธ์ที่ไม่ต่อกัน</p>
             </div>
             <div class="about-why-card about-why-solution">
-                <h3 class="about-why-card-title about-why-solution-title">Hashbox แก้ปัญหานี้</h3>
+                <h3 class="about-why-card-title">Hashbox แก้ปัญหานี้</h3>
                 <ul class="about-why-list">
                     <li class="about-why-item about-why-item-good">
                         <span class="about-why-icon about-why-icon-good">✓</span>
@@ -100,29 +84,25 @@ get_header();
             <h2 class="section-label">สิ่งที่เราทำ</h2>
         </div>
         <div class="about-services-grid">
-            <div class="about-service-card" data-accent="blue">
-                <div class="about-service-accent accent-blue"></div>
+            <div class="about-service-card">
                 <span class="about-service-num">01</span>
                 <h3 class="about-service-title">Website Development</h3>
                 <p class="about-service-desc">สร้างเว็บไซต์ Corporate, Brand, E-commerce ด้วย tech stack ที่เหมาะสม — Next.js, WordPress, หรือ WordPress Headless โดยทุกโปรเจคมี Performance &amp; SEO built-in ตั้งแต่โครงสร้าง</p>
                 <a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="about-service-link">ดูบริการ &rarr;</a>
             </div>
-            <div class="about-service-card" data-accent="cyan">
-                <div class="about-service-accent accent-cyan"></div>
+            <div class="about-service-card">
                 <span class="about-service-num">02</span>
                 <h3 class="about-service-title">Technical SEO &amp; Performance</h3>
                 <p class="about-service-desc">บริการ SEO audit, Core Web Vitals optimization, Schema Markup และ site architecture จากทีมที่เป็นทั้ง developer และ SEO specialist</p>
                 <a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="about-service-link">ดูบริการ &rarr;</a>
             </div>
-            <div class="about-service-card" data-accent="amber">
-                <div class="about-service-accent accent-amber"></div>
+            <div class="about-service-card">
                 <span class="about-service-num">03</span>
                 <h3 class="about-service-title">Digital Workforce Studio</h3>
                 <p class="about-service-desc">ออกแบบ AI assistant, workflow automation และ chatbot สำหรับธุรกิจ ลดงาน manual ลดค่าใช้จ่าย วัด ROI ได้จริง</p>
                 <a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="about-service-link">ดูบริการ &rarr;</a>
             </div>
-            <div class="about-service-card" data-accent="blue">
-                <div class="about-service-accent accent-blue"></div>
+            <div class="about-service-card">
                 <span class="about-service-num">04</span>
                 <h3 class="about-service-title">E-commerce</h3>
                 <p class="about-service-desc">เว็บขายของออนไลน์ที่ออกแบบเพื่อ conversion พร้อม payment gateway ไทยและ SEO สำหรับ e-commerce โดยเฉพาะ</p>
@@ -199,20 +179,16 @@ get_header();
         </div>
         <div class="about-stats-bar">
             <div class="about-stat about-stat-blue">
-                <span class="about-stat-num" data-target="19">0</span><span class="about-stat-suffix"> ปี</span>
+                <span class="about-stat-num" data-target="7">0</span><span class="about-stat-suffix">ปี</span>
                 <p class="about-stat-label">ประสบการณ์ด้าน development</p>
             </div>
             <div class="about-stat about-stat-cyan">
-                <span class="about-stat-num" data-target="300">0</span><span class="about-stat-suffix">+</span>
+                <span class="about-stat-num" data-target="108">0</span><span class="about-stat-suffix">+</span>
                 <p class="about-stat-label">แบรนด์ที่เคยดูแล</p>
             </div>
             <div class="about-stat about-stat-amber">
-                <span class="about-stat-num" data-target="90">0</span><span class="about-stat-suffix">+</span>
+                <span class="about-stat-num" data-target="32">0</span><span class="about-stat-suffix">+</span>
                 <p class="about-stat-label">คะแนน Core Web Vitals Desktop</p>
-            </div>
-            <div class="about-stat about-stat-blue">
-                <span class="about-stat-num" data-target="6">0</span><span class="about-stat-suffix"></span>
-                <p class="about-stat-label">AI tools ที่สร้างขึ้นมาเอง</p>
             </div>
         </div>
     </div>
@@ -256,7 +232,6 @@ get_header();
         <span class="section-label">พร้อมเริ่มต้นแล้วหรือยัง?</span>
         <h2 class="about-cta-title">พร้อมคุยกับเรา?</h2>
         <p class="about-cta-sub">นัดหมายปรึกษาฟรี 30 นาที ไม่มีข้อผูกมัด</p>
-        <div class="about-cta-divider-line"></div>
         <div class="about-cta-info">
             <span>project@hashbox.co.th</span>
             <span class="about-cta-divider">&middot;</span>
