@@ -204,7 +204,7 @@ get_header();
     <div class="container">
         <div class="section-header">
             <h2 class="section-label">THE EXPERIENCE THAT SHAPED US</h2>
-            <p class="section-sub">SEO results Tum contributed to as Tech Evangelist at an award-winning SEO agency, managing 300+ brands.</p>
+            <p class="section-sub">Real results delivered by our team through years of hands-on work at leading digital agencies and creative studios across Thailand.</p>
         </div>
         <div class="about-cases-grid">
             <div class="about-case-card about-case-blue">
