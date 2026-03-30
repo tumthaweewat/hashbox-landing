@@ -16,7 +16,7 @@ get_header();
         <span class="section-label">ABOUT US</span>
         <h1 class="about-hero-headline">We build websites that <span class="accent-word">perform</span><br>and AI workforce that delivers</h1>
         <p class="about-hero-body">Hashbox Studio is a Website Craft Agency + Digital Workforce Studio that combines technical web expertise with AI workflow consulting under one roof.</p>
-        <p class="about-hero-founder">Led by Thaweewat (Tum) Sriaroonthip — Fullstack Developer with 19 years of experience, former Tech Evangelist at an award-winning SEO agency managing 300+ brands across Thailand and internationally.</p>
+        <p class="about-hero-founder">Empowered by an experienced team with proven track records at leading digital agencies and award-winning creative studios — bringing deep expertise in performance engineering, technical SEO, and AI-driven workflows to every project.</p>
         <div class="about-hero-actions">
             <a href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="btn btn-cta btn-lg">Book a Free Consultation</a>
             <a href="<?php echo esc_url( home_url( '/portfolio' ) ); ?>" class="btn btn-outline btn-lg">View Our Work</a>
