@@ -40,7 +40,7 @@
 .section-label {
     display: inline-block;
     font-family: var(--font-body);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -75,7 +75,7 @@
 }
 
 .about-hero-headline {
-    font-size: clamp(32px, 5vw, 48px);
+    font-size: clamp(36px, 6vw, 56px);
     font-family: var(--font-display);
     font-weight: 700;
     line-height: 1.2;
@@ -89,7 +89,7 @@
 }
 
 .about-hero-body {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--color-text-muted);
     line-height: 1.7;
     margin-bottom: 12px;
@@ -97,7 +97,7 @@
 }
 
 .about-hero-founder {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--color-text-dim);
     line-height: 1.6;
     margin-bottom: 28px;
@@ -150,7 +150,7 @@
 }
 
 .about-why-card-title {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     font-family: var(--font-display);
     font-weight: 600;
     margin-bottom: 24px;
@@ -182,7 +182,7 @@
     align-items: flex-start;
     gap: 12px;
     color: var(--color-text-muted);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.5;
 }
 
@@ -256,7 +256,7 @@
 }
 
 .about-service-title {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-family: var(--font-display);
     font-weight: 600;
     color: var(--color-text);
@@ -264,7 +264,7 @@
 
 .about-service-desc {
     color: var(--color-text-muted);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1.6;
     flex: 1;
 }
@@ -303,9 +303,9 @@
 }
 
 .about-tech-tag {
-    padding: 6px 14px;
+    padding: 8px 16px;
     border-radius: var(--radius-full);
-    font-size: 0.82rem;
+    font-size: 0.9rem;
     font-weight: 500;
     background: transparent;
     transition: background 0.2s ease;
@@ -337,7 +337,7 @@
     align-items: center;
     gap: 12px;
     color: var(--color-text-muted);
-    font-size: 0.88rem;
+    font-size: 0.95rem;
     padding: 10px 0;
     border-bottom: none;
 }
@@ -382,7 +382,7 @@
 }
 
 .about-value-title {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     font-family: var(--font-display);
     font-weight: 600;
     margin-bottom: 12px;
@@ -394,7 +394,7 @@
 
 .about-value-desc {
     color: var(--color-text-muted);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1.6;
 }
 
@@ -482,7 +482,7 @@
 }
 
 .about-case-title {
-    font-size: 1rem;
+    font-size: 1.15rem;
     font-family: var(--font-display);
     font-weight: 600;
     color: var(--color-text);
@@ -490,7 +490,7 @@
 
 .about-case-desc {
     color: var(--color-text-muted);
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1.6;
     flex: 1;
 }
@@ -551,7 +551,7 @@
 }
 
 .about-cta-title {
-    font-size: clamp(28px, 4vw, 40px);
+    font-size: clamp(32px, 5vw, 48px);
     font-family: var(--font-display);
     font-weight: 700;
     color: var(--color-text);
@@ -561,7 +561,7 @@
 
 .about-cta-sub {
     color: var(--color-text-muted);
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     margin-bottom: 32px;
 }
 
