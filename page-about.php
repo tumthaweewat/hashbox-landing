@@ -14,7 +14,7 @@ get_header();
 <section class="about-hero">
     <div class="container about-hero-container">
         <span class="section-label">ABOUT US</span>
-        <h1 class="about-hero-headline">We build websites that <span class="accent-word">perform</span><br>and AI workforce that delivers</h1>
+        <h1 class="about-hero-headline">We Build Websites That <span class="accent-word">Perform</span><br>and an AI Workforce That Delivers</h1>
         <p class="about-hero-body">Hashbox Studio is a Website Craft Agency + Digital Workforce Studio that combines technical web expertise with AI workflow consulting under one roof.</p>
         <p class="about-hero-founder">Empowered by an experienced team with proven track records at leading digital agencies and award-winning creative studios — bringing deep expertise in performance engineering, technical SEO, and AI-driven workflows to every project.</p>
         <div class="about-hero-actions">
@@ -234,9 +234,9 @@ get_header();
 <!-- ============ SECTION 7 — CTA + CONTACT ============ -->
 <section class="about-section about-cta-section">
     <div class="container about-cta-container">
-        <span class="section-label">Ready to get started?</span>
+        <span class="section-label">LET'S CONNECT</span>
         <h2 class="about-cta-title">Ready to Talk?</h2>
-        <p class="about-cta-sub">Book a free 30-minute consultation, no strings attached</p>
+        <p class="about-cta-sub">Book a free 30-minute consultation — no strings attached.</p>
         <div class="about-cta-info">
             <span>project@hashbox.co.th</span>
             <span class="about-cta-divider">&middot;</span>
