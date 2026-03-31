@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // =============================================
     const revealElements = document.querySelectorAll(
         '.service-card, .stat-block, .timeline-step, .work-card, ' +
-        '.about-card, .pricing-card, .section-header, .why-left, ' +
-        '.why-right, .about-left, .about-right, .contact-left, ' +
+        '.about-bento-card, .pricing-card, .section-header, .why-left, ' +
+        '.why-right, .about-header, .contact-left, ' +
         '.contact-right, .retainer-note'
     );
 
