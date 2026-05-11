@@ -47,7 +47,7 @@
             </nav>
 
             <div class="header-actions">
-                <a href="#contact" class="btn btn-cta btn-nav-cta">Free Consultation</a>
+                <a href="#contact" class="btn btn-cta btn-nav-cta">รับ Audit ฟรี</a>
                 <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-controls="mobileMenu" aria-expanded="false">
                     <span></span>
                     <span></span>
@@ -69,7 +69,7 @@
                 hashbox_fallback_mobile_menu();
             }
             ?>
-            <a href="#contact" class="btn btn-cta mobile-cta">Free Consultation</a>
+            <a href="#contact" class="btn btn-cta mobile-cta">รับ Audit ฟรี</a>
         </div>
     </header>
 

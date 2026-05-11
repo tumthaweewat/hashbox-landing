@@ -120,13 +120,14 @@ function hashbox_resource_hints( $urls, $relation_type ) {
  * Fallback menu callback — renders static nav links when no WP menu is assigned
  */
 function hashbox_fallback_menu() {
+    $home = esc_url( home_url( '/' ) );
     ?>
     <ul>
-        <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#digital-workforce" class="nav-link">Digital Workforce</a></li>
-        <li><a href="#portfolio" class="nav-link">Work</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" class="nav-link">Services</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/work/' ) ); ?>" class="nav-link">Work</a></li>
+        <li><a href="<?php echo $home; ?>#insights" class="nav-link">Insights</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="nav-link">About</a></li>
+        <li><a href="<?php echo $home; ?>#contact" class="nav-link">Contact</a></li>
     </ul>
     <?php
 }
@@ -135,13 +136,14 @@ function hashbox_fallback_menu() {
  * Fallback mobile menu callback
  */
 function hashbox_fallback_mobile_menu() {
+    $home = esc_url( home_url( '/' ) );
     ?>
     <ul>
-        <li><a href="#services" class="mobile-link">Services</a></li>
-        <li><a href="#digital-workforce" class="mobile-link">Digital Workforce</a></li>
-        <li><a href="#portfolio" class="mobile-link">Work</a></li>
-        <li><a href="#about" class="mobile-link">About</a></li>
-        <li><a href="#contact" class="mobile-link">Contact</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" class="mobile-link">Services</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/work/' ) ); ?>" class="mobile-link">Work</a></li>
+        <li><a href="<?php echo $home; ?>#insights" class="mobile-link">Insights</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="mobile-link">About</a></li>
+        <li><a href="<?php echo $home; ?>#contact" class="mobile-link">Contact</a></li>
     </ul>
     <?php
 }
