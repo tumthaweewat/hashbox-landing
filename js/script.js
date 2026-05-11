@@ -161,14 +161,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const serviceValue = card.getAttribute('data-service');
 
             if (serviceDropdown && serviceValue) {
-                // Map data-service to dropdown option values
-                const valueMap = {
-                    'web': 'web',
-                    'digital-workforce': 'digital-workforce',
-                    'seo': 'seo'
-                };
-                const dropdownValue = valueMap[serviceValue] || '';
-                serviceDropdown.value = dropdownValue;
+                // service-card data-service slugs match dropdown option values 1:1
+                // (seo-website, marketing-cro, ai-consulting).
+                const allowed = new Set(['seo-website', 'marketing-cro', 'ai-consulting']);
+                serviceDropdown.value = allowed.has(serviceValue) ? serviceValue : '';
             }
 
             // Smooth scroll to contact

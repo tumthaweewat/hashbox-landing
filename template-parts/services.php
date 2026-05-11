@@ -6,19 +6,20 @@
  */
 ?>
 <!-- ============ SECTION 2 — SERVICES ============ -->
-<section id="services" class="section-padding">
+<section id="services" class="section-padding" aria-labelledby="services-h2">
     <div class="container">
         <div class="section-header">
             <span class="section-label">WHAT WE DO</span>
-            <h2 class="section-title">Services</h2>
+            <h2 id="services-h2" class="section-title">3 บริการหลัก ครอบคลุมตั้งแต่สร้างเว็บถึง AI Workforce</h2>
+            <p class="section-sub">ส่งมอบเว็บไซต์ที่พร้อม SEO ติดตั้งเครื่องมือ Digital Marketing เพื่อเพิ่ม Conversion และเป็นที่ปรึกษา AI ที่ทำงานได้จริง</p>
         </div>
 
         <div class="services-grid">
-            <!-- Card 1 — Website Development -->
-            <div class="service-card" data-service="web" data-accent="blue">
+            <!-- Card 1 — SEO-Ready Website -->
+            <div class="service-card" data-service="seo-website" data-accent="blue">
                 <div class="service-accent-bar accent-blue"></div>
                 <div class="service-icon-wrap icon-blue">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <rect x="2" y="3" width="20" height="14" rx="2"/>
                         <line x1="8" y1="21" x2="16" y2="21"/>
                         <line x1="12" y1="17" x2="12" y2="21"/>
@@ -26,21 +27,41 @@
                         <line x1="13" y1="14" x2="17" y2="14"/>
                     </svg>
                 </div>
-                <h3 class="service-title">Website Development</h3>
+                <h3 class="service-title">SEO-Ready Website</h3>
                 <div class="service-tags">
-                    <span class="tag">Corporate</span>
-                    <span class="tag">Brand</span>
-                    <span class="tag">E-commerce</span>
+                    <span class="tag">Next.js</span>
+                    <span class="tag">WordPress Headless</span>
+                    <span class="tag">Lighthouse 100</span>
                 </div>
-                <p class="service-desc">We build websites that don't just look great -- they convert. Performance & SEO is built into every project, from corporate sites to enterprise-level e-commerce platforms.</p>
-                <div class="service-footer">Performance & SEO &middot; Core Web Vitals &middot; Schema Markup</div>
+                <p class="service-desc">เว็บไซต์ที่พร้อมติด Google ตั้งแต่วันเปิดตัว ทุกโปรเจกต์ผ่าน Build Gate: Lighthouse 100, Core Web Vitals เขียว, Schema ครบ, hreflang + sitemap อัตโนมัติ ลูกค้าเห็นผล Ranking ภายใน 60-90 วัน</p>
+                <div class="service-footer">Lighthouse 100 &middot; CWV เขียว &middot; Schema ครบ &middot; PDPA-ready</div>
             </div>
 
-            <!-- Card 2 — Digital Workforce Studio -->
-            <div class="service-card" data-service="digital-workforce" data-accent="cyan">
+            <!-- Card 2 — Digital Marketing Tools + CRO -->
+            <div class="service-card" data-service="marketing-cro" data-accent="cyan">
                 <div class="service-accent-bar accent-cyan"></div>
                 <div class="service-icon-wrap icon-cyan">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M3 3v18h18"/>
+                        <path d="M7 14l4-4 4 4 5-5"/>
+                        <circle cx="20" cy="9" r="1.5"/>
+                    </svg>
+                </div>
+                <h3 class="service-title">Digital Marketing Tools + CRO</h3>
+                <div class="service-tags">
+                    <span class="tag">GA4 + GSC</span>
+                    <span class="tag">Heatmap + A/B</span>
+                    <span class="tag">CRO Sprint</span>
+                </div>
+                <p class="service-desc">ติดตั้งและ Operate ชุดเครื่องมือ Marketing ครบวงจร พร้อมรัน CRO Sprint รายเดือนเพื่อเพิ่ม Conversion Rate ทุก Touchpoint วัดผลด้วย Looker Studio Dashboard ที่ลูกค้าดู Real-time ได้</p>
+                <div class="service-footer">GA4 &middot; GSC &middot; Clarity &middot; GrowthBook &middot; Looker Studio</div>
+            </div>
+
+            <!-- Card 3 — AI Expert Consulting -->
+            <div class="service-card" data-service="ai-consulting" data-accent="gradient">
+                <div class="service-accent-bar accent-gradient"></div>
+                <div class="service-icon-wrap icon-cyan">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <circle cx="12" cy="12" r="3"/>
                         <circle cx="5" cy="6" r="2"/>
                         <circle cx="19" cy="6" r="2"/>
@@ -52,36 +73,15 @@
                         <line x1="14.5" y1="14" x2="17.5" y2="16.5"/>
                     </svg>
                 </div>
-                <div class="service-badge-new">NEW</div>
-                <h3 class="service-title">Digital Workforce Studio</h3>
+                <div class="service-badge-new">EXPERT</div>
+                <h3 class="service-title">AI Expert Consulting</h3>
                 <div class="service-tags">
-                    <span class="tag">AI Agents</span>
+                    <span class="tag">LINE Bot + GPT</span>
+                    <span class="tag">Sales GPT + RAG</span>
                     <span class="tag">Workflow Automation</span>
-                    <span class="tag">Cost Reduction</span>
                 </div>
-                <p class="service-desc">We design custom AI assistants and workflow automation for your business -- reducing costs, eliminating manual work, and boosting efficiency with measurable results.</p>
-                <div class="service-footer">LINE OA Chatbot &middot; CRM Integration &middot; ROI Tracking</div>
-            </div>
-
-            <!-- Card 3 — Performance & SEO -->
-            <div class="service-card" data-service="seo" data-accent="gradient">
-                <div class="service-accent-bar accent-gradient"></div>
-                <div class="service-icon-wrap icon-blue">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"/>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                        <polyline points="8 14 11 8 14 14"/>
-                        <line x1="9" y1="12" x2="13" y2="12"/>
-                    </svg>
-                </div>
-                <h3 class="service-title">Performance & SEO</h3>
-                <div class="service-tags">
-                    <span class="tag">SEO Audit</span>
-                    <span class="tag">Performance</span>
-                    <span class="tag">Structured Data</span>
-                </div>
-                <p class="service-desc">We build blazing-fast websites with SEO baked in from day one — so your site loads fast, ranks higher, and converts better.</p>
-                <div class="service-footer">100% SEO-Ready &middot; Page Speed &middot; Search Visibility</div>
+                <p class="service-desc">ที่ปรึกษา AI ที่ลงมือ Implement จริงใน Production ออกแบบและส่งมอบ AI Workforce ที่ลด Manual Work ของทีม 40%+ ทุกโปรเจกต์มี ROI Framework + Knowledge Transfer ให้ทีมลูกค้า</p>
+                <div class="service-footer">OpenAI &middot; Claude &middot; LangChain &middot; Flowise &middot; n8n &middot; LINE Messaging API</div>
             </div>
         </div>
     </div>
