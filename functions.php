@@ -597,8 +597,51 @@ function hashbox_inject_home_schema() {
 add_action( 'wp_head', 'hashbox_inject_home_schema', 20 );
 
 /**
- * Inject FAQPage schema on the homepage using the same FAQ source as the
- * visible markup in template-parts/faq.php. Keeps content + schema in sync.
+ * Source-of-truth FAQ data for the homepage.
+ *
+ * Defined in functions.php (not faq.php) so it loads before wp_head fires.
+ * template-parts/faq.php reuses this via the function_exists() guard so the
+ * visible markup and the FAQPage JSON-LD always stay in lockstep.
+ */
+if ( ! function_exists( 'hashbox_get_home_faqs' ) ) {
+    function hashbox_get_home_faqs() {
+        return array(
+            array(
+                'q' => 'เว็บที่คุณทำพร้อม SEO จริงไหม ใช้เวลานานแค่ไหนถึงเห็นผล?',
+                'a' => 'ใช่ ทุกเว็บผ่าน Build Gate: Lighthouse 100, Core Web Vitals เขียว, Schema Validator ผ่าน ลูกค้าส่วนใหญ่เห็น Impressions เพิ่มภายใน 30-60 วัน และ Ranking ขยับใน 60-90 วัน ทั้งนี้ขึ้นกับ Niche และ Domain Authority ปัจจุบัน',
+            ),
+            array(
+                'q' => 'Tech Stack ที่ใช้คืออะไร?',
+                'a' => 'ขึ้นกับโจทย์ — Next.js + Headless CMS สำหรับเว็บที่ต้องการ Performance สูงสุด, WordPress + Custom Theme สำหรับเว็บที่ทีมต้องแก้เนื้อหาเองได้, Cloudflare/Vercel สำหรับ CDN + Edge, GA4/GSC/Looker Studio สำหรับ Analytics',
+            ),
+            array(
+                'q' => 'Digital Marketing Tools และ CRO ทำอะไรบ้าง?',
+                'a' => 'ติดตั้งและ Configure เครื่องมือ Tracking ครบวงจร พร้อมรัน CRO Sprint รายเดือน เริ่มจาก Hypothesis → A/B Test → Measure ส่ง Report พร้อม Recommendation ลูกค้าได้ทั้งเครื่องมือและ Insight ไม่ใช่แค่ติดตั้งแล้วจบ',
+            ),
+            array(
+                'q' => 'AI Consulting ครอบคลุมอะไรบ้าง?',
+                'a' => 'เริ่มจากการประเมิน AI ROI → ออกแบบ Workflow → Implement → Train ทีม ตัวอย่างงาน: LINE Bot ตอบลูกค้า 24/7, Sales GPT ใน CRM, RAG Knowledge Base ภายใน, Workflow Automation ผ่าน n8n ลดงาน Manual ของทีม 40%+',
+            ),
+            array(
+                'q' => 'โปรเจกต์ใช้เวลานานเท่าไหร่?',
+                'a' => 'Landing Page: 2-3 สัปดาห์ · Corporate Site: 4-6 สัปดาห์ · E-commerce: 6-10 สัปดาห์ · AI Bot: 3-5 สัปดาห์ ขึ้นกับ Scope และ Integration ที่ต้องเชื่อมต่อ',
+            ),
+            array(
+                'q' => 'ราคาเริ่มต้นเท่าไหร่?',
+                'a' => 'Landing Page เริ่ม 80,000 บาท · Corporate Site เริ่ม 200,000 บาท · E-commerce เริ่ม 350,000 บาท · AI Consulting Retainer เริ่ม 50,000 บาท/เดือน — ทุก Quote เริ่มหลังการ Audit ฟรี',
+            ),
+            array(
+                'q' => 'มี Support หลังส่งมอบไหม?',
+                'a' => 'มี — เลือกได้ระหว่าง One-time Maintenance, Monthly Retainer (Performance + CRO + Content) หรือ AI Workforce Retainer ทุกแพ็กเกจมี SLA ตอบกลับและ Dashboard ให้ลูกค้าดูผลแบบ Real-time',
+            ),
+        );
+    }
+}
+
+/**
+ * Inject FAQPage schema on the homepage. Pulls the same array used by
+ * template-parts/faq.php for the visible accordion, keeping content + schema
+ * in sync from a single source of truth.
  */
 function hashbox_inject_home_faq_schema() {
     if ( ! is_front_page() ) {
