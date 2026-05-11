@@ -4,59 +4,98 @@
  *
  * @package Hashbox_Studio
  */
+
+$hashbox_cases = [
+    [
+        'slug'        => 'nexus-corp',
+        'name'        => 'Nexus Corp',
+        'tag'         => 'Corporate Website',
+        'tag_class'   => 'tag-blue',
+        'metric'      => '+540% Users',
+        'desc'        => 'Enterprise corporate website on Headless WordPress + Next.js with full SEO and analytics',
+        'card_class'  => 'work-large',
+        'card_bg'     => 'linear-gradient(135deg, #1D4ED8, #2563EB)',
+    ],
+    [
+        'slug'        => 'flow-store',
+        'name'        => 'Flow Store',
+        'tag'         => 'E-commerce',
+        'tag_class'   => 'tag-cyan',
+        'metric'      => '3× Conversion',
+        'desc'        => 'Full e-commerce build on Next.js + Stripe with TH payment gateway and CRO sprint',
+        'card_class'  => '',
+        'card_bg'     => 'linear-gradient(135deg, #0369A1, #06B6D4)',
+    ],
+    [
+        'slug'        => 'rank-project',
+        'name'        => 'Rank Project',
+        'tag'         => 'SEO Recovery',
+        'tag_class'   => 'tag-blue',
+        'metric'      => '+2,200% Impressions',
+        'desc'        => 'HR-Tech platform technical SEO audit + 12-month content programme. Real GSC data.',
+        'card_class'  => '',
+        'card_bg'     => 'linear-gradient(135deg, #1E3A5F, #2563EB)',
+    ],
+    [
+        'slug'        => 'autobot-line',
+        'name'        => 'AutoBot LINE',
+        'tag'         => 'AI Workforce',
+        'tag_class'   => 'tag-cyan',
+        'metric'      => '−60% Support Cost',
+        'desc'        => 'AI-powered LINE OA bot with CRM sync and OpenAI-driven Thai customer support',
+        'card_class'  => 'work-large',
+        'card_bg'     => 'linear-gradient(135deg, #064E3B, #059669)',
+    ],
+    [
+        'slug'        => 'gold-brand',
+        'name'        => 'Gold Brand',
+        'tag'         => 'Brand + Web',
+        'tag_class'   => 'tag-amber',
+        'metric'      => '+180% Branded Search',
+        'desc'        => 'Brand identity refresh paired with high-performance corporate site launch',
+        'card_class'  => '',
+        'card_bg'     => 'linear-gradient(135deg, #78350F, #F59E0B)',
+    ],
+    [
+        'slug'        => 'pitch-deck',
+        'name'        => 'Pitch Deck',
+        'tag'         => 'Investor Web',
+        'tag_class'   => 'tag-blue',
+        'metric'      => 'Series A Closed',
+        'desc'        => 'High-impact investor microsite with data viz; helped close Series A round',
+        'card_class'  => '',
+        'card_bg'     => 'linear-gradient(135deg, #312E81, #7C3AED)',
+    ],
+];
 ?>
 <!-- ============ SECTION 5 — SELECTED WORK ============ -->
-<section id="portfolio" class="section-padding">
+<section id="portfolio" class="section-padding" aria-labelledby="portfolio-h2">
     <div class="container">
         <div class="section-header">
             <span class="section-label">PORTFOLIO</span>
-            <h2 class="section-title">Selected Work</h2>
-            <p class="section-sub">A curated glimpse into how we blend edge, clarity, and strategy.</p>
+            <h2 id="portfolio-h2" class="section-title">Selected Work</h2>
+            <p class="section-sub">ผลงานที่วัดผลได้ ทุกเคสมีตัวเลขจริงและ Tech Stack ที่ใช้</p>
         </div>
 
         <div class="work-grid">
-            <div class="work-card work-large" style="--card-bg: linear-gradient(135deg, #1D4ED8, #2563EB);">
-                <span class="work-tag tag-blue">Corporate Website</span>
-                <div class="work-overlay">
-                    <h3 class="work-name">Nexus Corp</h3>
-                    <p class="work-desc">Enterprise corporate website with full Performance & SEO and analytics integration</p>
-                </div>
-            </div>
-            <div class="work-card" style="--card-bg: linear-gradient(135deg, #0369A1, #06B6D4);">
-                <span class="work-tag tag-cyan">E-commerce</span>
-                <div class="work-overlay">
-                    <h3 class="work-name">Flow Store</h3>
-                    <p class="work-desc">Full e-commerce setup with payment gateway and SEO optimization</p>
-                </div>
-            </div>
-            <div class="work-card" style="--card-bg: linear-gradient(135deg, #1E3A5F, #2563EB);">
-                <span class="work-tag tag-blue">Performance & SEO</span>
-                <div class="work-overlay">
-                    <h3 class="work-name">Rank Project</h3>
-                    <p class="work-desc">Complete technical SEO audit and optimization for search visibility</p>
-                </div>
-            </div>
-            <div class="work-card work-large" style="--card-bg: linear-gradient(135deg, #064E3B, #059669);">
-                <span class="work-tag tag-cyan">AI Chatbot</span>
-                <div class="work-overlay">
-                    <h3 class="work-name">AutoBot LINE</h3>
-                    <p class="work-desc">AI-powered LINE OA chatbot with CRM integration and automated workflows</p>
-                </div>
-            </div>
-            <div class="work-card" style="--card-bg: linear-gradient(135deg, #78350F, #F59E0B);">
-                <span class="work-tag tag-amber">Brand Identity</span>
-                <div class="work-overlay">
-                    <h3 class="work-name">Gold Brand</h3>
-                    <p class="work-desc">Complete brand identity design with digital presence strategy</p>
-                </div>
-            </div>
-            <div class="work-card" style="--card-bg: linear-gradient(135deg, #312E81, #7C3AED);">
-                <span class="work-tag tag-blue">Presentation</span>
-                <div class="work-overlay">
-                    <h3 class="work-name">Pitch Deck</h3>
-                    <p class="work-desc">High-impact investor pitch deck with data visualization</p>
-                </div>
-            </div>
+            <?php foreach ( $hashbox_cases as $case ) :
+                $href = '/work/' . $case['slug'] . '/';
+                $card_classes = 'work-card' . ( $case['card_class'] ? ' ' . $case['card_class'] : '' );
+            ?>
+                <a href="<?php echo esc_url( $href ); ?>" class="<?php echo esc_attr( $card_classes ); ?>" style="--card-bg: <?php echo esc_attr( $case['card_bg'] ); ?>;" aria-label="<?php echo esc_attr( $case['name'] . ' case study' ); ?>">
+                    <span class="work-tag <?php echo esc_attr( $case['tag_class'] ); ?>"><?php echo esc_html( $case['tag'] ); ?></span>
+                    <div class="work-overlay">
+                        <h3 class="work-name"><?php echo esc_html( $case['name'] ); ?></h3>
+                        <p class="work-metric"><strong><?php echo esc_html( $case['metric'] ); ?></strong></p>
+                        <p class="work-desc"><?php echo esc_html( $case['desc'] ); ?></p>
+                        <span class="work-cta">อ่าน Case Study →</span>
+                    </div>
+                </a>
+            <?php endforeach; ?>
+        </div>
+
+        <div class="work-footer" style="text-align:center;margin-top:2.5rem;">
+            <a href="/work/" class="btn btn-outline">ดูผลงานทั้งหมด →</a>
         </div>
     </div>
 </section>

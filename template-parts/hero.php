@@ -6,7 +6,7 @@
  */
 ?>
 <!-- ============ SECTION 1 — HERO ============ -->
-<section id="hero" class="hero-section">
+<section id="hero" class="hero-section" aria-labelledby="hero-h1">
     <!-- Background orbs -->
     <div class="hero-orb hero-orb-blue"></div>
     <div class="hero-orb hero-orb-cyan"></div>
@@ -15,31 +15,33 @@
 
     <div class="container hero-container">
         <div class="hero-content">
-            <div class="hero-label">Website Craft Agency + Digital Workforce Studio</div>
+            <div class="hero-label">SEO-Ready Website + Digital Marketing Tools + AI Expert Consulting</div>
 
-            <h1 class="hero-headline">
-                <span class="hero-line fade-up" style="--delay: 0ms">We Build Websites</span>
-                <span class="hero-line fade-up" style="--delay: 100ms">That Perform.</span>
-                <span class="hero-line fade-up" style="--delay: 200ms">We Build Workforces</span>
-                <span class="hero-line hero-line-gradient fade-up" style="--delay: 300ms">That Scale.</span>
+            <h1 id="hero-h1" class="hero-headline">
+                <span class="hero-line fade-up" style="--delay: 0ms">เว็บไซต์ที่</span>
+                <span class="hero-line hero-line-gradient fade-up" style="--delay: 100ms">พร้อม SEO ตั้งแต่วันแรก</span>
+                <span class="hero-line fade-up" style="--delay: 200ms">เครื่องมือที่เพิ่ม Conversion</span>
+                <span class="hero-line hero-line-gradient fade-up" style="--delay: 300ms">AI ที่ทำงานแทนทีม</span>
             </h1>
 
             <p class="hero-body fade-up" style="--delay: 400ms">
-                We craft enterprise-grade websites and design AI-powered workforces that deliver measurable cost savings for your business.
+                Hashbox Studio รวม Web Development, Digital Marketing Tools, CRO และ AI Consulting ไว้ในทีมเดียว
+                ส่งมอบเว็บที่ผ่าน <strong>Lighthouse 100</strong> · <strong>Core Web Vitals เขียว</strong> · เห็นผล SEO ภายใน <strong>90 วัน</strong>
             </p>
             <p class="hero-body-sub fade-up" style="--delay: 450ms">
-                Performance & SEO built-in. AI automation that delivers measurable ROI.
+                Websites that rank. Tools that convert. AI that scales.
             </p>
 
             <div class="hero-actions fade-up" style="--delay: 500ms">
-                <a href="#portfolio" class="btn btn-cta btn-lg">View Our Work</a>
-                <a href="#contact" class="btn btn-outline btn-lg">Free 30-Min Consultation</a>
+                <a href="#contact" class="btn btn-cta btn-lg">รับ SEO Audit ฟรี</a>
+                <a href="#portfolio" class="btn btn-outline btn-lg">ดูผลงานที่ผ่านมา</a>
             </div>
 
             <div class="hero-trust fade-up" style="--delay: 600ms">
-                <span class="trust-pill">Performance & SEO 100% Built-in</span>
-                <span class="trust-pill">30+ Projects Delivered</span>
-                <span class="trust-pill">AI Workflow Consulting</span>
+                <span class="trust-pill">ทีมประสบการณ์ 17 ปี</span>
+                <span class="trust-pill">300+ แบรนด์</span>
+                <span class="trust-pill">Lighthouse 100</span>
+                <span class="trust-pill">เห็นผลใน 90 วัน</span>
             </div>
         </div>
     </div>

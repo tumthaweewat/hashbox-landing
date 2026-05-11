@@ -436,3 +436,200 @@ function portfolio_settings_page() {
     </div>
     <?php
 }
+
+/* =========================================================================
+ * SEO + Schema (added 2026-05-10) — Sprint 1 of CONTENT-REWRITE-SPEC.md
+ * ========================================================================= */
+
+/**
+ * Force HTML lang="th" site-wide so crawlers classify the site as Thai.
+ *
+ * The visible content is Thai-primary; the WP locale was previously en-US which
+ * mis-signalled language to Google. Override at the language_attributes filter
+ * level so this works regardless of WP Settings → General locale.
+ */
+function hashbox_force_thai_lang_attribute( $output ) {
+    return 'lang="th"';
+}
+add_filter( 'language_attributes', 'hashbox_force_thai_lang_attribute' );
+
+/**
+ * Default homepage meta description + og:locale.
+ *
+ * Rank Math handles per-page meta when set; this fills gaps for the homepage
+ * if Rank Math is empty. Skip if Rank Math has already injected a description.
+ */
+function hashbox_homepage_meta_description() {
+    if ( ! is_front_page() ) {
+        return;
+    }
+
+    // Avoid double-emit if Rank Math (or another SEO plugin) is active.
+    if ( defined( 'RANK_MATH_VERSION' ) ) {
+        return;
+    }
+
+    $desc = 'Hashbox Studio — รับทำเว็บไซต์ที่พร้อม SEO ตั้งแต่วันแรก ติดตั้งเครื่องมือ Digital Marketing + CRO และเป็นที่ปรึกษา AI ผู้เชี่ยวชาญ ส่งมอบ Lighthouse 100, Core Web Vitals เขียว, ผลลัพธ์ใน 90 วัน';
+
+    echo '<meta name="description" content="' . esc_attr( $desc ) . '">' . "\n";
+    echo '<meta property="og:locale" content="th_TH">' . "\n";
+    echo '<meta property="og:locale:alternate" content="en_US">' . "\n";
+}
+add_action( 'wp_head', 'hashbox_homepage_meta_description', 1 );
+
+/**
+ * Output a JSON-LD <script> tag for structured data.
+ *
+ * @param array $data Schema graph or single object as associative array.
+ */
+function hashbox_jsonld( array $data ) {
+    $json = wp_json_encode( $data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
+    if ( false === $json ) {
+        return;
+    }
+    echo '<script type="application/ld+json">' . $json . '</script>' . "\n";
+}
+
+/**
+ * Inject Organization + ProfessionalService + WebSite schema on the homepage.
+ *
+ * Tied together via @id refs so AI engines can resolve the entity graph.
+ * Replaces stale Article schema previously emitted on the home page.
+ */
+function hashbox_inject_home_schema() {
+    if ( ! is_front_page() ) {
+        return;
+    }
+
+    $home   = home_url( '/' );
+    $logo   = get_template_directory_uri() . '/assets/favicons/apple-touch-icon.png';
+
+    hashbox_jsonld( array(
+        '@context' => 'https://schema.org',
+        '@graph'   => array(
+            array(
+                '@type' => 'Organization',
+                '@id'   => $home . '#organization',
+                'name'  => 'Hashbox Studio',
+                'url'   => $home,
+                'logo'  => $logo,
+                'sameAs' => array(
+                    'https://www.linkedin.com/company/hashbox-studio',
+                    'https://www.facebook.com/hashboxstudio',
+                    'https://www.instagram.com/hashboxstudio',
+                ),
+                'contactPoint' => array(
+                    '@type'             => 'ContactPoint',
+                    'telephone'         => '+66-2-266-6222',
+                    'email'             => 'hello@hashbox.co.th',
+                    'contactType'       => 'sales',
+                    'areaServed'        => 'TH',
+                    'availableLanguage' => array( 'th', 'en' ),
+                ),
+                'address' => array(
+                    '@type'           => 'PostalAddress',
+                    'streetAddress'   => '139 Pan Rd, Si Lom',
+                    'addressLocality' => 'Bang Rak',
+                    'addressRegion'   => 'Bangkok',
+                    'postalCode'      => '10500',
+                    'addressCountry'  => 'TH',
+                ),
+            ),
+            array(
+                '@type'              => 'ProfessionalService',
+                '@id'                => $home . '#service',
+                'name'               => 'Hashbox Studio',
+                'description'        => 'SEO-ready website builds, digital marketing tools, CRO, and AI consulting for Thai SMEs.',
+                'url'                => $home,
+                'priceRange'         => '฿฿฿',
+                'areaServed'         => 'Thailand',
+                'parentOrganization' => array( '@id' => $home . '#organization' ),
+                'hasOfferCatalog'    => array(
+                    '@type' => 'OfferCatalog',
+                    'name'  => 'Services',
+                    'itemListElement' => array(
+                        array(
+                            '@type'       => 'Offer',
+                            'itemOffered' => array(
+                                '@type'       => 'Service',
+                                'name'        => 'SEO-Ready Website Build',
+                                'description' => 'Production-ready websites that pass Lighthouse 100, green Core Web Vitals, complete schema, and rank within 60-90 days.',
+                            ),
+                        ),
+                        array(
+                            '@type'       => 'Offer',
+                            'itemOffered' => array(
+                                '@type'       => 'Service',
+                                'name'        => 'Digital Marketing Tools + CRO',
+                                'description' => 'GA4, GSC, Looker Studio, heatmaps, A/B testing, and monthly CRO sprints to compound conversion.',
+                            ),
+                        ),
+                        array(
+                            '@type'       => 'Offer',
+                            'itemOffered' => array(
+                                '@type'       => 'Service',
+                                'name'        => 'AI Expert Consulting',
+                                'description' => 'LINE bot, sales GPT, RAG knowledge base, and workflow automation that ships to production.',
+                            ),
+                        ),
+                    ),
+                ),
+            ),
+            array(
+                '@type'      => 'WebSite',
+                '@id'        => $home . '#website',
+                'url'        => $home,
+                'name'       => 'Hashbox Studio',
+                'inLanguage' => 'th-TH',
+                'publisher'  => array( '@id' => $home . '#organization' ),
+                'potentialAction' => array(
+                    '@type'       => 'SearchAction',
+                    'target'      => array(
+                        '@type'       => 'EntryPoint',
+                        'urlTemplate' => $home . '?s={search_term_string}',
+                    ),
+                    'query-input' => 'required name=search_term_string',
+                ),
+            ),
+        ),
+    ) );
+}
+add_action( 'wp_head', 'hashbox_inject_home_schema', 20 );
+
+/**
+ * Inject FAQPage schema on the homepage using the same FAQ source as the
+ * visible markup in template-parts/faq.php. Keeps content + schema in sync.
+ */
+function hashbox_inject_home_faq_schema() {
+    if ( ! is_front_page() ) {
+        return;
+    }
+    if ( ! function_exists( 'hashbox_get_home_faqs' ) ) {
+        return;
+    }
+
+    $faqs = hashbox_get_home_faqs();
+    if ( empty( $faqs ) ) {
+        return;
+    }
+
+    $main_entity = array();
+    foreach ( $faqs as $faq ) {
+        $main_entity[] = array(
+            '@type'          => 'Question',
+            'name'           => $faq['q'],
+            'acceptedAnswer' => array(
+                '@type' => 'Answer',
+                'text'  => $faq['a'],
+            ),
+        );
+    }
+
+    hashbox_jsonld( array(
+        '@context'   => 'https://schema.org',
+        '@type'      => 'FAQPage',
+        '@id'        => home_url( '/#faq' ),
+        'mainEntity' => $main_entity,
+    ) );
+}
+add_action( 'wp_head', 'hashbox_inject_home_faq_schema', 21 );
