@@ -52,7 +52,7 @@ $hashbox_faqs = hashbox_get_home_faqs();
         <div class="section-header">
             <span class="section-label">FAQ</span>
             <h2 id="faq-h2" class="section-title">คำถามที่พบบ่อย</h2>
-            <p class="section-sub">ทุกอย่างที่ลูกค้ามักถามก่อนเริ่มงานกับเรา</p>
+            <p class="section-sub">รวบรวมคำถามที่ลูกค้ามักถามเราในช่วงคุยกันก่อนเริ่มงาน ถ้ามีคำถามอื่นนอกเหนือจากนี้ ส่งมาทาง LINE ได้เลยทีมพร้อมตอบ</p>
         </div>
 
         <div class="faq-container">

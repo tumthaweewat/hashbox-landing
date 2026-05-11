@@ -16,7 +16,7 @@
         <div class="about-header">
             <span class="section-label">ABOUT US</span>
             <h2 id="about-h2" class="section-title about-title">เรารวม 3 ศาสตร์<br><span class="about-title-accent">ไว้ในทีมเดียว</span></h2>
-            <p class="about-subtitle">Hashbox Studio รวม Technical Web Development, Digital Marketing + CRO และ AI Workforce Consulting &mdash; ทีมที่มีประสบการณ์ใน Agency 7 ปี และ Corporate 10 ปี ทำงานใต้ KPI เดียวกันเพื่อผลลัพธ์ที่วัดได้</p>
+            <p class="about-subtitle">ที่ Hashbox เราเชื่อว่าเว็บไซต์ที่ดีต้องผ่านมาตรฐานทางเทคนิคที่วัดได้ ไม่ใช่แค่สวยงาม ทีมงานเรามีรากฐานทั้งจาก Agency ขนาดใหญ่ราว 7 ปี และจาก In-house Corporate อีกราว 10 ปี รวมแล้วเคยดูแลแบรนด์ไทยและต่างประเทศมาแล้วกว่า 300 ราย</p>
         </div>
 
         <!-- Bento grid -->
@@ -30,7 +30,7 @@
                         </svg>
                     </div>
                     <h3 class="about-bento-title">Our Mission</h3>
-                    <p class="about-bento-text">เราเชื่อว่าเว็บไซต์ที่ดีต้องวัดผลได้ ทุกโปรเจกต์ผ่าน Build Gate ที่เข้มงวด: Lighthouse 100, Core Web Vitals เขียว, Schema ครบทุกหน้า ไม่ใช่คำพูดสวยงาม แต่เป็นมาตรฐานที่บังคับใน CI</p>
+                    <p class="about-bento-text">เราเชื่อว่าเว็บไซต์ที่ดีต้องวัดผลได้ตั้งแต่วันแรก ทุกโปรเจกต์ที่ออกจากทีมเราจึงต้องผ่าน Build Gate ที่เข้มงวด ทั้ง Lighthouse 100 ทั้ง 4 หมวด Core Web Vitals เขียวทุก URL และ Schema Markup ที่ครบทุกหน้า — ไม่ใช่คำพูดสวยงามใน Slide แต่เป็นมาตรฐานที่บังคับใช้จริงใน CI Pipeline ของเรา</p>
                 </div>
                 <div class="about-bento-line about-bento-line-blue"></div>
             </div>
@@ -46,7 +46,7 @@
                         </svg>
                     </div>
                     <h4 class="about-feature-title">SEO-Ready Website</h4>
-                    <p class="about-feature-desc">เว็บที่พร้อมติด Google ตั้งแต่วันเปิดตัว Lighthouse 100, CWV เขียว, Schema ครบ, hreflang, sitemap auto-submit</p>
+                    <p class="about-feature-desc">เว็บที่พร้อมติด Google ตั้งแต่วันเปิดตัว ผ่านมาตรฐาน Lighthouse 100, Core Web Vitals เขียว และ Schema Markup ครบ พร้อมระบบ hreflang สำหรับเว็บหลายภาษา และ Sitemap ที่ส่งให้ Google และ Bing ทันทีหลัง Deploy</p>
                 </div>
                 <div class="about-bento-line about-bento-line-blue"></div>
             </div>
@@ -62,7 +62,7 @@
                         </svg>
                     </div>
                     <h4 class="about-feature-title">Marketing Tools + CRO</h4>
-                    <p class="about-feature-desc">GA4, GSC, Heatmap, A/B Testing, Looker Studio Dashboard พร้อม CRO Sprint รายเดือนที่เพิ่ม Conversion วัดผลได้</p>
+                    <p class="about-feature-desc">ติดตั้ง GA4, Search Console, Heatmap และระบบ A/B Testing ครบวงจร พร้อม Looker Studio Dashboard ที่ลูกค้าดูได้แบบ Real-time และรัน CRO Sprint รายเดือนเพื่อเพิ่ม Conversion อย่างต่อเนื่อง</p>
                 </div>
                 <div class="about-bento-line about-bento-line-cyan"></div>
             </div>
@@ -79,7 +79,7 @@
                         </svg>
                     </div>
                     <h4 class="about-feature-title">AI Expert Consulting</h4>
-                    <p class="about-feature-desc">LINE Bot, Sales GPT, RAG Knowledge Base, Workflow Automation ที่ใช้ได้จริงใน Production ลด Manual Work ของทีม 40%+</p>
+                    <p class="about-feature-desc">ทีมเราออกแบบและส่งมอบ AI Workforce ที่ใช้ได้จริงใน Production ตั้งแต่ LINE Bot ตอบลูกค้า 24/7 ไปจนถึง Sales GPT ที่เชื่อมกับฐานข้อมูลของลูกค้า ลด Manual Work ของทีมได้เฉลี่ย 40% ขึ้นไป</p>
                 </div>
                 <div class="about-bento-line about-bento-line-amber"></div>
             </div>

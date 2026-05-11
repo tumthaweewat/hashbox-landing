@@ -9,7 +9,7 @@ get_header();
 
 $page_url   = get_permalink();
 $page_title = 'Digital Marketing Tools + CRO — เครื่องมือที่เปลี่ยน Traffic เป็นลูกค้า';
-$page_desc  = 'ติดตั้งเครื่องมือ Marketing ครบวงจร พร้อมรัน CRO Sprint รายเดือนที่เพิ่ม Conversion วัดผลด้วย Looker Studio Real-time';
+$page_desc  = 'การมี Traffic เยอะแต่ Conversion ต่ำ คือเสียโอกาส ทีมเราติดตั้งและดูแลเครื่องมือ Marketing ครบวงจรให้ลูกค้า พร้อมรัน CRO Sprint รายเดือนเพื่อเพิ่ม Conversion อย่างต่อเนื่อง และวัดผลผ่าน Looker Studio Dashboard ที่ดูได้แบบ Real-time';
 
 $page_faqs = array(
     array(

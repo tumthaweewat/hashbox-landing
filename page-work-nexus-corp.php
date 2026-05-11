@@ -23,7 +23,7 @@ hashbox_render_case_study( array(
         array( 'value' => '<1.5s', 'label' => 'LCP Mobile' ),
     ),
 
-    'challenge' => 'Nexus Corp ใช้ WordPress + Theme builder ที่หนัก JS 1.2 MB ทำให้ PageSpeed Mobile 28/100, LCP 5.8s ผลลัพธ์: Googlebot Index ได้ 47% ของ URL ทั้งหมด · Organic Traffic ตก 18% YoY · Branded Search ยังพอได้ แต่ Non-branded แทบไม่มี ทีม Marketing เสนอจ้างเอเจนซีอีกตัวมาช่วย SEO แต่ปัญหาคือ Code ที่ Performance พังตั้งแต่ Layer Theme ไม่ใช่ Content',
+    'challenge' => 'Nexus Corp ใช้ WordPress พร้อม Theme Builder ตัวหนึ่งที่มาพร้อม JavaScript เกือบ 1.2 MB ต่อหน้า ทำให้ PageSpeed บน Mobile อยู่ที่ 28/100 และ LCP สูงถึง 5.8 วินาที ผลลัพธ์ที่เกิดขึ้นคือ Googlebot สามารถ Index ได้แค่ 47% ของ URL ทั้งหมด Organic Traffic ตก 18% เมื่อเทียบกับปีก่อน Branded Search ยังพอเหลือบ้าง แต่ Non-branded แทบจะหายไป ทีม Marketing เสนอแก้ปัญหาด้วยการจ้างเอเจนซี SEO เพิ่ม แต่จริง ๆ แล้วต้นเหตุของปัญหาอยู่ที่ Layer Theme ไม่ใช่ Content',
 
     'approach' => array(
         array( 'h' => 'Audit + Roadmap', 'p' => 'วัด Baseline ทุก URL ใน GSC + GA4 + PSI · ทำ Sitemap ที่ครอบ URL ทั้งหมด · พบ Theme Page Builder ทำให้ HTML 800KB+/page' ),

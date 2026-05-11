@@ -23,7 +23,7 @@ hashbox_render_case_study( array(
         array( 'value' => '84%',  'label' => 'AI-handled Resolution' ),
     ),
 
-    'challenge' => 'ลูกค้าทักผ่าน LINE OA 1,200 messages/วัน ทีม Support 8 คน 24/7 ส่วนใหญ่เป็น FAQ เรื่อง Pricing/Service Area/Booking Status — ตอบเหมือนเดิม ทีมเบื่อ ลูกค้ารอนาน Avg Response Time 2h+ ใน Peak Hours ลูกค้าหายระหว่างรอ Conversion ตก 22% เทียบกับ Inquiry แต่ Hire Support เพิ่มไม่คุ้ม Headcount Cost',
+    'challenge' => 'ลูกค้าของบริการนี้ทักผ่าน LINE OA เฉลี่ย 1,200 ข้อความต่อวัน ทีม Support 8 คนต้องทำงาน 24/7 เพื่อตอบทั้งหมด ปัญหาคือคำถามส่วนใหญ่เป็น FAQ ซ้ำ ๆ เรื่อง Pricing, Service Area, สถานะการจอง — ทีมเริ่มเบื่อ และในช่วง Peak Hours ลูกค้าต้องรอกว่า 2 ชั่วโมงก่อนได้คำตอบ ทำให้ Conversion จาก Inquiry ตกลง 22% แต่การจ้าง Support เพิ่มก็ไม่คุ้มกับ Headcount Cost ที่จะเพิ่มขึ้น',
 
     'approach' => array(
         array( 'h' => 'AI ROI Discovery (1 สัปดาห์)', 'p' => 'วิเคราะห์ Message Log 30 วัน · จัด Category พบ FAQ 80% มาจาก 12 Intent หลัก · ROI Model: ลด FTE 4 คน ภายใน 6 เดือน Payback ภายใน 4 เดือน' ),

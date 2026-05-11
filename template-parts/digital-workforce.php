@@ -10,8 +10,8 @@
     <div class="container">
         <div class="section-header">
             <span class="section-label">HOW IT WORKS</span>
-            <h2 id="process-h2" class="section-title">From Audit to AI — กระบวนการ 5 ขั้นตอน</h2>
-            <p class="section-sub">วัด Baseline ก่อน · กำหนด KPI ก่อน Code · ส่งมอบที่วัดผลได้</p>
+            <h2 id="process-h2" class="section-title">From Audit to AI — กระบวนการที่เราใช้กับลูกค้าทุกราย</h2>
+            <p class="section-sub">เราเชื่อในการวัด Baseline ก่อนเริ่มงาน ลูกค้าได้เห็นภาพชัดว่าเว็บปัจจุบันอยู่ที่ไหนและจะไปต่ออย่างไร ก่อนจะเซ็น Sign-off กับเรา</p>
         </div>
 
         <div class="timeline-wrapper">
@@ -25,7 +25,7 @@
                         </svg>
                     </div>
                     <h4 class="step-title">Discovery + Free Audit</h4>
-                    <p class="step-body">วัด Baseline ปัจจุบัน: CWV, Schema, Indexation, Backlinks, Competitor Gap ส่งรายงาน 15-20 หน้าให้ฟรี ก่อนเริ่มงานเสมอ</p>
+                    <p class="step-body">เราเริ่มต้นด้วยการวัด Baseline ของเว็บปัจจุบัน ตั้งแต่ Core Web Vitals, Schema, สถานะ Indexation, โปรไฟล์ Backlinks ไปจนถึงช่องว่างกับคู่แข่ง ส่งรายงาน 15-20 หน้าให้ลูกค้าฟรี ก่อนตัดสินใจเริ่มงานเสมอ</p>
                 </div>
 
                 <div class="timeline-connector"></div>
@@ -38,7 +38,7 @@
                         </svg>
                     </div>
                     <h4 class="step-title">Strategy + KPI Sign-off</h4>
-                    <p class="step-body">กำหนด Target KW, Conversion Goal, Tech Stack, Roadmap 90/180/365 วัน ลูกค้า Sign-off KPI ก่อน Code บรรทัดแรก</p>
+                    <p class="step-body">หลังเห็น Baseline ทีมงานจะวาง Target Keyword, Conversion Goal, Tech Stack และ Roadmap 90/180/365 วันให้ละเอียด ทุกอย่างเขียนเป็น KPI ที่จับต้องได้ และลูกค้าต้อง Sign-off ก่อนทีมเริ่มเขียนโค้ดบรรทัดแรก</p>
                 </div>
 
                 <div class="timeline-connector"></div>
@@ -51,7 +51,7 @@
                         </svg>
                     </div>
                     <h4 class="step-title">SEO-Ready Build</h4>
-                    <p class="step-body">Code + Schema + Performance + i18n ผ่าน Lighthouse Build Gate Deploy บน Cloudflare/Vercel พร้อม Cache Strategy</p>
+                    <p class="step-body">ทีมเขียนโค้ดพร้อมฝัง Schema, Performance Budget และระบบ i18n ตั้งแต่วันแรก ทุก Pull Request ผ่านการตรวจของ Lighthouse Build Gate อัตโนมัติ Deploy บน Cloudflare หรือ Vercel ตามที่เหมาะกับโจทย์ พร้อม Cache Strategy ที่วาง Plan ไว้ล่วงหน้า</p>
                 </div>
 
                 <div class="timeline-connector"></div>
@@ -64,7 +64,7 @@
                         </svg>
                     </div>
                     <h4 class="step-title">Marketing Tools + CRO Setup</h4>
-                    <p class="step-body">ติดตั้ง GA4, GSC, Looker Studio, Heatmap, A/B Framework เริ่ม CRO Sprint รายเดือน Hypothesize → Test → Measure</p>
+                    <p class="step-body">หลังเว็บ Live ทีมจะติดตั้ง GA4, Search Console, Looker Studio Dashboard และระบบ Heatmap พร้อมเริ่ม CRO Sprint รายเดือน ทุกการเปลี่ยนแปลงผ่านสมมติฐาน ทดสอบจริง และวัดผล ก่อนตัดสินใจ Ship ลง Production</p>
                 </div>
 
                 <div class="timeline-connector"></div>
@@ -77,13 +77,13 @@
                         </svg>
                     </div>
                     <h4 class="step-title">AI Workforce + Knowledge Transfer</h4>
-                    <p class="step-body">Implement AI Bot/Tool ตามที่เลือก ฝึกทีมลูกค้า ส่งมอบ Documentation + Runbook + Retainer สำหรับ Optimization ต่อเนื่อง</p>
+                    <p class="step-body">เมื่อระบบเสถียร ทีมเริ่มต่อยอดด้วย AI Workforce ที่ลูกค้าเลือก ไม่ว่าจะเป็น LINE Bot, Sales GPT หรือ Workflow Automation จากนั้นเราฝึกทีมลูกค้าให้ดูแลเองได้ ส่งมอบ Documentation และ Runbook ครบ พร้อม Retainer ที่ดูแลต่อเนื่อง</p>
                 </div>
             </div>
         </div>
 
         <div class="text-center">
-            <a href="#contact" class="btn btn-cta btn-lg">รับ SEO + Performance Audit ฟรี &rarr;</a>
+            <a href="#contact" class="btn btn-cta btn-lg">เริ่มต้นด้วย Audit ฟรี — รับรายงาน 15-20 หน้า &rarr;</a>
         </div>
     </div>
 </section>

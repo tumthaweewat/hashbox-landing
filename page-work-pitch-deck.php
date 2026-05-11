@@ -23,7 +23,7 @@ hashbox_render_case_study( array(
         array( 'value' => '3 wk',    'label' => 'Time to Ship' ),
     ),
 
-    'challenge' => 'SaaS B2B กำลัง Pitch Series A · มี Traction ดี (MRR เติบโต 18%/เดือน) แต่ Pitch Deck เป็น PDF Static ที่ Investor หลายคนขอ Update ทุกเดือน · Founder เหนื่อยกับ Manual Update · บาง Investor ขอเข้าถึง Live Dashboard เพื่อ Track Progress ระหว่างพิจารณา · ระยะเวลาปิด Round ช้าและ Negotiation อ่อนเพราะข้อมูลไม่ Real-time',
+    'challenge' => 'SaaS B2B รายนี้กำลัง Pitch Series A ในช่วงที่ Traction ค่อนข้างดี โดย MRR เติบโต 18% ต่อเดือน แต่ Pitch Deck ที่ใช้เป็น PDF Static ทำให้ Investor หลายคนขอให้ Update ทุกเดือน Founder ต้องเสียเวลากับการ Manual Update บ่อยมาก นอกจากนั้นยังมี Investor บางรายที่ขอเข้าถึง Live Dashboard เพื่อ Track Progress ระหว่างพิจารณา ผลคือระยะเวลาในการปิด Round ช้าลง และ Negotiation ก็อ่อนแอเพราะข้อมูลไม่ Real-time',
 
     'approach' => array(
         array( 'h' => 'Microsite Architecture', 'p' => 'Next.js + Edge Auth (Cloudflare Access) · Investor-only Routes · Public + Gated Sections · Server-side render เพื่อให้ Share Link Preview สวย' ),

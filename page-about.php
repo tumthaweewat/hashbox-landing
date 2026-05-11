@@ -27,9 +27,9 @@ $page_url = get_permalink();
         </nav>
 
         <span class="section-label">ABOUT US</span>
-        <h1 id="about-h1" class="about-hero-headline">เรารวม Web · SEO · AI<br>ไว้ใน <span class="accent-gradient">ทีมเดียวที่รับผิดชอบผลรวม</span></h1>
-        <p class="about-hero-body">Hashbox Studio รวม Technical Web Development, Digital Marketing + CRO และ AI Workforce Consulting ไว้ในทีมเดียว เพื่อให้ลูกค้าได้ผลลัพธ์ที่วัดได้ ภายใต้ KPI ชุดเดียวกัน</p>
-        <p class="about-hero-founder">ทีมงานเรามีรากฐานจากทั้งวงการ <strong>Agency 7 ปี</strong> และ <strong>Corporate 10 ปี</strong> สะสมงานกับแบรนด์มากกว่า <strong>300+ แบรนด์</strong> ในอุตสาหกรรม Banking, Real Estate, Mobile App, E-commerce และ HR-Tech</p>
+        <h1 id="about-h1" class="about-hero-headline">เรารวม Web, Marketing และ AI<br>ไว้ใน <span class="accent-gradient">ทีมเดียวที่รับผิดชอบผลรวม</span></h1>
+        <p class="about-hero-body">Hashbox Studio ตั้งขึ้นจากความเชื่อง่าย ๆ ว่าลูกค้า SME ไทยไม่ควรต้องจ้าง 3 บริษัทมาทำงานที่จริง ๆ แล้วต้องเชื่อมกัน เราจึงรวม Technical Web Development, Digital Marketing พร้อม CRO และ AI Workforce Consulting ไว้ในทีมเดียว ใต้ KPI ชุดเดียวกัน เพื่อให้ลูกค้าเห็นผลลัพธ์ที่จับต้องและวัดได้จริง</p>
+        <p class="about-hero-founder">ทีมงานของเรามาจากทั้งฝั่ง <strong>Agency ระดับท็อปของไทยประมาณ 7 ปี</strong> และจาก <strong>ทีม In-house Corporate อีกประมาณ 10 ปี</strong> รวมแล้วเคยดูแลแบรนด์ทั้งของไทยและต่างประเทศมามากกว่า <strong>300 ราย</strong> ครอบคลุมอุตสาหกรรม Banking, Real Estate, Mobile App, E-commerce และ HR-Tech</p>
         <div class="about-hero-actions">
             <a href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="btn btn-cta btn-lg">รับ SEO Audit ฟรี</a>
             <a href="<?php echo esc_url( home_url( '/portfolio/' ) ); ?>" class="btn btn-outline btn-lg">ดูผลงานที่ผ่านมา</a>

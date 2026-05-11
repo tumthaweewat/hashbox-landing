@@ -80,9 +80,9 @@ $cases = array(
     <section class="work-hub-hero section-padding" aria-labelledby="work-h1">
         <div class="container">
             <span class="section-label">CASE STUDIES</span>
-            <h1 id="work-h1" class="section-title">Selected Work — 6 เคสจริงที่วัดผลได้</h1>
+            <h1 id="work-h1" class="section-title">งานจริงที่เราภูมิใจ — 6 เคสที่ผลลัพธ์วัดได้ทุกตัวเลข</h1>
             <p class="section-sub" style="max-width:56rem;">
-                ทุกเคสคัดจากงานจริงในอุตสาหกรรม Banking, Real Estate, E-commerce, HR-Tech และ AI ทุกผลลัพธ์มีตัวเลขจาก GA4 + GSC จริง ทีม Lead เป็น Senior Engineer + Designer ทั้งหมด
+                ทุกเคสด้านล่างมาจากงานจริงที่ทีมเราทำให้ลูกค้าใน 4 อุตสาหกรรมหลัก ตั้งแต่ HR-Tech, E-commerce, On-demand Service ไปจนถึง SaaS ผลลัพธ์ที่แสดงล้วนมาจาก Google Analytics 4 และ Search Console จริง ไม่ใช่ตัวเลขประมาณ และทีมที่ Lead งานทุกเคสคือ Senior Engineer และ Designer โดยตรง ไม่ใช่ Junior PM ที่ส่งต่อ
             </p>
         </div>
     </section>

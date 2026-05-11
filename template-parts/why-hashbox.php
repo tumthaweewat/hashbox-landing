@@ -11,9 +11,9 @@
         <div class="why-grid">
             <div class="why-left">
                 <span class="section-label">WHY HASHBOX</span>
-                <h2 id="why-h2" class="section-title why-title">ทีมเดียวที่รวม Web + Marketing + AI ไว้ใต้ KPI เดียวกัน</h2>
-                <p class="why-sub">SME ไทยส่วนใหญ่จ้างเอเจนซีเว็บหนึ่งบริษัท + SEO อีกหนึ่ง + AI Consultant อีกหนึ่ง ผลคือข้อมูลกระจัดกระจาย ไม่มีใครรับผิดชอบผลรวม Hashbox รวมทุกอย่างไว้ใต้ KPI ชุดเดียว วัดได้ทุก Sprint</p>
-                <a href="#about" class="link-arrow">วิธีที่เราทำงาน <span class="arrow">&rarr;</span></a>
+                <h2 id="why-h2" class="section-title why-title">ทีมเดียวที่รับผิดชอบทั้ง Traffic, Conversion และ Workforce Capacity</h2>
+                <p class="why-sub">ในวงการ Digital ของไทย ปัญหาที่เราเห็นซ้ำคือลูกค้ามักต้องจ้าง 3 เอเจนซีพร้อมกัน ทีมหนึ่งทำเว็บ ทีมหนึ่งดูแล Marketing อีกทีมหนึ่งให้คำปรึกษาเรื่อง AI ผลลัพธ์คือข้อมูลที่กระจัดกระจาย ทุกฝ่ายมี KPI ของตัวเอง แต่ไม่มีใครรับผิดชอบผลรวม ที่ Hashbox เรารวมทุกอย่างไว้ใต้ KPI ชุดเดียวกัน และวัดได้ทุก Sprint</p>
+                <a href="<?php echo esc_url( home_url( '/about/' ) ); ?>" class="link-arrow">ทำความรู้จักทีมเรา <span class="arrow">&rarr;</span></a>
             </div>
             <div class="why-right">
                 <div class="stat-block stat-blue">

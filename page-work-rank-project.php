@@ -23,7 +23,7 @@ hashbox_render_case_study( array(
         array( 'value' => '+540%',   'label' => 'Unique Users' ),
     ),
 
-    'challenge' => 'Platform เพิ่ง Launch 18 เดือน Product-Market Fit ดี แต่ Acquisition Channel พึ่ง Paid Ads 95% · Organic Search แทบไม่มี · GSC แสดง Impressions 800/วันส่วนใหญ่จาก Branded · Avg Position 67 ทุก Non-branded KW · CTR < 0.3% · CWV ทุกหน้า Mobile แดง ทีม Marketing บอกอยากลด Paid Ads dependency ภายในปีหน้าแต่ไม่รู้ว่า Organic จะวิ่งทันหรือเปล่า',
+    'challenge' => 'Platform นี้เพิ่ง Launch มาได้ 18 เดือน Product-Market Fit ค่อนข้างดี แต่ Acquisition Channel พึ่ง Paid Ads ถึง 95% ส่วน Organic Search แทบไม่มีบทบาท Search Console แสดง Impressions แค่ 800 ครั้งต่อวัน และส่วนใหญ่มาจาก Branded Keyword ทั้งสิ้น Avg Position บน Non-branded อยู่ที่ 67 CTR ต่ำกว่า 0.3% และ Core Web Vitals ทุกหน้าบน Mobile อยู่ในโซนแดง ทีม Marketing ตั้งเป้าจะลด Paid Ads dependency ภายในปีหน้า แต่ไม่มั่นใจว่า Organic จะวิ่งทันหรือเปล่า',
 
     'approach' => array(
         array( 'h' => 'Technical Audit + Quick Wins', 'p' => 'พบ noindex บน 30% ของหน้า Job Listings · canonical ผิด 15% · sitemap.xml ขาด 60% URL · Schema = ไม่มี ส่ง Quick Win Patch ภายใน Week 1' ),

@@ -23,7 +23,7 @@ hashbox_render_case_study( array(
         array( 'value' => '12',   'label' => 'A/B Experiments Shipped' ),
     ),
 
-    'challenge' => 'Flow Store ทำ Branding + Visual ดีระดับ Magazine แต่ Conversion Rate 1.2% (ต่ำกว่า Benchmark Lifestyle 2.8%) Cart Abandonment 78% Checkout Field 11 field มี Friction หนัก Mobile-first ลูกค้า 82% เข้าจาก IG/TikTok แต่ Theme เดิม LCP 4.2s Bounce Rate Mobile 71% — ลูกค้าออกก่อนเห็นสินค้า',
+    'challenge' => 'Flow Store มี Branding และ Visual Design ที่สวยระดับ Magazine แต่ Conversion Rate กลับอยู่แค่ 1.2% ซึ่งต่ำกว่า Benchmark ของอุตสาหกรรม Lifestyle ที่ราว 2.8% Cart Abandonment สูงถึง 78% และในขั้นตอน Checkout มีฟิลด์ให้กรอกถึง 11 ฟิลด์ ซึ่งสร้าง Friction ที่หนักมาก จุดสำคัญคือลูกค้า 82% เข้ามาจาก Instagram และ TikTok ผ่านมือถือ แต่ Theme เดิมมี LCP 4.2 วินาที และ Bounce Rate บน Mobile สูง 71% — สรุปคือลูกค้าออกจากเว็บก่อนเห็นสินค้าด้วยซ้ำ',
 
     'approach' => array(
         array( 'h' => 'Performance First', 'p' => 'แทนที่ Theme เดิมด้วย Next.js + Shopify Hydrogen pattern Image CDN + Edge Cache LCP ลงจาก 4.2s → 1.2s ใน Sprint แรก' ),

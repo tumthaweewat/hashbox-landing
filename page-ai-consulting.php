@@ -9,7 +9,7 @@ get_header();
 
 $page_url   = get_permalink();
 $page_title = 'AI Expert Consulting — AI Workforce ที่ทำงานได้จริงใน Production';
-$page_desc  = 'ที่ปรึกษา AI ที่ลงมือ Implement ไม่ใช่แค่ทำ Slide ออกแบบและส่งมอบ AI Workforce ที่ลด Manual Work ของทีม 40%+ พร้อม ROI Framework + Knowledge Transfer';
+$page_desc  = 'ทีมเราเป็นที่ปรึกษา AI ที่ลงมือเขียนโค้ดและส่งมอบของจริงให้ลูกค้าใช้งานใน Production ไม่ใช่จบที่ Slide ทุกโปรเจกต์เริ่มต้นด้วยการคำนวณ AI ROI ก่อน ถ้าผลตอบแทนคุ้มค่าจึงจะลงมือ Implement พร้อม Knowledge Transfer ให้ทีมลูกค้าดูแลต่อเองได้';
 
 $page_faqs = array(
     array(

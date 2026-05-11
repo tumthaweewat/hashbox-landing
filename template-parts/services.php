@@ -10,8 +10,8 @@
     <div class="container">
         <div class="section-header">
             <span class="section-label">WHAT WE DO</span>
-            <h2 id="services-h2" class="section-title">3 บริการหลัก ครอบคลุมตั้งแต่สร้างเว็บถึง AI Workforce</h2>
-            <p class="section-sub">ส่งมอบเว็บไซต์ที่พร้อม SEO ติดตั้งเครื่องมือ Digital Marketing เพื่อเพิ่ม Conversion และเป็นที่ปรึกษา AI ที่ทำงานได้จริง</p>
+            <h2 id="services-h2" class="section-title">3 บริการที่ทำงานร่วมกัน ครอบคลุมตั้งแต่สร้างเว็บไปจนถึง AI Workforce</h2>
+            <p class="section-sub">ทุกบริการของเราออกแบบมาให้สอดรับกัน เว็บที่สร้างพร้อมติด Google ตั้งแต่วันแรก เครื่องมือ Marketing ที่ช่วยเปลี่ยน Traffic ให้กลายเป็นลูกค้าจริง และที่ปรึกษา AI ที่ลงมือ Implement ให้ใช้ได้ใน Production ไม่ใช่แค่ Slide</p>
         </div>
 
         <div class="services-grid">
@@ -33,8 +33,8 @@
                     <span class="tag">WordPress Headless</span>
                     <span class="tag">Lighthouse 100</span>
                 </div>
-                <p class="service-desc">เว็บไซต์ที่พร้อมติด Google ตั้งแต่วันเปิดตัว ทุกโปรเจกต์ผ่าน Build Gate: Lighthouse 100, Core Web Vitals เขียว, Schema ครบ, hreflang + sitemap อัตโนมัติ ลูกค้าเห็นผล Ranking ภายใน 60-90 วัน</p>
-                <div class="service-footer">Lighthouse 100 &middot; CWV เขียว &middot; Schema ครบ &middot; PDPA-ready</div>
+                <p class="service-desc">เราเชื่อว่าเว็บไซต์ที่ดีต้องพร้อมติด Google ตั้งแต่วันเปิดตัว ไม่ใช่ค่อยมาทำ SEO ทีหลัง ทุกโปรเจกต์ที่ออกจากทีมเราต้องผ่าน Build Gate ที่บังคับใน CI — Lighthouse 100 ทั้ง 4 หมวด, Core Web Vitals เขียวทุก URL, Schema Markup ครบ และพร้อม Multi-language ตั้งแต่วันแรก ลูกค้าส่วนใหญ่เริ่มเห็น Ranking ขยับใน 60-90 วัน</p>
+                <div class="service-footer">Lighthouse 100 · CWV เขียว · Schema ครบ · PDPA-ready</div>
             </div>
 
             <!-- Card 2 — Digital Marketing Tools + CRO -->
@@ -53,7 +53,7 @@
                     <span class="tag">Heatmap + A/B</span>
                     <span class="tag">CRO Sprint</span>
                 </div>
-                <p class="service-desc">ติดตั้งและ Operate ชุดเครื่องมือ Marketing ครบวงจร พร้อมรัน CRO Sprint รายเดือนเพื่อเพิ่ม Conversion Rate ทุก Touchpoint วัดผลด้วย Looker Studio Dashboard ที่ลูกค้าดู Real-time ได้</p>
+                <p class="service-desc">การมี Traffic เยอะแต่ Conversion ต่ำ คือเสียโอกาส เราติดตั้งและดูแลเครื่องมือ Marketing ครบวงจร ตั้งแต่ GA4, Search Console, Heatmap ไปจนถึงระบบ A/B Testing พร้อมรัน CRO Sprint รายเดือนเพื่อปรับเว็บให้ Convert ดีขึ้นต่อเนื่อง ลูกค้าดูผลผ่าน Looker Studio Dashboard ของทีมเองได้แบบ Real-time</p>
                 <div class="service-footer">GA4 &middot; GSC &middot; Clarity &middot; GrowthBook &middot; Looker Studio</div>
             </div>
 
@@ -80,7 +80,7 @@
                     <span class="tag">Sales GPT + RAG</span>
                     <span class="tag">Workflow Automation</span>
                 </div>
-                <p class="service-desc">ที่ปรึกษา AI ที่ลงมือ Implement จริงใน Production ออกแบบและส่งมอบ AI Workforce ที่ลด Manual Work ของทีม 40%+ ทุกโปรเจกต์มี ROI Framework + Knowledge Transfer ให้ทีมลูกค้า</p>
+                <p class="service-desc">เราเป็นที่ปรึกษา AI ที่ลงมือเขียนโค้ดและ Deploy เอง ไม่ใช่จบที่ Slide ทุกโปรเจกต์เริ่มจากการคำนวณ AI ROI ก่อน ถ้าผลตอบแทนไม่คุ้มเราจะแนะนำให้ไม่ทำ ส่วนเคสที่ผ่านเกณฑ์ เราจะออกแบบและส่งมอบ AI Workforce — ไม่ว่าจะเป็น LINE Bot, Sales GPT หรือระบบ Workflow Automation ที่ลด Manual Work ของทีมได้ 40% ขึ้นไป พร้อม Knowledge Transfer ให้ทีมลูกค้าดูแลต่อเองได้</p>
                 <div class="service-footer">OpenAI &middot; Claude &middot; LangChain &middot; Flowise &middot; n8n &middot; LINE Messaging API</div>
             </div>
         </div>

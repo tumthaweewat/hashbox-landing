@@ -24,9 +24,9 @@ get_header();
     <section class="services-hub-hero section-padding" aria-labelledby="hub-h1">
         <div class="container">
             <span class="section-label">SERVICES</span>
-            <h1 id="hub-h1" class="section-title">3 บริการหลักของ Hashbox Studio</h1>
+            <h1 id="hub-h1" class="section-title">3 บริการที่ออกแบบมาให้ทำงานร่วมกัน</h1>
             <p class="section-sub" style="max-width: 56rem;">
-                ครอบคลุมตั้งแต่การสร้างเว็บไซต์ที่พร้อม SEO ติดตั้งเครื่องมือ Digital Marketing เพื่อเพิ่ม Conversion ไปจนถึงการให้คำปรึกษา AI Workforce ที่ทำงานได้จริงใน Production ทุกบริการอยู่ใต้ KPI เดียวกันและทีมเดียวกัน
+                ทุกบริการของเราสามารถจ้างแยกได้ แต่จะให้ผลลัพธ์สูงสุดเมื่อทำงานร่วมกันใต้ทีมเดียว เริ่มจากการสร้างเว็บไซต์ที่พร้อม SEO ตั้งแต่วันแรก ติดตั้งเครื่องมือ Digital Marketing เพื่อเพิ่ม Conversion อย่างต่อเนื่อง และวาง AI Workforce ที่ลด Manual Work ให้ทีมลูกค้าได้ใช้เวลากับงานที่สำคัญกว่า ทุกอย่างใช้ KPI ชุดเดียวกันและรายงานผ่าน Dashboard ที่ลูกค้าดูได้แบบ Real-time
             </p>
         </div>
     </section>

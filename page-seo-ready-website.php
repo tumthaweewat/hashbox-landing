@@ -9,7 +9,7 @@ get_header();
 
 $page_url   = get_permalink();
 $page_title = 'รับทำเว็บไซต์ SEO-Ready — Lighthouse 100 + Core Web Vitals เขียว';
-$page_desc  = 'เว็บไซต์ที่พร้อมติด Google ตั้งแต่วันแรก Lighthouse 100, CWV เขียว, Schema ครบ, hreflang พร้อม, sitemap auto-submit — Ranking ขยับใน 60-90 วัน';
+$page_desc  = 'เราเชื่อว่าเว็บไซต์ที่ดีต้องพร้อมติด Google ตั้งแต่วันเปิดตัว ทุกโปรเจกต์ของทีมเราจึงผ่านมาตรฐาน Lighthouse 100, Core Web Vitals เขียว, Schema Markup ครบ พร้อมระบบ hreflang และ Sitemap ที่ส่งให้ Search Engine ทันที — ลูกค้าส่วนใหญ่เริ่มเห็น Ranking ขยับภายใน 60 ถึง 90 วัน';
 
 $page_faqs = array(
     array(

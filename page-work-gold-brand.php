@@ -23,7 +23,7 @@ hashbox_render_case_study( array(
         array( 'value' => '+42%',  'label' => 'Avg Session Duration' ),
     ),
 
-    'challenge' => 'แบรนด์ Luxury Retail ที่อยู่มา 30 ปี Brand Equity ดีใน Offline แต่ Digital ตามไม่ทัน · เว็บเก่า WordPress + Theme Generic ดูเหมือนร้านทั่วไป · Branded Search ตก 12% YoY ลูกค้าใหม่หา Reference Online ไม่เจอภาพที่สมกับ Premium ของแบรนด์ · ทีม Marketing บอก "เห็นเว็บแล้วลูกค้าไม่กล้าโทรเข้ามาเพราะคิดว่าราคาแพง"',
+    'challenge' => 'แบรนด์ Luxury Retail นี้อยู่ในตลาดมา 30 ปี Brand Equity ในฝั่ง Offline แข็งแรงมาก แต่ Digital Touchpoint กลับตามไม่ทัน เว็บไซต์เก่าใช้ WordPress พร้อม Theme Generic ทำให้ดูเหมือนร้านทั่วไป Branded Search ตก 12% เมื่อเทียบกับปีก่อน และลูกค้าใหม่หา Reference Online ไม่เจอภาพที่สมกับ Premium ของแบรนด์ ทีม Marketing เคยบอกเราว่า "เห็นเว็บแล้วลูกค้าไม่กล้าโทรเข้ามาเพราะคิดว่าราคาแพง" ซึ่งเป็นโจทย์ที่ตรงข้ามกับที่แบรนด์อยากสื่อ',
 
     'approach' => array(
         array( 'h' => 'Brand Audit + Refresh', 'p' => 'Audit Brand Touchpoint Online ทั้งหมด · ทำงานร่วม Brand Strategist 4 สัปดาห์ · Refresh Logo Variants + Color System + Typography Pairing + Photography Direction' ),

@@ -11,8 +11,8 @@
         <div class="contact-grid">
             <div class="contact-left">
                 <span class="section-label">GET IN TOUCH</span>
-                <h2 id="contact-h2" class="section-title contact-title">เริ่มต้นด้วย SEO + Performance Audit ฟรี</h2>
-                <p class="contact-sub">กรอกแบบฟอร์ม รับรายงาน Audit 15-20 หน้าภายใน 3 วันทำการ — ก่อนตัดสินใจเริ่มงานกับเรา</p>
+                <h2 id="contact-h2" class="section-title contact-title">เริ่มต้นด้วย Audit ฟรี ก่อนตัดสินใจร่วมงานกับเรา</h2>
+                <p class="contact-sub">กรอกแบบฟอร์มสั้น ๆ ทีมเราจะวัด Baseline ของเว็บคุณ ตั้งแต่ Performance, Schema, สถานะ Indexation ไปจนถึงโอกาส SEO ที่หายไป แล้วส่งรายงาน 15-20 หน้าให้ภายใน 3 วันทำการ ฟรีไม่มีข้อผูกมัด</p>
 
                 <div class="contact-items">
                     <div class="contact-item">
