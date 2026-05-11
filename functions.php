@@ -676,3 +676,202 @@ function hashbox_inject_home_faq_schema() {
     ) );
 }
 add_action( 'wp_head', 'hashbox_inject_home_faq_schema', 21 );
+
+/**
+ * Contact form submission handler.
+ *
+ * Accepts the homepage #contact form. Validates required fields + PDPA
+ * consent, sanitizes input, and emails the form to the admin address.
+ * Sends a 303 redirect back to the homepage on success (no JS required).
+ */
+function hashbox_handle_contact_submit() {
+    if ( ! isset( $_POST['hashbox_nonce'] ) || ! wp_verify_nonce( wp_unslash( $_POST['hashbox_nonce'] ), 'hashbox_contact' ) ) {
+        wp_die( 'Invalid request token.', 'Forbidden', array( 'response' => 403 ) );
+    }
+
+    $name    = isset( $_POST['name'] )    ? sanitize_text_field( wp_unslash( $_POST['name'] ) )    : '';
+    $email   = isset( $_POST['email'] )   ? sanitize_email( wp_unslash( $_POST['email'] ) )       : '';
+    $phone   = isset( $_POST['phone'] )   ? sanitize_text_field( wp_unslash( $_POST['phone'] ) )   : '';
+    $website = isset( $_POST['website'] ) ? esc_url_raw( wp_unslash( $_POST['website'] ) )         : '';
+    $service = isset( $_POST['service'] ) ? sanitize_text_field( wp_unslash( $_POST['service'] ) ) : '';
+    $message = isset( $_POST['message'] ) ? sanitize_textarea_field( wp_unslash( $_POST['message'] ) ) : '';
+    $pdpa    = isset( $_POST['pdpa'] );
+
+    if ( $name === '' || $email === '' || ! is_email( $email ) || ! $pdpa ) {
+        wp_safe_redirect( add_query_arg( 'contact', 'invalid', home_url( '/#contact' ) ) );
+        exit;
+    }
+
+    $to      = get_option( 'admin_email' );
+    $subject = sprintf( '[Hashbox] New enquiry from %s — %s', $name, $service ?: 'unspecified' );
+    $body    = sprintf(
+        "Name: %s\nEmail: %s\nPhone: %s\nWebsite: %s\nService: %s\n\nMessage:\n%s\n\n— Submitted from %s",
+        $name, $email, $phone, $website, $service, $message, home_url( '/' )
+    );
+    $headers = array(
+        'Content-Type: text/plain; charset=UTF-8',
+        sprintf( 'Reply-To: %s <%s>', $name, $email ),
+    );
+
+    $sent = wp_mail( $to, $subject, $body, $headers );
+
+    wp_safe_redirect( add_query_arg( 'contact', $sent ? 'sent' : 'error', home_url( '/#contact' ) ) );
+    exit;
+}
+add_action( 'admin_post_nopriv_hashbox_contact', 'hashbox_handle_contact_submit' );
+add_action( 'admin_post_hashbox_contact',        'hashbox_handle_contact_submit' );
+
+/**
+ * Shared case-study renderer. Each /work/<slug>/ page template builds a $case
+ * array and calls this helper. Keeps markup + schema generation in one place
+ * so all 6 case study pages stay structurally consistent.
+ *
+ * Required $case keys:
+ *   slug, name, industry, year, timeline, tag, headline, lede,
+ *   snapshot (array of 3 {value,label}), challenge (string),
+ *   approach (array of {h,p}), results (array of {value,label}),
+ *   stack (array of strings), testimonial {quote,attribution} (optional)
+ */
+function hashbox_render_case_study( array $case ) {
+    $page_url = get_permalink();
+    $work_url = home_url( '/work/' . $case['slug'] . '/' );
+    ?>
+
+    <main id="content" class="case-study-page">
+
+        <nav class="breadcrumb container" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/work/' ) ); ?>">Work</a></li>
+                <li aria-current="page"><?php echo esc_html( $case['name'] ); ?></li>
+            </ol>
+        </nav>
+
+        <article class="case-study">
+
+            <header class="case-hero section-padding">
+                <div class="container">
+                    <span class="section-label"><?php echo esc_html( $case['tag'] ); ?> · <?php echo esc_html( $case['industry'] ); ?> · <?php echo esc_html( $case['year'] ); ?></span>
+                    <h1 class="section-title"><?php echo esc_html( $case['name'] ); ?></h1>
+                    <p class="section-sub" style="max-width:56rem;"><?php echo esc_html( $case['headline'] ); ?></p>
+                    <p style="max-width:56rem;margin-top:1rem;font-size:1.05rem;opacity:.85;"><?php echo esc_html( $case['lede'] ); ?></p>
+                </div>
+            </header>
+
+            <section class="case-snapshot section-padding section-surface">
+                <div class="container">
+                    <h2 class="section-label" style="margin-bottom:1.5rem;">SNAPSHOT</h2>
+                    <div class="about-stats-bar">
+                        <?php foreach ( $case['snapshot'] as $i => $stat ) : ?>
+                            <?php if ( $i > 0 ) : ?><div class="about-stat-bar-divider"></div><?php endif; ?>
+                            <div class="about-stat">
+                                <span class="about-stat-num"><?php echo esc_html( $stat['value'] ); ?></span>
+                                <p class="about-stat-label"><?php echo esc_html( $stat['label'] ); ?></p>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <p style="margin-top:1.5rem;opacity:.75;">Industry: <?php echo esc_html( $case['industry'] ); ?> · Project duration: <?php echo esc_html( $case['timeline'] ); ?></p>
+                </div>
+            </section>
+
+            <section class="case-challenge section-padding">
+                <div class="container" style="max-width:64rem;">
+                    <h2>โจทย์ที่ลูกค้าเข้ามา</h2>
+                    <p style="font-size:1.05rem;line-height:1.75;"><?php echo esc_html( $case['challenge'] ); ?></p>
+                </div>
+            </section>
+
+            <section class="case-approach section-padding section-surface">
+                <div class="container">
+                    <h2 style="margin-bottom:1.5rem;">วิธีที่เราแก้</h2>
+                    <ol class="process-list">
+                        <?php foreach ( $case['approach'] as $i => $step ) : ?>
+                            <li>
+                                <h3><?php echo (int) ( $i + 1 ) . '. ' . esc_html( $step['h'] ); ?></h3>
+                                <p><?php echo esc_html( $step['p'] ); ?></p>
+                            </li>
+                        <?php endforeach; ?>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="case-results section-padding">
+                <div class="container">
+                    <h2 style="margin-bottom:1.5rem;">ผลลัพธ์</h2>
+                    <div class="about-cases-grid">
+                        <?php foreach ( $case['results'] as $r ) : ?>
+                            <div class="about-case-card" style="text-align:center;">
+                                <span class="about-metric about-metric-blue" style="font-size:1.5rem;"><?php echo esc_html( $r['value'] ); ?></span>
+                                <p style="margin-top:.75rem;opacity:.85;"><?php echo esc_html( $r['label'] ); ?></p>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </section>
+
+            <section class="case-stack section-padding section-surface">
+                <div class="container">
+                    <h2 style="margin-bottom:1rem;">Tech Stack ที่ใช้</h2>
+                    <div class="about-tech-tags">
+                        <?php foreach ( $case['stack'] as $tech ) : ?>
+                            <span class="about-tech-tag about-tech-tag-blue"><?php echo esc_html( $tech ); ?></span>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </section>
+
+            <?php if ( ! empty( $case['testimonial']['quote'] ) ) : ?>
+            <section class="case-testimonial section-padding">
+                <div class="container" style="max-width:56rem;text-align:center;">
+                    <blockquote style="font-size:1.25rem;line-height:1.6;font-style:italic;opacity:.95;">
+                        &ldquo;<?php echo esc_html( $case['testimonial']['quote'] ); ?>&rdquo;
+                    </blockquote>
+                    <p style="margin-top:1rem;opacity:.75;">— <?php echo esc_html( $case['testimonial']['attribution'] ); ?></p>
+                </div>
+            </section>
+            <?php endif; ?>
+
+            <section class="case-cta section-padding section-surface">
+                <div class="container" style="text-align:center;">
+                    <h2>เคสของคุณคือเคสถัดไป</h2>
+                    <p style="max-width:48rem;margin:0 auto 2rem;">รับ Audit ฟรี · เห็น Friction Point ของเว็บคุณก่อนตัดสินใจ</p>
+                    <a href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="btn btn-cta btn-lg">รับ Audit ฟรี &rarr;</a>
+                </div>
+            </section>
+
+        </article>
+    </main>
+
+    <?php
+    // Schema: Article (CaseStudy) + BreadcrumbList
+    $results_strings = array();
+    foreach ( $case['results'] as $r ) {
+        $results_strings[] = $r['value'] . ' — ' . $r['label'];
+    }
+    hashbox_jsonld( array(
+        '@context'        => 'https://schema.org',
+        '@type'           => 'Article',
+        '@id'             => $work_url . '#article',
+        'headline'        => $case['name'] . ' — ' . $case['headline'],
+        'description'     => $case['lede'],
+        'url'             => $work_url,
+        'datePublished'   => $case['year'] . '-01-01',
+        'inLanguage'      => 'th-TH',
+        'author'          => array( '@id' => home_url( '/#organization' ) ),
+        'publisher'       => array( '@id' => home_url( '/#organization' ) ),
+        'about'           => $case['industry'],
+        'keywords'        => implode( ', ', $case['stack'] ),
+        'articleSection'  => 'Case Studies',
+        'articleBody'     => $case['challenge'] . ' ' . implode( ' ', array_map( fn( $a ) => $a['h'] . ': ' . $a['p'], $case['approach'] ) ) . ' Results: ' . implode( '; ', $results_strings ) . '.',
+    ) );
+
+    hashbox_jsonld( array(
+        '@context' => 'https://schema.org',
+        '@type'    => 'BreadcrumbList',
+        'itemListElement' => array(
+            array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home',  'item' => home_url( '/' ) ),
+            array( '@type' => 'ListItem', 'position' => 2, 'name' => 'Work',  'item' => home_url( '/work/' ) ),
+            array( '@type' => 'ListItem', 'position' => 3, 'name' => $case['name'], 'item' => $work_url ),
+        ),
+    ) );
+}

@@ -2,119 +2,126 @@
 /**
  * Template Name: About Page
  *
- * Standalone About Us page for Hashbox Studio.
+ * Standalone About Us page for Hashbox Studio (V2 org-led narrative).
  *
  * @package Hashbox_Studio
  */
 
 get_header();
+$page_url = get_permalink();
 ?>
 
 <!-- ============ SECTION 1 — HERO ============ -->
-<section class="about-hero">
+<section class="about-hero" aria-labelledby="about-h1">
     <div class="about-hero-orb about-hero-orb-blue"></div>
     <div class="about-hero-orb about-hero-orb-cyan"></div>
     <div class="about-hero-grid-bg"></div>
 
     <div class="container about-hero-container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol style="display:flex;gap:.5rem;list-style:none;padding:0;margin:0 0 1rem;font-size:.875rem;opacity:.7;">
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Home</a></li>
+                <li>›</li>
+                <li aria-current="page">About</li>
+            </ol>
+        </nav>
+
         <span class="section-label">ABOUT US</span>
-        <h1 class="about-hero-headline">We Build Websites That <span class="accent-gradient">Perform</span><br>and AI Workforces That <span class="accent-gradient">Deliver</span></h1>
-        <p class="about-hero-body">Hashbox Studio is a Website Craft Agency + Digital Workforce Studio that combines technical web expertise with AI workflow consulting under one roof.</p>
-        <p class="about-hero-founder">Empowered by an experienced team with proven track records at leading digital agencies and award-winning creative studios — bringing deep expertise in performance engineering, technical SEO, and AI-driven workflows to every project.</p>
+        <h1 id="about-h1" class="about-hero-headline">เรารวม Web · SEO · AI<br>ไว้ใน <span class="accent-gradient">ทีมเดียวที่รับผิดชอบผลรวม</span></h1>
+        <p class="about-hero-body">Hashbox Studio รวม Technical Web Development, Digital Marketing + CRO และ AI Workforce Consulting ไว้ในทีมเดียว เพื่อให้ลูกค้าได้ผลลัพธ์ที่วัดได้ ภายใต้ KPI ชุดเดียวกัน</p>
+        <p class="about-hero-founder">ทีมงานเรามีรากฐานจากทั้งวงการ <strong>Agency 7 ปี</strong> และ <strong>Corporate 10 ปี</strong> สะสมงานกับแบรนด์มากกว่า <strong>300+ แบรนด์</strong> ในอุตสาหกรรม Banking, Real Estate, Mobile App, E-commerce และ HR-Tech</p>
         <div class="about-hero-actions">
-            <a href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="btn btn-cta btn-lg">Book a Free Consultation</a>
-            <a href="<?php echo esc_url( home_url( '/portfolio' ) ); ?>" class="btn btn-outline btn-lg">View Our Work</a>
+            <a href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="btn btn-cta btn-lg">รับ SEO Audit ฟรี</a>
+            <a href="<?php echo esc_url( home_url( '/portfolio/' ) ); ?>" class="btn btn-outline btn-lg">ดูผลงานที่ผ่านมา</a>
         </div>
         <div class="about-hero-badges">
             <span class="about-hero-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                Website Development
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                SEO-Ready Website
             </span>
             <span class="about-hero-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-                Technical SEO &amp; Performance
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
+                Marketing Tools + CRO
             </span>
             <span class="about-hero-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4m-7.07-3.93l2.83-2.83m8.48-8.48l2.83-2.83M2 12h4m12 0h4m-3.93 7.07l-2.83-2.83M6.76 6.76L3.93 3.93"/></svg>
-                Digital Workforce Studio
-            </span>
-            <span class="about-hero-badge">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-                E-commerce
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/></svg>
+                AI Expert Consulting
             </span>
         </div>
     </div>
 </section>
 
 <!-- ============ SECTION 2 — WHY HASHBOX ============ -->
-<section class="about-section about-surface">
+<section class="about-section about-surface" aria-labelledby="problem-h2">
     <div class="container">
         <div class="section-header">
-            <span class="section-label">WHY HASHBOX</span>
+            <span class="section-label">THE PROBLEM &amp; OUR FIX</span>
+            <h2 id="problem-h2" class="section-title">ปัญหาที่เห็นซ้ำ ๆ ใน SME ไทย</h2>
         </div>
         <div class="about-why-grid">
             <div class="about-why-card about-why-problem">
-                <h3 class="about-why-card-title">The Problem We See Repeatedly</h3>
+                <h3 class="about-why-card-title">3 ปัญหาที่เกิดเป็นประจำ</h3>
                 <ul class="about-why-list">
                     <li class="about-why-item about-why-item-bad">
                         <span class="about-why-icon about-why-icon-bad">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                         </span>
-                        <span>Hire a web agency — looks great but loads slow</span>
+                        <span>จ้าง Web Agency — เว็บสวยแต่ติด Google ไม่ได้</span>
                     </li>
                     <li class="about-why-item about-why-item-bad">
                         <span class="about-why-icon about-why-icon-bad">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                         </span>
-                        <span>Hire an SEO agency — great advice but can't touch code</span>
+                        <span>จ้าง SEO Agency — แนะนำดี แต่แตะ Code ไม่ได้</span>
                     </li>
                     <li class="about-why-item about-why-item-bad">
                         <span class="about-why-icon about-why-icon-bad">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                         </span>
-                        <span>Hire an AI consultant — big promises but no real implementation</span>
+                        <span>จ้าง AI Consultant — Slide ดี แต่ไม่เคย Implement จริง</span>
                     </li>
                 </ul>
-                <p class="about-why-footer">3 teams that don't talk to each other = disconnected results</p>
+                <p class="about-why-footer">3 ทีม 3 KPI ที่ไม่คุยกัน = ผลลัพธ์ที่ไม่เชื่อมโยง ไม่มีใครรับผิดชอบผลรวม</p>
             </div>
             <div class="about-why-card about-why-solution">
-                <h3 class="about-why-card-title">How Hashbox Solves This</h3>
+                <h3 class="about-why-card-title">วิธีที่ Hashbox แก้</h3>
                 <ul class="about-why-list">
                     <li class="about-why-item about-why-item-good">
                         <span class="about-why-icon about-why-icon-good">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                         </span>
-                        <span>Web + SEO + AI under one team</span>
+                        <span>Web + Marketing + AI อยู่ใต้ทีมเดียวกัน</span>
                     </li>
                     <li class="about-why-item about-why-item-good">
                         <span class="about-why-icon about-why-icon-good">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                         </span>
-                        <span>Developers who understand SEO and ship code directly</span>
+                        <span>Developer ที่เข้าใจ SEO + Marketing Analyst ที่อ่าน Code ได้</span>
                     </li>
                     <li class="about-why-item about-why-item-good">
                         <span class="about-why-icon about-why-icon-good">
-                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
                         </span>
-                        <span>AI that actually works in production with measurable ROI</span>
+                        <span>AI ที่ใช้ได้จริงใน Production พร้อม ROI Framework</span>
                     </li>
                 </ul>
-                <p class="about-why-footer">Website Craft Agency + Digital Workforce Studio</p>
+                <p class="about-why-footer">SEO-Ready Website + Marketing Tools + AI Expert Consulting</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- ============ SECTION 3 — WHAT WE DO ============ -->
-<section class="about-section">
+<section class="about-section" aria-labelledby="services-h2">
     <div class="container">
         <div class="section-header">
             <span class="section-label">WHAT WE DO</span>
+            <h2 id="services-h2" class="section-title">3 บริการหลัก</h2>
         </div>
         <div class="about-services-grid">
             <div class="about-service-card">
                 <div class="about-service-icon about-service-icon-blue">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <rect x="2" y="3" width="20" height="14" rx="2"/>
                         <line x1="8" y1="21" x2="16" y2="21"/>
                         <line x1="12" y1="17" x2="12" y2="21"/>
@@ -123,27 +130,26 @@ get_header();
                     </svg>
                 </div>
                 <span class="about-service-num">01</span>
-                <h3 class="about-service-title">Website Development</h3>
-                <p class="about-service-desc">We build Corporate, Brand, and E-commerce websites with the right tech stack — Next.js, WordPress, or WordPress Headless. Every project ships with Performance &amp; SEO built-in from the ground up.</p>
-                <a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="about-service-link">View Services &rarr;</a>
+                <h3 class="about-service-title">SEO-Ready Website</h3>
+                <p class="about-service-desc">เว็บไซต์ Corporate, Brand, E-commerce บน Next.js / WordPress / Headless ทุกโปรเจกต์ผ่าน Build Gate: Lighthouse 100, CWV เขียว, Schema ครบ</p>
+                <a href="<?php echo esc_url( home_url( '/services/seo-ready-website/' ) ); ?>" class="about-service-link">รายละเอียด &rarr;</a>
             </div>
             <div class="about-service-card">
                 <div class="about-service-icon about-service-icon-cyan">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"/>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-                        <polyline points="8 14 11 8 14 14"/>
-                        <line x1="9" y1="12" x2="13" y2="12"/>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M3 3v18h18"/>
+                        <path d="M7 14l4-4 4 4 5-5"/>
+                        <circle cx="20" cy="9" r="1.5"/>
                     </svg>
                 </div>
                 <span class="about-service-num">02</span>
-                <h3 class="about-service-title">Technical SEO &amp; Performance</h3>
-                <p class="about-service-desc">SEO audits, Core Web Vitals optimization, Schema Markup, and site architecture — delivered by a team that's both developer and SEO specialist.</p>
-                <a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="about-service-link">View Services &rarr;</a>
+                <h3 class="about-service-title">Digital Marketing + CRO</h3>
+                <p class="about-service-desc">ติดตั้ง GA4, GSC, Heatmap, A/B Testing พร้อมรัน CRO Sprint รายเดือน ลูกค้าเห็น Conversion เพิ่มต่อเนื่องทุก Sprint</p>
+                <a href="<?php echo esc_url( home_url( '/services/digital-marketing-tools/' ) ); ?>" class="about-service-link">รายละเอียด &rarr;</a>
             </div>
             <div class="about-service-card">
                 <div class="about-service-icon about-service-icon-amber">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <circle cx="12" cy="12" r="3"/>
                         <circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/>
                         <circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/>
@@ -154,13 +160,13 @@ get_header();
                     </svg>
                 </div>
                 <span class="about-service-num">03</span>
-                <h3 class="about-service-title">Digital Workforce Studio</h3>
-                <p class="about-service-desc">We design AI assistants, workflow automation, and chatbots for businesses — reducing manual work, cutting costs, with real measurable ROI.</p>
-                <a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="about-service-link">View Services &rarr;</a>
+                <h3 class="about-service-title">AI Expert Consulting</h3>
+                <p class="about-service-desc">ออกแบบและ Implement AI Workforce: LINE Bot, Sales GPT + RAG, Workflow Automation ลด Manual Work ของทีม 40%+ พร้อม ROI Framework</p>
+                <a href="<?php echo esc_url( home_url( '/services/ai-consulting/' ) ); ?>" class="about-service-link">รายละเอียด &rarr;</a>
             </div>
             <div class="about-service-card">
                 <div class="about-service-icon about-service-icon-blue">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
                         <line x1="3" y1="6" x2="21" y2="6"/>
                         <path d="M16 10a4 4 0 01-8 0"/>
@@ -168,51 +174,94 @@ get_header();
                 </div>
                 <span class="about-service-num">04</span>
                 <h3 class="about-service-title">E-commerce</h3>
-                <p class="about-service-desc">Online stores designed for conversion, with local payment gateway integration and e-commerce-specific SEO optimization.</p>
-                <a href="<?php echo esc_url( home_url( '/#services' ) ); ?>" class="about-service-link">View Services &rarr;</a>
+                <p class="about-service-desc">ร้านค้าออนไลน์ที่ออกแบบเพื่อ Conversion เชื่อม Payment Gateway ไทย พร้อม E-commerce SEO + CRO ภายในแพ็กเกจ</p>
+                <a href="<?php echo esc_url( home_url( '/services/' ) ); ?>" class="about-service-link">รายละเอียด &rarr;</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============ SECTION 4 — TECH STACK + AI TOOLS ============ -->
-<section class="about-section about-surface">
+<!-- ============ SECTION 4 — TEAM BACKGROUND ============ -->
+<section class="about-section about-surface" aria-labelledby="team-h2">
     <div class="container">
+        <div class="section-header">
+            <span class="section-label">OUR TEAM BACKGROUND</span>
+            <h2 id="team-h2" class="section-title">ภูมิหลังทีมงาน</h2>
+            <p class="section-sub">Corporate-grade craft ส่งมอบด้วย Agency speed</p>
+        </div>
+        <div class="about-why-grid">
+            <div class="about-why-card">
+                <h3 class="about-why-card-title">Agency Experience — 7 ปี</h3>
+                <ul class="about-why-list">
+                    <li>ดูแลโปรเจกต์ Brand + Web ครอบคลุม Banking, E-commerce, Real Estate, FMCG</li>
+                    <li>เข้าใจ Brand Tone, Visual Direction และ Campaign Integration</li>
+                    <li>คุ้นเคยกับ Speed-to-Market และ Iteration Cycle สั้น</li>
+                    <li>เคยทำงานกับ Award-winning Creative Studios ในกรุงเทพฯ</li>
+                </ul>
+            </div>
+            <div class="about-why-card">
+                <h3 class="about-why-card-title">Corporate Experience — 10 ปี</h3>
+                <ul class="about-why-list">
+                    <li>ทำงาน In-house ที่องค์กรขนาดใหญ่ ผ่าน Scale Constraint จริง</li>
+                    <li>เชี่ยวชาญ Performance Budget, Security Policy, PDPA Compliance</li>
+                    <li>เข้าใจ Multi-stakeholder Engineering + Governance Process</li>
+                    <li>คุ้นเคยกับ Enterprise Architecture และ Multi-region Deployment</li>
+                </ul>
+            </div>
+        </div>
+        <p style="text-align:center;margin-top:2rem;max-width:48rem;margin-left:auto;margin-right:auto;font-size:1.05rem;opacity:.85;">
+            ผลรวม: ทีมที่ <strong>Code เร็วแบบ Agency</strong> แต่ <strong>คุณภาพแบบ Corporate</strong>
+        </p>
+    </div>
+</section>
+
+<!-- ============ SECTION 5 — TECH STACK + AI TOOLS ============ -->
+<section class="about-section" aria-labelledby="stack-h2">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-label">TOOLS</span>
+            <h2 id="stack-h2" class="section-title">Tech Stack + เครื่องมือ In-House</h2>
+        </div>
         <div class="about-tech-grid">
             <div class="about-tech-col">
-                <h2 class="section-label">TECH STACK</h2>
+                <h3 class="section-label" style="margin-bottom:1rem;">TECH STACK</h3>
                 <div class="about-tech-tags">
                     <span class="about-tech-tag about-tech-tag-blue">Next.js</span>
                     <span class="about-tech-tag about-tech-tag-blue">React</span>
                     <span class="about-tech-tag about-tech-tag-blue">Tailwind CSS</span>
                     <span class="about-tech-tag about-tech-tag-cyan">WordPress</span>
                     <span class="about-tech-tag about-tech-tag-cyan">WordPress Headless</span>
+                    <span class="about-tech-tag about-tech-tag-cyan">Sanity / Contentful</span>
                     <span class="about-tech-tag about-tech-tag-amber">Node.js</span>
                     <span class="about-tech-tag about-tech-tag-amber">Python</span>
+                    <span class="about-tech-tag about-tech-tag-blue">Vercel / Cloudflare</span>
+                    <span class="about-tech-tag about-tech-tag-cyan">GA4 / GSC / Looker Studio</span>
+                    <span class="about-tech-tag about-tech-tag-amber">OpenAI / Claude / LangChain</span>
+                    <span class="about-tech-tag about-tech-tag-amber">Flowise / n8n</span>
                 </div>
             </div>
             <div class="about-tech-col">
-                <h2 class="section-label">IN-HOUSE AI TOOLS</h2>
+                <h3 class="section-label" style="margin-bottom:1rem;">IN-HOUSE TOOLS</h3>
                 <ul class="about-tools-list">
                     <li class="about-tool-item">
                         <span class="about-tool-dot about-tool-dot-amber"></span>
-                        <span>Paid Media Alert Tool</span>
+                        <span><strong>Paid Media Alert</strong> — เตือนเมื่อ Cost-per-Lead เกิน Threshold</span>
                     </li>
                     <li class="about-tool-item">
                         <span class="about-tool-dot about-tool-dot-blue"></span>
-                        <span>SEO Tracker</span>
+                        <span><strong>SEO Tracker</strong> — Track Keyword Position รายวันแบบ Realtime</span>
                     </li>
                     <li class="about-tool-item">
                         <span class="about-tool-dot about-tool-dot-cyan"></span>
-                        <span>Asearchlab</span>
+                        <span><strong>Asearchlab</strong> — เครื่องมือ AI Visibility Audit</span>
                     </li>
                     <li class="about-tool-item">
                         <span class="about-tool-dot about-tool-dot-amber"></span>
-                        <span>peec.AI</span>
+                        <span><strong>peec.AI</strong> — AI Citation Monitor (ChatGPT/Perplexity/AIO)</span>
                     </li>
                     <li class="about-tool-item">
                         <span class="about-tool-dot about-tool-dot-blue"></span>
-                        <span>Query Fan-out</span>
+                        <span><strong>Query Fan-out</strong> — สร้าง Topic Cluster อัตโนมัติ</span>
                     </li>
                 </ul>
             </div>
@@ -220,79 +269,81 @@ get_header();
     </div>
 </section>
 
-<!-- ============ SECTION 5 — WHAT WE BELIEVE + NUMBERS ============ -->
-<section class="about-section">
+<!-- ============ SECTION 6 — VALUES + STATS ============ -->
+<section class="about-section about-surface" aria-labelledby="values-h2">
     <div class="container">
         <div class="section-header">
             <span class="section-label">WHAT WE BELIEVE</span>
+            <h2 id="values-h2" class="section-title">3 หลักการที่บังคับใช้ทุกโปรเจกต์</h2>
         </div>
         <div class="about-values-grid">
             <div class="about-value-card about-value-blue">
                 <div class="about-value-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <polyline points="16 18 22 12 16 6"/>
                         <polyline points="8 6 2 12 8 18"/>
                     </svg>
                 </div>
                 <h3 class="about-value-title">Technical Excellence</h3>
-                <p class="about-value-desc">We never cut corners. Every project must pass Core Web Vitals standards, ship with SEO built-in, and be thoroughly tested before launch.</p>
+                <p class="about-value-desc">ไม่ทำ Shortcut ทุกโปรเจกต์ต้องผ่าน Build Gate: Lighthouse 100, Core Web Vitals เขียว, Schema Validator ผ่าน — บังคับใน CI ไม่ใช่คำพูดสวยงาม</p>
             </div>
             <div class="about-value-card about-value-cyan">
                 <div class="about-value-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
                     </svg>
                 </div>
                 <h3 class="about-value-title">Measurable Results</h3>
-                <p class="about-value-desc">We don't sell feelings. Everything we do must be measurable — whether it's PageSpeed scores, organic traffic, or cost reduction from AI.</p>
+                <p class="about-value-desc">ทุกการตัดสินใจวัดผลได้ ไม่ว่าจะเป็น PageSpeed, Organic Traffic, Conversion Rate, หรือ Hours saved ของทีมจาก AI Workforce</p>
             </div>
             <div class="about-value-card about-value-amber">
                 <div class="about-value-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
                         <circle cx="12" cy="12" r="3"/>
                     </svg>
                 </div>
                 <h3 class="about-value-title">Transparency</h3>
-                <p class="about-value-desc">Clear pricing with no hidden costs. Realistic timelines. We don't promise what we can't deliver.</p>
+                <p class="about-value-desc">ราคาชัด ไม่มี Hidden Cost ส่ง Audit ฟรีก่อนเริ่ม Timeline จริง ไม่สัญญาเกินสิ่งที่ทำได้</p>
             </div>
         </div>
-        <div class="about-stats-bar">
+        <div class="about-stats-bar" style="margin-top:3rem;">
             <div class="about-stat">
-                <span class="about-stat-num" data-target="7">0</span><span class="about-stat-suffix">yrs</span>
-                <p class="about-stat-label">Development experience</p>
+                <span class="about-stat-num" data-target="17">17</span><span class="about-stat-suffix"></span>
+                <p class="about-stat-label">ปี ประสบการณ์รวม<br><small>(Agency 7 + Corporate 10)</small></p>
             </div>
             <div class="about-stat-bar-divider"></div>
             <div class="about-stat">
-                <span class="about-stat-num" data-target="108">0</span><span class="about-stat-suffix">+</span>
-                <p class="about-stat-label">Brands managed</p>
+                <span class="about-stat-num" data-target="300">300</span><span class="about-stat-suffix">+</span>
+                <p class="about-stat-label">แบรนด์ที่ทีมเคยดูแล</p>
             </div>
             <div class="about-stat-bar-divider"></div>
             <div class="about-stat">
-                <span class="about-stat-num" data-target="32">0</span><span class="about-stat-suffix">+</span>
-                <p class="about-stat-label">Core Web Vitals Desktop score</p>
+                <span class="about-stat-num" data-target="100">100</span><span class="about-stat-suffix"></span>
+                <p class="about-stat-label">Lighthouse Score เฉลี่ย</p>
             </div>
             <div class="about-stat-bar-divider"></div>
             <div class="about-stat">
-                <span class="about-stat-num" data-target="6">0</span><span class="about-stat-suffix"></span>
-                <p class="about-stat-label">In-house AI tools built</p>
+                <span class="about-stat-num" data-target="5">5</span><span class="about-stat-suffix"></span>
+                <p class="about-stat-label">เครื่องมือ In-House ที่ใช้ Production</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ============ SECTION 6 — TRACK RECORD ============ -->
-<section class="about-section about-surface">
+<!-- ============ SECTION 7 — TRACK RECORD ============ -->
+<section class="about-section" aria-labelledby="cases-h2">
     <div class="container">
         <div class="section-header">
-            <span class="section-label">THE EXPERIENCE THAT SHAPED US</span>
-            <p class="section-sub">Real results delivered by our team through years of hands-on work at leading digital agencies and creative studios across Thailand.</p>
+            <span class="section-label">TRACK RECORD</span>
+            <h2 id="cases-h2" class="section-title">ผลลัพธ์จริงที่ทีมเคยส่งมอบ</h2>
+            <p class="section-sub">เคสที่ทีมงาน Hashbox ทำผ่าน Agency / Corporate / In-house ในช่วง 17 ปีที่ผ่านมา ตัวเลขจาก GA4 + GSC จริง</p>
         </div>
         <div class="about-cases-grid">
             <div class="about-case-card">
                 <span class="about-case-eyebrow">Case Study 01</span>
-                <h3 class="about-case-title">HR Tech Platform</h3>
-                <p class="about-case-desc">Full technical SEO overhaul — optimized Core Web Vitals, resolved crawlability issues, implemented complete Schema Markup, and restructured site architecture within 12 months.</p>
+                <h3 class="about-case-title">HR-Tech Platform</h3>
+                <p class="about-case-desc">Technical SEO overhaul ทั้งระบบ Optimize Core Web Vitals แก้ Crawlability Implement Schema Markup ครบทุกหน้า และ Restructure Site Architecture ภายใน 12 เดือน</p>
                 <div class="about-case-metrics">
                     <span class="about-metric about-metric-blue">+2,200% impressions</span>
                     <span class="about-metric about-metric-cyan">+700% organic traffic</span>
@@ -302,9 +353,9 @@ get_header();
             <div class="about-case-card">
                 <span class="about-case-eyebrow">Case Study 02</span>
                 <h3 class="about-case-title">Home Service App</h3>
-                <p class="about-case-desc">Technical SEO + Core Web Vitals optimization combined with SEO content strategy integrated into site structure within 6 months.</p>
+                <p class="about-case-desc">Technical SEO + Core Web Vitals Optimization ผสมกับ SEO Content Strategy ที่บูรณาการกับ Site Structure ภายใน 6 เดือน</p>
                 <div class="about-case-metrics">
-                    <span class="about-metric about-metric-amber">50x impressions</span>
+                    <span class="about-metric about-metric-amber">50× impressions</span>
                     <span class="about-metric about-metric-blue">+300% clicks</span>
                     <span class="about-metric about-metric-cyan">+200% target audience</span>
                 </div>
@@ -313,72 +364,49 @@ get_header();
     </div>
 </section>
 
-<!-- ============ SECTION 7 — CTA + CONTACT ============ -->
-<section class="about-section about-cta-section">
+<!-- ============ SECTION 8 — CTA + CONTACT ============ -->
+<section class="about-section about-cta-section" aria-labelledby="cta-h2">
     <div class="about-cta-glow"></div>
     <div class="container about-cta-container">
         <span class="section-label">LET'S CONNECT</span>
-        <h2 class="about-cta-title">Ready to Talk?</h2>
-        <p class="about-cta-sub">Book a free 30-minute consultation — no strings attached.</p>
+        <h2 id="cta-h2" class="about-cta-title">พร้อมเริ่มงานกับเรา?</h2>
+        <p class="about-cta-sub">รับ SEO + Performance Audit ฟรี 15-20 หน้า ก่อนตัดสินใจเริ่มงาน ไม่มีข้อผูกมัด</p>
         <div class="about-cta-info">
-            <span>project@hashbox.co.th</span>
+            <span><a href="mailto:hello@hashbox.co.th">hello@hashbox.co.th</a></span>
             <span class="about-cta-divider">&middot;</span>
-            <span>02 266 6222</span>
+            <span><a href="tel:+6622666222">02 266 6222</a></span>
             <span class="about-cta-divider">&middot;</span>
             <span>LINE: @hashboxstudio</span>
         </div>
-        <p class="about-cta-address">139 Pan Rd, Si Lom, Bang Rak, Bangkok 10500 &middot; Mon - Fri 9:00 - 18:00</p>
+        <p class="about-cta-address">139 Pan Rd, Si Lom, Bang Rak, Bangkok 10500 &middot; จันทร์-ศุกร์ 9:00-18:00</p>
         <div class="about-cta-actions">
-            <a href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="btn btn-cta">Book Free Consultation &rarr;</a>
-            <a href="https://lin.ee/Xagx6i4" class="btn btn-outline-cyan" target="_blank" rel="noopener noreferrer">LINE OA</a>
+            <a href="<?php echo esc_url( home_url( '/#contact' ) ); ?>" class="btn btn-cta">รับ Audit ฟรี &rarr;</a>
+            <a href="https://lin.ee/Xagx6i4" class="btn btn-outline-cyan" target="_blank" rel="noopener noreferrer">คุยทาง LINE OA</a>
         </div>
     </div>
 </section>
 
-<!-- Schema Markup -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "Organization",
-            "@id": "https://hashbox.co.th/#organization",
-            "name": "Hashbox Studio",
-            "alternateName": "Hashbox Co., Ltd.",
-            "url": "https://hashbox.co.th",
-            "logo": "https://hashbox.co.th/logo.png",
-            "description": "Website Craft Agency + Digital Workforce Studio",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "139 Pan Rd, Si Lom, Bang Rak",
-                "addressLocality": "Bangkok",
-                "postalCode": "10500",
-                "addressCountry": "TH"
-            },
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+66-2-266-6222",
-                "email": "project@hashbox.co.th",
-                "contactType": "customer service"
-            },
-            "founder": {
-                "@type": "Person",
-                "name": "Thaweewat Sriaroonthip",
-                "jobTitle": "Co-founder & Head of Technology"
-            },
-            "sameAs": [
-                "https://lin.ee/Xagx6i4"
-            ]
-        },
-        {
-            "@type": "AboutPage",
-            "name": "About Hashbox Studio",
-            "url": "https://hashbox.co.th/about",
-            "mainEntity": { "@id": "https://hashbox.co.th/#organization" }
-        }
-    ]
-}
-</script>
-
 <?php
+// AboutPage + BreadcrumbList schema. Organization graph already injected via
+// functions.php on homepage; we reference @id only here (no duplicate).
+hashbox_jsonld( array(
+    '@context' => 'https://schema.org',
+    '@type'    => 'AboutPage',
+    '@id'      => $page_url . '#aboutpage',
+    'url'      => $page_url,
+    'name'     => 'About Hashbox Studio',
+    'description' => 'Hashbox Studio รวมประสบการณ์ทีมงาน Agency 7 ปี + Corporate 10 ปี ส่งมอบ SEO-Ready Website, Marketing Tools + CRO และ AI Expert Consulting ใต้ KPI เดียวกัน',
+    'inLanguage' => 'th-TH',
+    'mainEntity' => array( '@id' => home_url( '/#organization' ) ),
+) );
+
+hashbox_jsonld( array(
+    '@context' => 'https://schema.org',
+    '@type'    => 'BreadcrumbList',
+    'itemListElement' => array(
+        array( '@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => home_url( '/' ) ),
+        array( '@type' => 'ListItem', 'position' => 2, 'name' => 'About', 'item' => $page_url ),
+    ),
+) );
+
 get_footer();

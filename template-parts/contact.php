@@ -44,7 +44,20 @@
             </div>
 
             <div class="contact-right">
-                <form id="contactForm" class="contact-form" novalidate>
+                <?php
+                $contact_status = isset( $_GET['contact'] ) ? sanitize_key( $_GET['contact'] ) : '';
+                if ( $contact_status === 'sent' ) :
+                ?>
+                    <div class="form-flash form-flash-success" role="status">ส่งข้อความสำเร็จ ทีมเราจะติดต่อกลับใน 1-3 วันทำการ</div>
+                <?php elseif ( $contact_status === 'invalid' ) : ?>
+                    <div class="form-flash form-flash-error" role="alert">กรุณากรอกชื่อ อีเมล และยินยอม PDPA ก่อนส่ง</div>
+                <?php elseif ( $contact_status === 'error' ) : ?>
+                    <div class="form-flash form-flash-error" role="alert">ส่งไม่สำเร็จ กรุณาลองใหม่หรือติดต่อทาง LINE</div>
+                <?php endif; ?>
+
+                <form id="contactForm" class="contact-form" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" novalidate>
+                    <input type="hidden" name="action" value="hashbox_contact">
+                    <?php wp_nonce_field( 'hashbox_contact', 'hashbox_nonce' ); ?>
                     <div class="form-group">
                         <label for="name">ชื่อ <span class="required" aria-hidden="true">*</span></label>
                         <input type="text" id="name" name="name" required placeholder="ชื่อ-นามสกุล">
